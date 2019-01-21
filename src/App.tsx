@@ -1,17 +1,18 @@
 import * as React from 'react';
-import AutoCompleteSearch from './containers/search';
-import { getSuggestions } from './actions';
+import { getSuggestions, selectLocation } from './actions';
+import AutoCompleteSearch from './containers/AutoCompleteSearch';
+import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <AutoCompleteSearch
-        suggestor={getSuggestions}
-        name="search-list"
-        onSelect={(term, dispatch) => {
-          dispatch({ type: 'LOCATION_SELECT', term });
-        }}
-      />
+      <div className="Search">
+        <AutoCompleteSearch
+          id="search-list"
+          onChange={getSuggestions}
+          onSelect={selectLocation}
+        />
+      </div>
     </div>
   );
 }

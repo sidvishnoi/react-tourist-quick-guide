@@ -3,10 +3,9 @@ import search from './search';
 
 export interface State {
   search: {
-    suggestions: string[];
-    term: string;
+    suggestions: { name: string; id: string }[];
+    query: string;
     isLoading: boolean;
-    isInvalid: boolean;
   };
 }
 

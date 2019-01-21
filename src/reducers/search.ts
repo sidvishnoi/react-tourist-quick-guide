@@ -2,13 +2,18 @@ import { State } from '.';
 
 type LookupAction = {
   type: 'SUGGESTION_LOOKUP';
-  term: string;
+  query: string;
 };
+
+type APIResponse = {
+  name: string;
+  id: string;
+}[];
 
 type ResponseAction = {
   type: 'SUGGESTION_RESPONSE';
-  term: string;
-  terms: string[];
+  query: string;
+  locations: APIResponse;
 };
 
 type ResponseError = {
@@ -18,13 +23,13 @@ type ResponseError = {
 
 type LookupNoop = {
   type: 'SUGGESTION_NOOP';
+  query: string;
 };
 
 const intialState: State['search'] = {
-  term: '',
-  suggestions: [] as string[],
+  query: '',
+  suggestions: [] as APIResponse,
   isLoading: false,
-  isInvalid: false,
 };
 
 type SearchActions = LookupAction | ResponseAction | ResponseError | LookupNoop;
@@ -36,32 +41,29 @@ export default function searchSuggestions(
   switch (action.type) {
     case 'SUGGESTION_LOOKUP':
       return {
-        term: action.term,
-        suggestions: [] as string[],
+        query: action.query,
+        suggestions: [] as APIResponse,
         isLoading: true,
-        isInvalid: false,
       };
     case 'SUGGESTION_RESPONSE':
       // reject a delayed response from previous slow request
       // so it doesn't override expected response for current state
-      if (state.term !== action.term) {
+      if (state.query !== action.query) {
         return { ...state, isLoading: false };
       }
       return {
-        term: action.term,
-        suggestions: action.terms,
+        query: action.query,
+        suggestions: action.locations,
         isLoading: false,
-        isInvalid: action.term.length && !action.terms.length,
       };
     case 'SUGGESTION_RESPONSE_ERROR':
       return {
         isLoading: false,
-        term: state.term,
-        suggestions: [] as string[],
-        isInvalid: true,
+        query: state.query,
+        suggestions: [] as APIResponse,
       };
     case 'SUGGESTION_NOOP':
-      return { ...intialState };
+      return { ...intialState, query: action.query };
     default:
       return state;
   }
