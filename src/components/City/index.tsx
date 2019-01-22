@@ -20,7 +20,11 @@ export default function City(props: CityProps & CityPropsFromDispatch) {
   return (
     <div className="City">
       <div className="meta">
-        <button className="close" onClick={() => props.destroyer(id)}>
+        <button
+          className="close"
+          title="Remove from list"
+          onClick={() => props.destroyer(id)}
+        >
           X
         </button>
         <h3>{name}</h3>

@@ -1,25 +1,31 @@
 .City {
   display: flex;
-  background: #fff;
-  margin: 0.5em;
   flex-wrap: wrap;
+  justify-content: center;
+  background: linear-gradient(to right, #ff8a00, #da1b60);
+  margin: 1em auto;
+  padding: 0.2em;
   transition: all 0.2s ease;
-  border: 0.25em solid #fff;
 }
 
 .City:hover {
-  border-color: crimson;
+  border-image: linear-gradient(to right, #ff8a00, #da1b60) 1 1;
+}
+
+.City > div {
+  flex-grow: 1;
 }
 
 .City .widget {
-  align-self: center;
+  background: #fff;
 }
 
 .City .meta {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  background: gold;
+  background: transparent;
+  /* background-image: linear-gradient(to right, #ff8a00, #da1b60); */
   width: 200px;
 }
 

@@ -11,9 +11,9 @@ export interface ListProps {
 }
 
 export default function Places(props: ListProps) {
-  const { title, items, style } = props;
+  const { title, items, ...rest } = props;
   return (
-    <div className="List" style={style}>
+    <div className="List" {...rest}>
       <h3>{title}</h3>
       <ul>
         {items.map((place, i) => (

@@ -13,7 +13,8 @@ stories.add('list', () => {
   const props: ListProps = {
     title: text('title', 'Top 5 tourist places:'),
     style: {
-      '--color': color('theme color', 'crimson'),
+      '--color': color('title color', '#000'),
+      '--link-color': color('theme color', 'crimson'),
     },
     items: object('items', [
       { name: 'Place one', link: '#' },
