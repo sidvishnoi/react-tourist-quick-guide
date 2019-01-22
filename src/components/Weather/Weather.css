@@ -1,0 +1,35 @@
+.Weather {
+  --padding-day: 2rem;
+  --background-size: 4rem;
+  --value-font-size: 2.5rem;
+  background: #fff;
+  max-width: 300px;
+}
+
+.Weather-day {
+  background-repeat: no-repeat;
+  background-position: 80% -10%;
+  padding: var(--padding-day);
+  background-size: var(--background-size);
+  transition: all 0.2s ease;
+}
+
+.Weather-day-value {
+  font-size: var(--value-font-size);
+}
+
+.Weather-day-summary {
+  font-size: 90%;
+  font-style: italic;
+}
+
+.Weather-forecast {
+  --padding-day: 1rem;
+  --background-size: 2rem;
+  --value-font-size: 1.2rem;
+  display: flex;
+}
+
+.Weather-forecast .Weather-day {
+  flex-grow: 1;
+}

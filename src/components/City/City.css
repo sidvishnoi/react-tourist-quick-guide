@@ -1,0 +1,52 @@
+.City {
+  display: flex;
+  background: #fff;
+  margin: 0.5em;
+  flex-wrap: wrap;
+  transition: all 0.2s ease;
+  border: 0.25em solid #fff;
+}
+
+.City:hover {
+  border-color: crimson;
+}
+
+.City .widget {
+  align-self: center;
+}
+
+.City .meta {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background: gold;
+  width: 200px;
+}
+
+.City .meta button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  align-self: flex-start;
+  padding: 0.5rem;
+  color: crimson;
+}
+
+.City .meta button:hover,
+.City .meta button:focus {
+  background: crimson;
+  color: #fff;
+  cursor: pointer;
+}
+
+.City .meta h3 {
+  font-size: 2rem;
+  text-align: center;
+  padding: 0.2rem 0.5rem;
+  color: #000;
+}
+
+.City .meta .distance {
+  text-align: right;
+  padding: 1rem;
+  font-size: 1.2rem;
+}

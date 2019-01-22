@@ -1,0 +1,26 @@
+.List {
+  --color: crimson;
+}
+
+.List h3 {
+  padding: 0.5rem;
+  border-bottom: 2px solid var(--color);
+}
+
+.List ul {
+  margin: 0.5rem 0 0 2rem;
+}
+
+.List li {
+  margin: 0.2rem 0;
+}
+
+.List li a {
+  text-decoration: none;
+  color: var(--color);
+}
+
+.List li a:hover,
+.List li a:focus {
+  text-decoration: underline;
+}

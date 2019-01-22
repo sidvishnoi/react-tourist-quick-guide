@@ -2,6 +2,7 @@ import * as React from 'react';
 import { getSuggestions, selectLocation } from './actions';
 import AutoCompleteSearch from './containers/AutoCompleteSearch';
 import './App.css';
+import Cities from './containers/Cities';
 
 function App() {
   return (
@@ -12,6 +13,9 @@ function App() {
           onChange={getSuggestions}
           onSelect={selectLocation}
         />
+      </div>
+      <div className="Content">
+        <Cities />
       </div>
     </div>
   );

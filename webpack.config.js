@@ -15,34 +15,38 @@ module.exports = {
       {
         test: /\.jsx?$/,
         loader: 'babel-loader',
-        options: { presets: ['@babel/env'] }
+        options: { presets: ['@babel/env'] },
       },
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader'
-      }
-    ]
+        loader: 'style-loader!css-loader',
+      },
+      {
+        test: /\.svg$/,
+        loader: 'url-loader',
+      },
+    ],
   },
   resolve: { extensions: ['*', '.ts', '.tsx', '.js', '.jsx'] },
   output: {
     path: path.resolve(__dirname, 'dist/'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   devServer: {
-    contentBase: path.resolve(__dirname, 'dist/'),
+    contentBase: path.resolve(__dirname, 'public/'),
     publicPath: '/',
     hot: true,
   },
   optimization: {
     splitChunks: {
       chunks: 'all',
-    }
+    },
   },
   plugins: [
     new HtmlWebPackPlugin({
       template: './public/index.html',
-      filename: './index.html'
+      filename: './index.html',
     }),
     new webpack.HotModuleReplacementPlugin(),
-  ]
+  ],
 };
