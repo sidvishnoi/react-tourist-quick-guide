@@ -3,11 +3,16 @@ import search from './search';
 import cities from './cities';
 import { WeatherProps } from '../components/Weather';
 
+export interface SearchState {
+  suggestions: { name: string; id: string }[];
+  query: string;
+  isLoading: boolean;
+}
+
 export interface State {
   search: {
-    suggestions: { name: string; id: string }[];
-    query: string;
-    isLoading: boolean;
+    source: SearchState;
+    destination: SearchState;
   };
   cities: {
     byId: {

@@ -1,35 +1,46 @@
 import { State } from '.';
 
-type LookupAction = {
+interface Action {
+  id: 'source' | 'destination';
+}
+
+interface LookupAction extends Action {
   type: 'SUGGESTION_LOOKUP';
   query: string;
-};
+}
 
 type APIResponse = {
   name: string;
   id: string;
 }[];
 
-type ResponseAction = {
+interface ResponseAction extends Action {
   type: 'SUGGESTION_RESPONSE';
   query: string;
   locations: APIResponse;
-};
+}
 
-type ResponseError = {
+interface ResponseError extends Action {
   type: 'SUGGESTION_RESPONSE_ERROR';
   error: string;
-};
+}
 
-type LookupNoop = {
-  type: 'SUGGESTION_NOOP';
+interface LookupNoop extends Action {
+  type: 'SUGGESTION_UPDATE';
   query: string;
-};
+}
 
 const intialState: State['search'] = {
-  query: '',
-  suggestions: [] as APIResponse,
-  isLoading: false,
+  source: {
+    query: '',
+    suggestions: [] as APIResponse,
+    isLoading: false,
+  },
+  destination: {
+    query: '',
+    suggestions: [] as APIResponse,
+    isLoading: false,
+  },
 };
 
 type SearchActions = LookupAction | ResponseAction | ResponseError | LookupNoop;
@@ -38,32 +49,42 @@ export default function searchSuggestions(
   state: State['search'] = intialState,
   action: SearchActions,
 ) {
+  const { id } = action;
   switch (action.type) {
     case 'SUGGESTION_LOOKUP':
       return {
-        query: action.query,
-        suggestions: [] as APIResponse,
-        isLoading: true,
+        ...state,
+        [id]: {
+          query: action.query,
+          suggestions: [] as APIResponse,
+          isLoading: true,
+        },
       };
     case 'SUGGESTION_RESPONSE':
       // reject a delayed response from previous slow request
       // so it doesn't override expected response for current state
-      if (state.query !== action.query) {
-        return { ...state, isLoading: false };
+      if (state[id].query !== action.query) {
+        return { ...state, [id]: { ...state[id], isLoading: false } };
       }
       return {
-        query: action.query,
-        suggestions: action.locations,
-        isLoading: false,
+        ...state,
+        [id]: {
+          query: action.query,
+          suggestions: action.locations,
+          isLoading: false,
+        },
       };
     case 'SUGGESTION_RESPONSE_ERROR':
       return {
-        isLoading: false,
-        query: state.query,
-        suggestions: [] as APIResponse,
+        ...state,
+        [id]: {
+          isLoading: false,
+          query: state[id].query,
+          suggestions: [] as APIResponse,
+        },
       };
-    case 'SUGGESTION_NOOP':
-      return { ...intialState, query: action.query };
+    case 'SUGGESTION_UPDATE':
+      return { ...state, [id]: { ...intialState[id], query: action.query } };
     default:
       return state;
   }

@@ -9,9 +9,18 @@ function App() {
     <div className="App">
       <div className="Search">
         <AutoCompleteSearch
-          id="search-list"
-          onChange={getSuggestions}
-          onSelect={selectLocation}
+          id="search-list-source"
+          stateKey="source"
+          placeholder="Your Location"
+          onChange={getSuggestions('source')}
+          onSelect={selectLocation('source')}
+        />
+        <AutoCompleteSearch
+          id="search-list-destination"
+          stateKey="destination"
+          placeholder="Destination"
+          onChange={getSuggestions('destination')}
+          onSelect={selectLocation('destination')}
         />
       </div>
       <div className="Content">

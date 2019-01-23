@@ -11,6 +11,10 @@
   width: 100%;
 }
 
+.AutoComplete > div {
+  position: relative;
+}
+
 .AutoComplete-input {
   padding: 1em;
   width: 100%;
@@ -36,8 +40,12 @@
   width: 100%;
   max-height: 300px;
   overflow: auto;
-  border: 1px solid #eee;
+  border: 1px solid cornflowerblue;
+  border-top: none;
   background: #fafafa;
+  position: absolute;
+  top: calc(2em + 2px);
+  left: 0;
   border-radius: 0 0 3px 3px;
 }
 

@@ -1,28 +1,40 @@
 import { Dispatch } from 'redux';
+import { State } from '../reducers';
 
-export function getSuggestions(query: string) {
-  return function(dispatch: Dispatch) {
-    dispatch({ type: 'SUGGESTION_LOOKUP', query });
+export const getSuggestions = (id: keyof State['search']) => (
+  query: string,
+) => (dispatch: Dispatch) => {
+  dispatch({ type: 'SUGGESTION_LOOKUP', query, id });
 
-    fakeApi(query, 1000)
-      .then(response => {
-        dispatch({
-          type: 'SUGGESTION_RESPONSE',
-          ...response,
-        });
-      })
-      .catch(error => {
-        dispatch({
-          type: 'SUGGESTION_RESPONSE_ERROR',
-          error: error.message,
-        });
+  fakeApi(query, 1000)
+    .then(response => {
+      dispatch({
+        type: 'SUGGESTION_RESPONSE',
+        id,
+        ...response,
       });
-  };
-}
+    })
+    .catch(error => {
+      dispatch({
+        type: 'SUGGESTION_RESPONSE_ERROR',
+        id,
+        error: error.message,
+      });
+    });
+};
 
-export function selectLocation(location: string, dispatch: Dispatch) {
-  dispatch({ type: 'LOCATION_SELECT', location });
-}
+export const searchUpdate = (query: string, id: keyof State['search']) => ({
+  type: 'SUGGESTION_UPDATE',
+  query,
+  id,
+});
+
+export const selectLocation = (id: keyof State['search']) => (
+  location: string,
+  dispatch: Dispatch,
+) => {
+  dispatch({ type: 'LOCATION_SELECT', location, id });
+};
 
 function fakeApi(query: string, delay: number) {
   if (new Set(['foo', 'bar', 'fooo']).has(query)) {

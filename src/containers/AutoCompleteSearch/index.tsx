@@ -3,9 +3,11 @@ import { ThunkDispatch, ThunkAction } from 'redux-thunk';
 import { AnyAction } from 'redux';
 import { State } from '../../reducers';
 import AutoCompleteSearch from '../../components/AutoCompleteSearch';
+import { searchUpdate } from '../../actions';
 
 interface OwnProps {
   id: string;
+  stateKey: 'source' | 'destination';
   delay?: number;
   onChange: (query: string) => ThunkAction<void, State, null, null>;
   onSelect: (
@@ -14,23 +16,27 @@ interface OwnProps {
   ) => void | ThunkAction<void, State, null, null>;
 }
 
-const mapStateToProps = ({ search }: State) => ({
-  value: search.query,
-  items: search.suggestions,
-  isLoading: search.isLoading,
-});
+const mapStateToProps = (state: State, ownProps: OwnProps) => {
+  const search = state.search[ownProps.stateKey];
+  return {
+    value: search.query,
+    items: search.suggestions,
+    isLoading: search.isLoading,
+  };
+};
 
 const mapDispatchToProps = (
   dispatch: ThunkDispatch<State, null, AnyAction>,
   ownProps: OwnProps,
 ) => {
   // for debouncing lookup requests
-  let timer: any; // https://stackoverflow.com/q/45802988
+  let timer: any; // why any? https://stackoverflow.com/q/45802988
 
+  const id = ownProps.stateKey;
   return {
     onChange(query: string) {
-      dispatch({ type: 'SUGGESTION_NOOP', query });
-      if (query.length < 3) return;
+      dispatch(searchUpdate(query, id));
+      if (query.length < 1) return;
 
       if (timer) clearTimeout(timer);
       timer = setTimeout(() => {
@@ -39,7 +45,7 @@ const mapDispatchToProps = (
       }, ownProps.delay || 300);
     },
     onSelect(location: string) {
-      dispatch({ type: 'SUGGESTION_NOOP', query: location });
+      dispatch(searchUpdate(location, id));
       ownProps.onSelect(location, dispatch);
     },
   };
