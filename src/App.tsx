@@ -16,10 +16,9 @@ function App({ source }: { source: string }) {
       <div className="App">
         <div className="Search">
           <AutoCompleteSearch
-            stateKey="source"
             placeholder="Your Location"
-            onChange={getSuggestions('source')}
-            onSelect={selectLocation('source')}
+            onChange={getSuggestions}
+            onSelect={selectLocation}
           />
         </div>
       </div>
@@ -33,10 +32,9 @@ function App({ source }: { source: string }) {
       </h2>
       <div className="Search">
         <AutoCompleteSearch
-          stateKey="destination"
           placeholder="Add destination"
-          onChange={getSuggestions('destination')}
-          onSelect={selectLocation('destination')}
+          onChange={getSuggestions}
+          onSelect={selectLocation}
         />
       </div>
       <div className="Content">

@@ -1,43 +1,36 @@
 import { Dispatch } from 'redux';
-import { State } from '../reducers';
 
-export const getSuggestions = (id: 'source' | 'destination') => (
-  query: string,
-) => (dispatch: Dispatch) => {
-  dispatch({ type: 'SUGGESTION_LOOKUP', query, id });
+export function getSuggestions(query: string) {
+  return (dispatch: Dispatch) => {
+    dispatch({ type: 'SUGGESTION_LOOKUP', query });
 
-  fakeApi(query, 1000)
-    .then(response => {
-      dispatch({
-        type: 'SUGGESTION_RESPONSE',
-        id,
-        ...response,
+    fakeApi(query, 1000)
+      .then(response => {
+        dispatch({
+          type: 'SUGGESTION_RESPONSE',
+          ...response,
+        });
+      })
+      .catch(error => {
+        dispatch({
+          type: 'SUGGESTION_RESPONSE_ERROR',
+          error: error.message,
+        });
       });
-    })
-    .catch(error => {
-      dispatch({
-        type: 'SUGGESTION_RESPONSE_ERROR',
-        id,
-        error: error.message,
-      });
-    });
-};
+  };
+}
 
-export const searchUpdate = (query: string, id: 'source' | 'destination') => ({
+export const searchUpdate = (query: string) => ({
   type: 'SUGGESTION_UPDATE',
   query,
-  id,
 });
 
-export const selectLocation = (id: 'source' | 'destination') => (
-  location: string,
-  dispatch: Dispatch,
-) => {
-  if (id === 'source') {
-    dispatch(searchUpdate('', 'destination'));
-  }
-  dispatch({ type: 'LOCATION_SELECT', location, id });
-};
+export function selectLocation(location: string) {
+  return (dispatch: Dispatch) => {
+    dispatch(searchUpdate(''));
+    dispatch({ type: 'LOCATION_SELECT', location });
+  };
+}
 
 function fakeApi(query: string, delay: number) {
   if (new Set(['foo', 'bar', 'fooo']).has(query)) {

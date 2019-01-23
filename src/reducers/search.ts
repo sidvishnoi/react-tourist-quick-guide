@@ -1,10 +1,6 @@
 import { State } from '.';
 
-interface Action {
-  id: 'source' | 'destination';
-}
-
-interface LookupAction extends Action {
+interface LookupAction {
   type: 'SUGGESTION_LOOKUP';
   query: string;
 }
@@ -14,18 +10,18 @@ type APIResponse = {
   id: string;
 }[];
 
-interface ResponseAction extends Action {
+interface ResponseAction {
   type: 'SUGGESTION_RESPONSE';
   query: string;
   locations: APIResponse;
 }
 
-interface ResponseError extends Action {
+interface ResponseError {
   type: 'SUGGESTION_RESPONSE_ERROR';
   error: string;
 }
 
-interface LookupNoop extends Action {
+interface LookupNoop {
   type: 'SUGGESTION_UPDATE';
   query: string;
 }

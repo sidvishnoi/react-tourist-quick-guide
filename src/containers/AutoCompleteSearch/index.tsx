@@ -6,16 +6,12 @@ import AutoCompleteSearch from '../../components/AutoCompleteSearch';
 import { searchUpdate } from '../../actions';
 
 interface OwnProps {
-  stateKey: 'source' | 'destination';
   delay?: number;
   onChange: (query: string) => ThunkAction<void, State, null, null>;
-  onSelect: (
-    location: string,
-    dispatch: ThunkDispatch<State, null, AnyAction>,
-  ) => void | ThunkAction<void, State, null, null>;
+  onSelect: (location: string) => ThunkAction<void, State, null, null>;
 }
 
-const mapStateToProps = ({ search }: State, ownProps: OwnProps) => {
+const mapStateToProps = ({ search }: State) => {
   return {
     value: search.query,
     items: search.suggestions,
@@ -30,10 +26,9 @@ const mapDispatchToProps = (
   // for debouncing lookup requests
   let timer: any; // why any? https://stackoverflow.com/q/45802988
 
-  const id = ownProps.stateKey;
   return {
     onChange(query: string) {
-      dispatch(searchUpdate(query, id));
+      dispatch(searchUpdate(query));
       if (query.length < 3) return;
 
       if (timer) clearTimeout(timer);
@@ -43,8 +38,7 @@ const mapDispatchToProps = (
       }, ownProps.delay || 300);
     },
     onSelect(location: string) {
-      dispatch(searchUpdate(location, id));
-      ownProps.onSelect(location, dispatch);
+      dispatch(ownProps.onSelect(location));
     },
   };
 };
