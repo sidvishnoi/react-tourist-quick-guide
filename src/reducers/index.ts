@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
 import search from './search';
 import cities from './cities';
+import source from './source';
+
 import { WeatherProps } from '../components/Weather';
 
 export interface SearchState {
@@ -10,10 +12,8 @@ export interface SearchState {
 }
 
 export interface State {
-  search: {
-    source: SearchState;
-    destination: SearchState;
-  };
+  search: SearchState;
+  source: string;
   cities: {
     byId: {
       [id: string]: {
@@ -29,5 +29,6 @@ export interface State {
 
 export default combineReducers<State>({
   search,
+  source,
   cities,
 });

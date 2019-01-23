@@ -6,7 +6,6 @@ import AutoCompleteSearch from '../../components/AutoCompleteSearch';
 import { searchUpdate } from '../../actions';
 
 interface OwnProps {
-  id: string;
   stateKey: 'source' | 'destination';
   delay?: number;
   onChange: (query: string) => ThunkAction<void, State, null, null>;
@@ -16,8 +15,7 @@ interface OwnProps {
   ) => void | ThunkAction<void, State, null, null>;
 }
 
-const mapStateToProps = (state: State, ownProps: OwnProps) => {
-  const search = state.search[ownProps.stateKey];
+const mapStateToProps = ({ search }: State, ownProps: OwnProps) => {
   return {
     value: search.query,
     items: search.suggestions,
@@ -36,7 +34,7 @@ const mapDispatchToProps = (
   return {
     onChange(query: string) {
       dispatch(searchUpdate(query, id));
-      if (query.length < 1) return;
+      if (query.length < 3) return;
 
       if (timer) clearTimeout(timer);
       timer = setTimeout(() => {

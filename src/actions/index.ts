@@ -1,7 +1,7 @@
 import { Dispatch } from 'redux';
 import { State } from '../reducers';
 
-export const getSuggestions = (id: keyof State['search']) => (
+export const getSuggestions = (id: 'source' | 'destination') => (
   query: string,
 ) => (dispatch: Dispatch) => {
   dispatch({ type: 'SUGGESTION_LOOKUP', query, id });
@@ -23,16 +23,19 @@ export const getSuggestions = (id: keyof State['search']) => (
     });
 };
 
-export const searchUpdate = (query: string, id: keyof State['search']) => ({
+export const searchUpdate = (query: string, id: 'source' | 'destination') => ({
   type: 'SUGGESTION_UPDATE',
   query,
   id,
 });
 
-export const selectLocation = (id: keyof State['search']) => (
+export const selectLocation = (id: 'source' | 'destination') => (
   location: string,
   dispatch: Dispatch,
 ) => {
+  if (id === 'source') {
+    dispatch(searchUpdate('', 'destination'));
+  }
   dispatch({ type: 'LOCATION_SELECT', location, id });
 };
 

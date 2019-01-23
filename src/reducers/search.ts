@@ -31,16 +31,9 @@ interface LookupNoop extends Action {
 }
 
 const intialState: State['search'] = {
-  source: {
-    query: '',
-    suggestions: [] as APIResponse,
-    isLoading: false,
-  },
-  destination: {
-    query: '',
-    suggestions: [] as APIResponse,
-    isLoading: false,
-  },
+  query: '',
+  suggestions: [] as APIResponse,
+  isLoading: false,
 };
 
 type SearchActions = LookupAction | ResponseAction | ResponseError | LookupNoop;
@@ -49,42 +42,32 @@ export default function searchSuggestions(
   state: State['search'] = intialState,
   action: SearchActions,
 ) {
-  const { id } = action;
   switch (action.type) {
     case 'SUGGESTION_LOOKUP':
       return {
-        ...state,
-        [id]: {
-          query: action.query,
-          suggestions: [] as APIResponse,
-          isLoading: true,
-        },
+        query: action.query,
+        suggestions: [] as APIResponse,
+        isLoading: true,
       };
     case 'SUGGESTION_RESPONSE':
       // reject a delayed response from previous slow request
       // so it doesn't override expected response for current state
-      if (state[id].query !== action.query) {
-        return { ...state, [id]: { ...state[id], isLoading: false } };
+      if (state.query !== action.query) {
+        return { ...state, isLoading: false };
       }
       return {
-        ...state,
-        [id]: {
-          query: action.query,
-          suggestions: action.locations,
-          isLoading: false,
-        },
+        query: action.query,
+        suggestions: action.locations,
+        isLoading: false,
       };
     case 'SUGGESTION_RESPONSE_ERROR':
       return {
-        ...state,
-        [id]: {
-          isLoading: false,
-          query: state[id].query,
-          suggestions: [] as APIResponse,
-        },
+        isLoading: false,
+        query: state.query,
+        suggestions: [] as APIResponse,
       };
     case 'SUGGESTION_UPDATE':
-      return { ...state, [id]: { ...intialState[id], query: action.query } };
+      return { ...intialState, query: action.query };
     default:
       return state;
   }

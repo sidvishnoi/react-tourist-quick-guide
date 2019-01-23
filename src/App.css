@@ -12,8 +12,7 @@ body {
   padding: 1em;
 }
 
-.Search {
-  display: flex;
-  position: relative;
-  width: 100%;
+h2.source {
+  padding: 1em 1em 0;
+  text-align: center;
 }
