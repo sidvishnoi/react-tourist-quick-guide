@@ -1,10 +1,6 @@
 import { number, select, text, withKnobs } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
-import { mount } from 'enzyme';
-import * as expect from 'expect';
-import { describe, it, specs } from 'storybook-addon-specifications';
-
 import * as React from 'react';
 import Weather, { WeatherProps } from '.';
 
@@ -41,7 +37,7 @@ stories.add('weather', () => {
     unit: select('unit', ['C', 'F'], 'C'),
   };
 
-  const story = (
+  return (
     <Weather
       temperature={props.temperature}
       unit={props.unit}
@@ -50,24 +46,4 @@ stories.add('weather', () => {
       summary={props.summary}
     />
   );
-
-  specs(() =>
-    describe('weather', () => {
-      it('should show temperature value and summary with correct unit', () => {
-        const output = mount(story);
-        expect(output.find('.Weather-today .Weather-day-value').text()).toEqual(
-          `${props.temperature}`,
-        );
-        expect(
-          output.find('.Weather-today .Weather-day-summary').text(),
-        ).toEqual(props.summary);
-      });
-
-      it('should show forecast for next 3 days', () => {
-        const output = mount(story);
-        expect(output.find('.Weather-forecast .Weather-day').length).toEqual(3);
-      });
-    }),
-  );
-  return story;
 });

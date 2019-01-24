@@ -2,10 +2,6 @@ import { action } from '@storybook/addon-actions';
 import { boolean, text, withKnobs } from '@storybook/addon-knobs';
 import { forceReRender, storiesOf } from '@storybook/react';
 
-import { shallow } from 'enzyme';
-import * as expect from 'expect';
-import { describe, it, specs } from 'storybook-addon-specifications';
-
 import * as React from 'react';
 import AutoCompleteSearch from '.';
 
@@ -88,7 +84,7 @@ const stories = storiesOf('AutoCompleteSearch', module);
 stories.addDecorator(withKnobs);
 
 stories.add('with sync predictor', () => {
-  const story = (
+  return (
     <AutoCompleteSearch
       onChange={onChange}
       onSelect={onSelect}
@@ -99,16 +95,4 @@ stories.add('with sync predictor', () => {
       placeholder={text('Placeholder', 'Location')}
     />
   );
-
-  specs(() =>
-    describe('with sync predictor', () => {
-      it('should display an empty input', () => {
-        const output = shallow(story);
-        expect(output.prop('className')).toEqual('AutoComplete');
-        // console.log(output.html());
-        // expect(output.find('input').exists()).toBeTruthy();
-      });
-    }),
-  );
-  return story;
 });

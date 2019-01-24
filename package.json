@@ -12,28 +12,26 @@
     "@storybook/addon-knobs": "^4.1.7",
     "@storybook/addons": "^4.1.7",
     "@storybook/react": "^4.1.6",
-    "enzyme-adapter-react-16": "^1.7.1",
-    "expect": "^23.6.0",
-    "react": "^16.7.0",
     "react-autocomplete": "^1.8.1",
     "react-dom": "^16.7.0",
     "react-redux": "^6.0.0",
-    "redux": "^4.0.1",
+    "react": "^16.7.0",
     "redux-thunk": "^2.3.0",
-    "storybook-addon-specifications": "^2.1.2"
+    "redux": "^4.0.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
+    "@types/enzyme-adapter-react-16": "^1.0.3",
     "@types/enzyme": "^3.1.15",
     "@types/expect": "^1.20.3",
     "@types/jest": "^23.3.12",
-    "@types/react": "^16.7.19",
     "@types/react-autocomplete": "^1.8.4",
     "@types/react-dom": "^16.0.11",
     "@types/react-redux": "^7.0.0",
+    "@types/react": "^16.7.19",
     "@types/storybook__addon-actions": "^3.4.1",
     "@types/storybook__addon-knobs": "^4.0.0",
     "@types/storybook__react": "^4.0.0",
@@ -43,8 +41,10 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^2.1.0",
+    "enzyme-adapter-react-16": "^1.7.1",
     "enzyme": "^3.8.0",
     "html-webpack-plugin": "^3.2.0",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^23.6.0",
     "react-test-renderer": "^16.7.0",
     "redux-devtools-extension": "^2.13.7",
@@ -53,17 +53,11 @@
     "tslint": "^5.12.1",
     "typescript": "^3.2.2",
     "url-loader": "^1.1.2",
-    "webpack": "^4.28.4",
     "webpack-cli": "^3.2.1",
-    "webpack-dev-server": "^3.1.14"
+    "webpack-dev-server": "^3.1.14",
+    "webpack": "^4.28.4"
   },
   "eslintConfig": {
     "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  }
 }

@@ -1,15 +1,31 @@
 {
-  "transform": {
-    ".(ts|tsx|js)": "ts-jest"
-  },
-  "testPathIgnorePatterns": [
-    "/node_modules/",
-    "/dist/"
+  "collectCoverage": true,
+  "collectCoverageFrom": [
+    "src/**/*.tsx",
+    "src/**/*.ts",
+    "!src/**/*.story.tsx"
   ],
-  "testRegex": ".test.(t|j)sx?$",
-  "moduleFileExtensions": [
-    "ts",
-    "tsx",
-    "js"
-  ]
+  "coveragePathIgnorePatterns": [
+    "<rootDir>/.jest",
+    "<rootDir>/.storybook",
+    "<rootDir>/dist",
+    "<rootDir>/node_modules",
+    "<rootDir>/public",
+    "<rootDir>/src/@types",
+    "<rootDir>/src/actions",
+    "<rootDir>/src/containers",
+    "<rootDir>/src/containers",
+    "<rootDir>/src/fake-apis",
+    "<rootDir>/src/fake-apis",
+    "<rootDir>/src/images"
+  ],
+  "moduleFileExtensions": ["ts", "tsx", "js"],
+  "moduleNameMapper": {
+    "\\.css": "identity-obj-proxy",
+    "\\.svg": "<rootDir>/.jest/file-transformer.js"
+  },
+  "preset": "ts-jest",
+  "testMatch": null,
+  "testPathIgnorePatterns": ["/node_modules/", "/dist/"],
+  "testRegex": ".test.(t|j)sx?$"
 }

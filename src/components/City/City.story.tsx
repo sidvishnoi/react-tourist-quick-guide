@@ -2,10 +2,6 @@ import { action } from '@storybook/addon-actions';
 import { number, select, text, withKnobs } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
-import { shallow } from 'enzyme';
-import * as expect from 'expect';
-import { describe, it, specs } from 'storybook-addon-specifications';
-
 import * as React from 'react';
 import City, { CityProps } from '.';
 
@@ -61,7 +57,7 @@ stories.add('city', () => {
       state: 'ready',
     },
   };
-  const story = (
+  return (
     <City
       name={props.name}
       distance={props.distance}
@@ -71,13 +67,4 @@ stories.add('city', () => {
       mover={action('MOVE_CITY_UP')}
     />
   );
-
-  specs(() =>
-    describe('city', () => {
-      it('should show city with proper widgets', () => {
-        // nothing yet
-      });
-    }),
-  );
-  return story;
 });
