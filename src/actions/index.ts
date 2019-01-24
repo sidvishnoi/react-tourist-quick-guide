@@ -1,10 +1,15 @@
 import { Dispatch } from 'redux';
 
+import distanceAPI from '../fake-apis/distance';
+import locationAPI from '../fake-apis/location';
+import placesAPI from '../fake-apis/places';
+import weatherAPI from '../fake-apis/weather';
+
 export function getSuggestions(query: string) {
   return (dispatch: Dispatch) => {
     dispatch({ type: 'SUGGESTION_LOOKUP', query });
 
-    fakeApi(query, 10)
+    locationAPI(query, 10)
       .then(response => {
         dispatch({
           type: 'SUGGESTION_RESPONSE',
@@ -29,9 +34,9 @@ export function addCity(name: string) {
   return (dispatch: Dispatch) => {
     dispatch(searchUpdate(''));
     dispatch({ type: 'ADD_CITY', name });
-    dispatch({ type: 'WEATHER_SEARCH', name });
-    dispatch({ type: 'PLACES_SEARCH', name });
-    dispatch({ type: 'DISTANCE_SEARCH', name });
+    getWeather(name, dispatch);
+    getPlaces(name, dispatch);
+    getDistance(name, dispatch);
   };
 }
 
@@ -46,25 +51,62 @@ export function selectLocation(location: string) {
   };
 }
 
-function fakeApi(query: string, delay: number) {
-  if (new Set(['foo', 'bar', 'fooo']).has(query)) {
-    return Promise.reject({ query, locations: [] });
-  }
-  const n = 3 + Math.floor(Math.random() * 6);
-  const locations = [{ name: query, id: query }];
-  for (let i = 0; i < n; ++i) {
-    const str = Math.random()
-      .toString(36)
-      .substring(7);
-    locations.push({ name: query + str, id: str });
-  }
-  return new Promise<{
-    locations: { name: string; id: string }[];
-    query: string;
-  }>(resolve =>
-    setTimeout(() => {
-      const response = { locations, query };
-      resolve(response);
-    }, delay),
-  );
+function getWeather(location: string, dispatch: Dispatch) {
+  dispatch({ type: 'WEATHER_SEARCH', name: location });
+
+  weatherAPI(location, 500)
+    .then(response => {
+      dispatch({
+        name: location,
+        response,
+        type: 'WEATHER_RESPONSE',
+      });
+    })
+    .catch(error => {
+      dispatch({
+        error: error.message,
+        name: location,
+        type: 'WEATHER_ERROR',
+      });
+    });
+}
+
+function getPlaces(location: string, dispatch: Dispatch) {
+  dispatch({ type: 'PLACES_SEARCH', name: location });
+
+  placesAPI(location, 900)
+    .then(response => {
+      dispatch({
+        name: location,
+        response,
+        type: 'PLACES_RESPONSE',
+      });
+    })
+    .catch(error => {
+      dispatch({
+        error: error.message,
+        name: location,
+        type: 'PLACES_ERROR',
+      });
+    });
+}
+
+function getDistance(location: string, dispatch: Dispatch) {
+  dispatch({ type: 'DISTANCE_SEARCH', name: location });
+
+  distanceAPI(location, 1200)
+    .then(response => {
+      dispatch({
+        name: location,
+        response,
+        type: 'DISTANCE_RESPONSE',
+      });
+    })
+    .catch(error => {
+      dispatch({
+        error: error.message,
+        name: location,
+        type: 'DISTANCE_ERROR',
+      });
+    });
 }

@@ -134,7 +134,7 @@ const initialStatePlaces = {
 };
 
 const initialState: State = {
-  cities: ['City One', 'City With Long name'],
+  cities: ['City One'],
   distance: initialStateDistance,
   places: initialStatePlaces,
   search: {
