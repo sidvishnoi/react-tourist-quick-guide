@@ -4,3 +4,9 @@
   padding: 1em;
   text-align: center;
 }
+
+@media print {
+  .Ad {
+    display: none;
+  }
+}

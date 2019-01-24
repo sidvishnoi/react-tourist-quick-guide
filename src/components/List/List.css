@@ -26,3 +26,10 @@
 .List li a:focus {
   text-decoration: underline;
 }
+
+@media print {
+  .List {
+    --color: #000;
+    --link-color: #000;
+  }
+}

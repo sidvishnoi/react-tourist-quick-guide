@@ -16,3 +16,12 @@ h2.source {
   padding: 1em 1em 0;
   text-align: center;
 }
+
+@media print {
+  body {
+    background: #fff;
+  }
+  .Search {
+    display: none;
+  }
+}

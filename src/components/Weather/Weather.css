@@ -32,3 +32,19 @@
 .Weather-forecast .Weather-day {
   flex-grow: 1;
 }
+
+@media print {
+  .Weather {
+    display: flex;
+    --padding-day: 0 0.5rem;
+  }
+
+  .Weather-day {
+    --background-size: 0;
+  }
+
+  .Weather-forecast {
+    flex-direction: column;
+    --padding-day: 0.5rem;
+  }
+}
