@@ -17,7 +17,8 @@ export default function cities(
 ) {
   switch (action.type) {
     case 'ADD_CITY':
-      return [...state, action.name];
+      return [action.name, ...state];
+
     case 'REMOVE_CITY': {
       const idx = state.indexOf(action.name);
       if (idx === -1) {
