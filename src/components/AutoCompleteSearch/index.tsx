@@ -26,7 +26,9 @@ export default function AutoCompleteSearch(props: AutoCompleteSearchProps) {
   } = props;
 
   const classNames = ['AutoComplete-input'];
-  if (isLoading) classNames.push('AutoComplete-input--loading');
+  if (isLoading) {
+    classNames.push('AutoComplete-input--loading');
+  }
 
   return (
     <div className="AutoComplete">
@@ -35,13 +37,13 @@ export default function AutoCompleteSearch(props: AutoCompleteSearchProps) {
         getItemValue={item => item.name}
         inputProps={{
           className: classNames.join(' '),
-          placeholder: placeholder || 'Enter location',
           id,
+          placeholder: placeholder || 'Enter location',
         }}
         value={value}
-        onChange={(e, value) => {
+        onChange={(e, val) => {
           e.persist();
-          onChange(value);
+          onChange(val);
         }}
         onSelect={onSelect}
         renderMenu={children => (
