@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-interface Props {
+export interface WidgetProps {
   props: {
     state: string;
     data: any;
@@ -16,7 +16,7 @@ const style = {
   padding: '1em',
 };
 
-export default function({ props, component: Component }: Props) {
+export default function({ props, component: Component }: WidgetProps) {
   if (!props || !props.data || props.state !== 'ready') {
     return (
       <div className="widget" style={style}>
@@ -41,6 +41,7 @@ function Loader() {
       viewBox="0 0 38 38"
       xmlns="http://www.w3.org/2000/svg"
       stroke="#ff8a00"
+      className="loader"
     >
       <g fill="none" fillRule="evenodd">
         <g transform="translate(1 1)" strokeWidth="2">
