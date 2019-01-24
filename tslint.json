@@ -8,7 +8,8 @@
     "quotemark": false,
     "interface-name": false,
     "array-type": false,
-    "arrow-parens": false
+    "arrow-parens": false,
+    "object-literal-key-quotes": false
   },
   "rulesDirectory": []
 }

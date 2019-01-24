@@ -18,6 +18,15 @@ interface CityPropsFromDispatch {
 
 export default function City(props: CityProps & CityPropsFromDispatch) {
   const { weather, places, name, distance } = props;
+  const placesProps = {
+    data: places
+      ? {
+          items: places.data,
+          title: `Top ${places.data ? places.data.length : ''} tourist places:`,
+        }
+      : null,
+    state: places ? places.state : 'loading',
+  };
   return (
     <div className="City">
       <div className="meta">
@@ -34,7 +43,7 @@ export default function City(props: CityProps & CityPropsFromDispatch) {
             title="Remove from list"
             onClick={() => props.destroyer(name)}
           >
-            ❎
+            ✗
           </button>
         </div>
         <h3>{name}</h3>
@@ -44,29 +53,8 @@ export default function City(props: CityProps & CityPropsFromDispatch) {
           <div className="distance">...</div>
         )}
       </div>
-      {weather && (
-        <Widget state={weather.state}>
-          {weather.state === 'ready' && (
-            <Weather
-              temperature={weather.data.temperature}
-              unit={weather.data.unit}
-              icon={weather.data.icon}
-              summary={weather.data.summary}
-              forecast={weather.data.forecast}
-            />
-          )}
-        </Widget>
-      )}
-      {places && (
-        <Widget state={places.state}>
-          {places.state === 'ready' && (
-            <List
-              items={places.data}
-              title={`Top ${places.data.length} Tourist Places:`}
-            />
-          )}
-        </Widget>
-      )}
+      <Widget props={weather} component={Weather} />
+      <Widget props={placesProps} component={List} />
     </div>
   );
 }
