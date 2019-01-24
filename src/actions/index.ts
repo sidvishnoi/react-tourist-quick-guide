@@ -44,6 +44,10 @@ export function removeCity(name: string) {
   return { type: 'REMOVE_CITY', name };
 }
 
+export function moveCityUp(name: string) {
+  return { type: 'MOVE_CITY_UP', name };
+}
+
 export function selectLocation(location: string) {
   return (dispatch: Dispatch) => {
     dispatch(searchUpdate(''));
