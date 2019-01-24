@@ -1,10 +1,11 @@
 import * as React from 'react';
-import { getSuggestions, selectLocation } from './actions';
-import AutoCompleteSearch from './containers/AutoCompleteSearch';
-import './App.css';
-import Cities from './containers/Cities';
-import { State } from './reducers';
 import { connect } from 'react-redux';
+
+import { addCity, getSuggestions, selectLocation } from './actions';
+import './App.css';
+import AutoCompleteSearch from './containers/AutoCompleteSearch';
+import Cities from './containers/Cities';
+import { State } from './state';
 
 const mapStateToProps = ({ source }: State) => ({
   source,
@@ -34,7 +35,7 @@ function App({ source }: { source: string }) {
         <AutoCompleteSearch
           placeholder="Add destination"
           onChange={getSuggestions}
-          onSelect={selectLocation}
+          onSelect={addCity}
         />
       </div>
       <div className="Content">

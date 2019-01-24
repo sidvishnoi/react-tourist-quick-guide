@@ -1,8 +1,13 @@
 import { AnyAction } from 'redux';
+import initialState from '../state';
 
-const initialState = '';
+interface LocationSelectAction extends AnyAction {
+  location: string;
+}
 
-export default (state = initialState, action: AnyAction) => {
+type ActionType = LocationSelectAction;
+
+export default (state: string = initialState.source, action: ActionType) => {
   if (action.type === 'LOCATION_SELECT' && !state) {
     return action.location;
   }

@@ -1,4 +1,4 @@
-import { State } from '.';
+import initialState, { State } from '../state';
 
 interface LookupAction {
   type: 'SUGGESTION_LOOKUP';
@@ -26,24 +26,18 @@ interface LookupNoop {
   query: string;
 }
 
-const intialState: State['search'] = {
-  query: '',
-  suggestions: [] as APIResponse,
-  isLoading: false,
-};
-
 type SearchActions = LookupAction | ResponseAction | ResponseError | LookupNoop;
 
 export default function searchSuggestions(
-  state: State['search'] = intialState,
+  state: State['search'] = initialState.search,
   action: SearchActions,
 ) {
   switch (action.type) {
     case 'SUGGESTION_LOOKUP':
       return {
+        isLoading: true,
         query: action.query,
         suggestions: [] as APIResponse,
-        isLoading: true,
       };
     case 'SUGGESTION_RESPONSE':
       // reject a delayed response from previous slow request
@@ -52,9 +46,9 @@ export default function searchSuggestions(
         return { ...state, isLoading: false };
       }
       return {
+        isLoading: false,
         query: action.query,
         suggestions: action.locations,
-        isLoading: false,
       };
     case 'SUGGESTION_RESPONSE_ERROR':
       return {
@@ -63,7 +57,7 @@ export default function searchSuggestions(
         suggestions: [] as APIResponse,
       };
     case 'SUGGESTION_UPDATE':
-      return { ...intialState, query: action.query };
+      return { ...initialState.search, query: action.query };
     default:
       return state;
   }

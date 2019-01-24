@@ -1,6 +1,6 @@
 import * as React from 'react';
+import { iconRain, iconSunny } from '../../images';
 import './Weather.css';
-import { iconSunny, iconRain } from '../../images';
 
 interface WeatherDayProps {
   temperature: number;
@@ -14,8 +14,8 @@ export interface WeatherProps extends WeatherDayProps {
 }
 
 const icons: { [name: string]: any } = {
-  sun: iconSunny,
   rain: iconRain,
+  sun: iconSunny,
 };
 
 function WeatherDay(props: WeatherDayProps) {

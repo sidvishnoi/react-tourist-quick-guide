@@ -4,7 +4,7 @@ export function getSuggestions(query: string) {
   return (dispatch: Dispatch) => {
     dispatch({ type: 'SUGGESTION_LOOKUP', query });
 
-    fakeApi(query, 1000)
+    fakeApi(query, 10)
       .then(response => {
         dispatch({
           type: 'SUGGESTION_RESPONSE',
@@ -13,17 +13,31 @@ export function getSuggestions(query: string) {
       })
       .catch(error => {
         dispatch({
-          type: 'SUGGESTION_RESPONSE_ERROR',
           error: error.message,
+          type: 'SUGGESTION_RESPONSE_ERROR',
         });
       });
   };
 }
 
 export const searchUpdate = (query: string) => ({
-  type: 'SUGGESTION_UPDATE',
   query,
+  type: 'SUGGESTION_UPDATE',
 });
+
+export function addCity(name: string) {
+  return (dispatch: Dispatch) => {
+    dispatch(searchUpdate(''));
+    dispatch({ type: 'ADD_CITY', name });
+    dispatch({ type: 'WEATHER_SEARCH', name });
+    dispatch({ type: 'PLACES_SEARCH', name });
+    dispatch({ type: 'DISTANCE_SEARCH', name });
+  };
+}
+
+export function removeCity(name: string) {
+  return { type: 'REMOVE_CITY', name };
+}
 
 export function selectLocation(location: string) {
   return (dispatch: Dispatch) => {

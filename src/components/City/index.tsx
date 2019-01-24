@@ -1,14 +1,14 @@
 import * as React from 'react';
-import Weather, { WeatherProps } from '../../components/Weather';
 import List from '../../components/List';
+import Weather, { WeatherProps } from '../../components/Weather';
+import Widget from '../Widget';
 import './City.css';
 
 export interface CityProps {
-  id: string;
   name: string;
-  weather?: WeatherProps;
-  places?: { name: string; link: string }[];
-  distance?: number;
+  weather: { state: string; data: WeatherProps };
+  places: { state: string; data: { name: string; link: string }[] };
+  distance: { state: string; data: number };
 }
 
 interface CityPropsFromDispatch {
@@ -16,32 +16,47 @@ interface CityPropsFromDispatch {
 }
 
 export default function City(props: CityProps & CityPropsFromDispatch) {
-  const { weather, name, id, distance, places } = props;
+  const { weather, places, name, distance } = props;
   return (
     <div className="City">
       <div className="meta">
         <button
           className="close"
           title="Remove from list"
-          onClick={() => props.destroyer(id)}
+          onClick={() => props.destroyer(name)}
         >
           X
         </button>
         <h3>{name}</h3>
-        <div className="distance">{distance} KM</div>
+        {distance && distance.state === 'ready' ? (
+          <div className="distance">{distance.data} KM</div>
+        ) : (
+          <div className="distance">...</div>
+        )}
       </div>
-      <div className="widget">
-        <Weather
-          temperature={weather.temperature}
-          unit={weather.unit}
-          icon={weather.icon}
-          summary={weather.summary}
-          forecast={weather.forecast}
-        />
-      </div>
-      <div className="widget">
-        <List items={places} title={`Top ${places.length} Tourist Places:`} />
-      </div>
+      {weather && (
+        <Widget state={weather.state}>
+          {weather.state === 'ready' && (
+            <Weather
+              temperature={weather.data.temperature}
+              unit={weather.data.unit}
+              icon={weather.data.icon}
+              summary={weather.data.summary}
+              forecast={weather.data.forecast}
+            />
+          )}
+        </Widget>
+      )}
+      {places && (
+        <Widget state={places.state}>
+          {places.state === 'ready' && (
+            <List
+              items={places.data}
+              title={`Top ${places.data.length} Tourist Places:`}
+            />
+          )}
+        </Widget>
+      )}
     </div>
   );
 }

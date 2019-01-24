@@ -1,21 +1,25 @@
 import * as React from 'react';
-import { State } from '../../reducers';
-import { Dispatch } from 'redux';
-import City, { CityProps } from '../../components/City';
 import { connect } from 'react-redux';
+import { Dispatch } from 'redux';
+
+import { removeCity } from '../../actions';
 import Ad from '../../components/Ad';
+import City, { CityProps } from '../../components/City';
+import { State } from '../../state';
 
 const mapStateToProps = (state: State) => ({
-  cities: state.cities.allIds.map(id => ({
-    ...state.cities.byId[id],
-    id,
+  cities: state.cities.map(name => ({
+    distance: state.distance[name],
+    name,
+    places: state.places[name],
+    weather: state.weather[name],
   })),
 });
 
 const mapDispatchToProps = (dispatch: Dispatch) => {
   return {
-    removeCity(id: string) {
-      dispatch({ type: 'REMOVE_CITY', id });
+    removeCity(name: string) {
+      dispatch(removeCity(name));
     },
   };
 };
@@ -31,11 +35,11 @@ function Cities(props: Props) {
   return (
     <>
       {props.cities.slice(0, 1).map(city => (
-        <City {...city} key={city.id} destroyer={props.removeCity} />
+        <City {...city} key={city.name} destroyer={props.removeCity} />
       ))}
       <Ad />
       {props.cities.slice(1).map(city => (
-        <City {...city} key={city.id} destroyer={props.removeCity} />
+        <City {...city} key={city.name} destroyer={props.removeCity} />
       ))}
     </>
   );

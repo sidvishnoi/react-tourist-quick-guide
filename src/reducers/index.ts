@@ -1,34 +1,37 @@
 import { combineReducers } from 'redux';
-import search from './search';
-import cities from './cities';
-import source from './source';
 
 import { WeatherProps } from '../components/Weather';
+import initialState, { State } from '../state';
+import cities from './cities';
+import createReducer from './createReducer';
+import search from './search';
+import source from './source';
 
-export interface SearchState {
-  suggestions: { name: string; id: string }[];
-  query: string;
-  isLoading: boolean;
+const distance = createReducer<State['distance'], number>(
+  'DISTANCE',
+  initialState.distance,
+);
+
+interface PlacesResponse {
+  name: string;
+  link: string;
 }
 
-export interface State {
-  search: SearchState;
-  source: string;
-  cities: {
-    byId: {
-      [id: string]: {
-        name: string;
-        distance: number;
-        weather: WeatherProps;
-        places: { name: string; link: string }[];
-      };
-    };
-    allIds: string[];
-  };
-}
+const places = createReducer<
+  State['places'],
+  PlacesResponse[]
+>('PLACES', initialState.places);
+
+const weather = createReducer<State['weather'], WeatherProps>(
+  'WEATHER',
+  initialState.weather,
+);
 
 export default combineReducers<State>({
+  cities,
+  distance,
+  places,
   search,
   source,
-  cities,
+  weather,
 });

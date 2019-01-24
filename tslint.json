@@ -6,6 +6,9 @@
   "jsRules": {},
   "rules": {
     "quotemark": false,
+    "interface-name": false,
+    "array-type": false,
+    "arrow-parens": false
   },
   "rulesDirectory": []
 }

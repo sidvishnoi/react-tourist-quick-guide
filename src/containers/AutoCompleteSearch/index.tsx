@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
-import { ThunkDispatch, ThunkAction } from 'redux-thunk';
 import { AnyAction } from 'redux';
-import { State } from '../../reducers';
-import AutoCompleteSearch from '../../components/AutoCompleteSearch';
+import { ThunkAction, ThunkDispatch } from 'redux-thunk';
 import { searchUpdate } from '../../actions';
+import AutoCompleteSearch from '../../components/AutoCompleteSearch';
+import { State } from '../../state';
 
 interface OwnProps {
   delay?: number;
@@ -13,9 +13,9 @@ interface OwnProps {
 
 const mapStateToProps = ({ search }: State) => {
   return {
-    value: search.query,
-    items: search.suggestions,
     isLoading: search.isLoading,
+    items: search.suggestions,
+    value: search.query,
   };
 };
 
@@ -29,9 +29,13 @@ const mapDispatchToProps = (
   return {
     onChange(query: string) {
       dispatch(searchUpdate(query));
-      if (query.length < 3) return;
+      if (query.length < 3) {
+        return;
+      }
 
-      if (timer) clearTimeout(timer);
+      if (timer) {
+        clearTimeout(timer);
+      }
       timer = setTimeout(() => {
         dispatch(ownProps.onChange(query));
         timer = null;

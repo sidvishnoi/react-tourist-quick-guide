@@ -12,48 +12,55 @@ stories.addDecorator(withKnobs);
 
 stories.add('city', () => {
   const props: CityProps = {
-    id: 'city-one',
     name: text('city.name', 'London'),
-    distance: number('distance', 50),
+    distance: {
+      state: 'ready',
+      data: number('distance', 50),
+    },
     weather: {
-      unit: select('weather.unit', ['C', 'F'], 'C'),
-      temperature: number('weather.temperature', 30, {
-        range: true,
-        min: -100,
-        max: 100,
-        step: 1,
-      }),
-      icon: 'sun',
-      summary: 'sunny',
-      forecast: [
-        {
-          temperature: 30,
-          icon: 'sun',
-          summary: 'sunny',
-        },
-        {
-          temperature: 35,
-          icon: 'rain',
-          summary: 'shower',
-        },
-        {
-          temperature: 32,
-          icon: 'sun',
-          summary: 'sunny',
-        },
+      state: 'ready',
+      data: {
+        unit: select('weather.unit', ['C', 'F'], 'C'),
+        temperature: number('weather.temperature', 30, {
+          range: true,
+          min: -100,
+          max: 100,
+          step: 1,
+        }),
+        icon: 'sun',
+        summary: 'sunny',
+        forecast: [
+          {
+            temperature: 30,
+            icon: 'sun',
+            summary: 'sunny',
+          },
+          {
+            temperature: 35,
+            icon: 'rain',
+            summary: 'shower',
+          },
+          {
+            temperature: 32,
+            icon: 'sun',
+            summary: 'sunny',
+          },
+        ],
+      },
+    },
+    places: {
+      state: 'ready',
+      data: [
+        { name: 'Place 1', link: '#' },
+        { name: 'Place 2', link: '#' },
+        { name: 'Place 3', link: '#' },
+        { name: 'Place 4', link: '#' },
+        { name: 'Place 5', link: '#' },
       ],
     },
-    places: [
-      { name: 'Place 1', link: '#' },
-      { name: 'Place 2', link: '#' },
-      { name: 'Place 3', link: '#' },
-      { name: 'Place 4', link: '#' },
-      { name: 'Place 5', link: '#' },
-    ],
   };
   const story = (
     <City
-      id={props.id}
       name={props.name}
       distance={props.distance}
       weather={props.weather}
