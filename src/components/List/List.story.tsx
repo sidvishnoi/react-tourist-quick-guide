@@ -1,9 +1,11 @@
-import * as React from 'react';
+import { color, object, text, withKnobs } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, color, object, text } from '@storybook/addon-knobs';
-import { specs, describe, it } from 'storybook-addon-specifications';
+
 import { shallow } from 'enzyme';
 import * as expect from 'expect';
+import { describe, it, specs } from 'storybook-addon-specifications';
+
+import * as React from 'react';
 import List, { ListProps } from '.';
 
 const stories = storiesOf('List', module);
@@ -11,11 +13,6 @@ stories.addDecorator(withKnobs);
 
 stories.add('list', () => {
   const props: ListProps = {
-    title: text('title', 'Top 5 tourist places:'),
-    style: {
-      '--color': color('title color', '#000'),
-      '--link-color': color('theme color', 'crimson'),
-    },
     items: object('items', [
       { name: 'Place one', link: '#' },
       { name: 'Place two', link: '#' },
@@ -23,6 +20,11 @@ stories.add('list', () => {
       { name: 'Place fourth is long', link: '#' },
       { name: 'Place five', link: '#' },
     ]),
+    style: {
+      '--color': color('title color', '#000'),
+      '--link-color': color('theme color', 'crimson'),
+    },
+    title: text('title', 'Top 5 tourist places:'),
   };
 
   const story = (

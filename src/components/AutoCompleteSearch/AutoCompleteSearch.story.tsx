@@ -1,10 +1,12 @@
-import * as React from 'react';
-import { storiesOf, forceReRender } from '@storybook/react';
-import { withKnobs, text, boolean, number } from '@storybook/addon-knobs';
-import { specs, describe, it } from 'storybook-addon-specifications';
+import { action } from '@storybook/addon-actions';
+import { boolean, text, withKnobs } from '@storybook/addon-knobs';
+import { forceReRender, storiesOf } from '@storybook/react';
+
 import { shallow } from 'enzyme';
 import * as expect from 'expect';
-import { action } from '@storybook/addon-actions';
+import { describe, it, specs } from 'storybook-addon-specifications';
+
+import * as React from 'react';
 import AutoCompleteSearch from '.';
 
 const allItems = [
@@ -61,7 +63,9 @@ const allItems = [
 ];
 
 const createSuggestions = (prefix: string) => {
-  if (!prefix.length) return [];
+  if (!prefix.length) {
+    return [];
+  }
   return allItems.filter(s =>
     s.name.toLowerCase().startsWith(prefix.toLowerCase()),
   );
