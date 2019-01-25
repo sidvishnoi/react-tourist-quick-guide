@@ -23,6 +23,9 @@ describe('Components - AutoCompleteSearch', () => {
     expect(output.find('.AutoComplete').exists()).toBeTruthy();
     const input = output.find('input');
     expect(input.exists()).toBeTruthy();
+    expect(output.find('input').prop('className')).not.toContain(
+      'AutoComplete-input--loading',
+    );
     expect(input.prop('placeholder')).toEqual('PLACEHOLDER');
   });
 
@@ -38,7 +41,9 @@ describe('Components - AutoCompleteSearch', () => {
     );
     expect(output.find('.AutoComplete').exists()).toBeTruthy();
     expect(output.find('input').exists()).toBeTruthy();
-    expect(output.find('input').prop('value')).toEqual('');
+    expect(output.find('input').prop('className')).toContain(
+      'AutoComplete-input--loading',
+    );
   });
 
   it('calls onChange when user types', () => {
