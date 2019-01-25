@@ -5,7 +5,7 @@ interface LocationSelectAction extends AnyAction {
   location: string;
 }
 
-type ActionType = LocationSelectAction;
+export type ActionType = LocationSelectAction;
 
 export default (state: string = initialState.source, action: ActionType) => {
   if (action.type === 'LOCATION_SELECT' && !state) {

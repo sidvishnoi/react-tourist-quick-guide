@@ -12,39 +12,43 @@ export interface CityProps {
 }
 
 interface CityPropsFromDispatch {
-  destroyer: (name: string) => void;
-  mover: (name: string) => void;
+  destroyer?: (name: string) => void;
+  mover?: (name: string) => void;
 }
 
 export default function City(props: CityProps & CityPropsFromDispatch) {
   const { weather, places, name, distance } = props;
   const placesProps = {
-    data: places
+    data: places.data
       ? {
           items: places.data,
-          title: `Top ${places.data ? places.data.length : ''} tourist places:`,
+          title: `Top ${places.data.length} tourist places:`,
         }
-      : null,
-    state: places ? places.state : 'loading',
+      : places.data,
+    state: places.state,
   };
   return (
     <div className="City">
       <div className="meta">
         <div className="buttons">
-          <button
-            className="move"
-            title="Move destination up in list"
-            onClick={() => props.mover(name)}
-          >
-            ⬆
-          </button>
-          <button
-            className="close"
-            title="Remove from list"
-            onClick={() => props.destroyer(name)}
-          >
-            ✗
-          </button>
+          {props.mover && (
+            <button
+              className="move"
+              title="Move destination up in list"
+              onClick={() => props.mover(name)}
+            >
+              ⬆
+            </button>
+          )}
+          {props.destroyer && (
+            <button
+              className="remove"
+              title="Remove from list"
+              onClick={() => props.destroyer(name)}
+            >
+              ✗
+            </button>
+          )}
         </div>
         <h3>{name}</h3>
         {distance && distance.state === 'ready' ? (

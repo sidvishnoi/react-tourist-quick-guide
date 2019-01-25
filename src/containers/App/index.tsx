@@ -1,11 +1,13 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 
-import { addCity, getSuggestions, selectLocation } from './actions';
+import { addCity, getSuggestions, selectLocation } from '../../actions';
+import { State } from '../../state';
+
+import AutoCompleteSearch from '../AutoCompleteSearch';
+import Cities from '../Cities';
+
 import './App.css';
-import AutoCompleteSearch from './containers/AutoCompleteSearch';
-import Cities from './containers/Cities';
-import { State } from './state';
 
 const mapStateToProps = ({ source }: State) => ({
   source,

@@ -1,6 +1,7 @@
+import { AnyAction } from 'redux';
 import initialState, { State } from '../state';
 
-interface LookupAction {
+interface LookupAction extends AnyAction {
   type: 'SUGGESTION_LOOKUP';
   query: string;
 }
@@ -10,29 +11,35 @@ type APIResponse = {
   id: string;
 }[];
 
-interface ResponseAction {
+interface ResponseAction extends AnyAction {
   type: 'SUGGESTION_RESPONSE';
   query: string;
   locations: APIResponse;
 }
 
-interface ResponseError {
+interface ResponseError extends AnyAction {
   type: 'SUGGESTION_RESPONSE_ERROR';
   error: string;
 }
 
-interface LookupNoop {
+interface LookupNoop extends AnyAction {
   type: 'SUGGESTION_UPDATE';
   query: string;
 }
 
-type SearchActions = LookupAction | ResponseAction | ResponseError | LookupNoop;
+export type SearchActions =
+  | LookupAction
+  | ResponseAction
+  | ResponseError
+  | LookupNoop;
 
 export default function searchSuggestions(
   state: State['search'] = initialState.search,
   action: SearchActions,
 ) {
   switch (action.type) {
+    case 'SUGGESTION_UPDATE':
+      return { ...initialState.search, query: action.query };
     case 'SUGGESTION_LOOKUP':
       return {
         isLoading: true,
@@ -56,8 +63,6 @@ export default function searchSuggestions(
         query: state.query,
         suggestions: [] as APIResponse,
       };
-    case 'SUGGESTION_UPDATE':
-      return { ...initialState.search, query: action.query };
     default:
       return state;
   }

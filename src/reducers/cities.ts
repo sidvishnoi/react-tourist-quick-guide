@@ -9,7 +9,7 @@ interface RemoveCityAction extends AnyAction {
   name: string;
 }
 
-type ActionType = AddCityAction | RemoveCityAction;
+export type ActionType = AddCityAction | RemoveCityAction;
 
 export default function cities(
   state: State['cities'] = initialState.cities,
@@ -17,7 +17,11 @@ export default function cities(
 ) {
   switch (action.type) {
     case 'ADD_CITY':
-      return [action.name, ...state];
+      const newCity = action.name;
+      if (state.includes(newCity)) {
+        return state;
+      }
+      return [newCity, ...state];
 
     case 'REMOVE_CITY': {
       const idx = state.indexOf(action.name);

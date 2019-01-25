@@ -3,7 +3,9 @@
   "collectCoverageFrom": [
     "src/**/*.tsx",
     "src/**/*.ts",
-    "!src/**/*.story.tsx"
+    "!src/**/*.story.tsx",
+    "!src/*.tsx",
+    "!src/*.ts"
   ],
   "coveragePathIgnorePatterns": [
     "<rootDir>/.jest",

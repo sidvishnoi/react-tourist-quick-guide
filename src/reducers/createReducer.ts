@@ -1,6 +1,6 @@
 import { AnyAction } from 'redux';
 
-export default function createDataSearchReducer<State, ResponseType>(
+export default function createReducer<State, ResponseType>(
   prefix: string,
   initialState: State,
 ) {

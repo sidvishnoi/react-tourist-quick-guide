@@ -49,16 +49,17 @@ export default function AutoCompleteSearch(props: AutoCompleteSearchProps) {
         renderMenu={children => (
           <div className="AutoComplete-menu">{children}</div>
         )}
-        renderItem={(item, isHighlighted) => (
-          <div
-            key={item.id}
-            className={`AutoComplete-menuItem ${
-              isHighlighted ? 'AutoComplete-menuItem--highlighted' : ''
-            }`}
-          >
-            {item.name}
-          </div>
-        )}
+        renderItem={(item, isHighlighted) => {
+          const itemClassName = ['AutoComplete-menuItem'];
+          if (isHighlighted) {
+            itemClassName.push('AutoComplete-menuItem--highlighted');
+          }
+          return (
+            <div key={item.id} className={itemClassName.join(' ')}>
+              {item.name}
+            </div>
+          );
+        }}
       />
     </div>
   );

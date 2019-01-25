@@ -1,0 +1,284 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component - City renders city with proper widgets 1`] = `
+<div
+  className="City"
+>
+  <div
+    className="meta"
+  >
+    <div
+      className="buttons"
+    >
+      <button
+        className="move"
+        onClick={[Function]}
+        title="Move destination up in list"
+      >
+        ⬆
+      </button>
+      <button
+        className="remove"
+        onClick={[Function]}
+        title="Remove from list"
+      >
+        ✗
+      </button>
+    </div>
+    <h3>
+      CITY
+    </h3>
+    <div
+      className="distance"
+    >
+      23
+       KM
+    </div>
+  </div>
+  <div
+    className="widget"
+  >
+    <div
+      className="Weather"
+    >
+      <div
+        className="Weather-today"
+      >
+        <div
+          className="Weather-day"
+          style={
+            Object {
+              "backgroundImage": "url([object Object])",
+            }
+          }
+        >
+          <span
+            className="Weather-day-value"
+          >
+            40
+          </span>
+           °
+          <p
+            className="Weather-day-summary"
+          >
+            sunny
+          </p>
+        </div>
+      </div>
+      <div
+        className="Weather-forecast"
+      >
+        <div
+          className="Weather-day"
+          style={
+            Object {
+              "backgroundImage": "url([object Object])",
+            }
+          }
+        >
+          <span
+            className="Weather-day-value"
+          >
+            39
+          </span>
+           °
+          <p
+            className="Weather-day-summary"
+          >
+            sunny
+          </p>
+        </div>
+        <div
+          className="Weather-day"
+          style={
+            Object {
+              "backgroundImage": "url([object Object])",
+            }
+          }
+        >
+          <span
+            className="Weather-day-value"
+          >
+            30
+          </span>
+           °
+          <p
+            className="Weather-day-summary"
+          >
+            shower
+          </p>
+        </div>
+        <div
+          className="Weather-day"
+          style={
+            Object {
+              "backgroundImage": "url([object Object])",
+            }
+          }
+        >
+          <span
+            className="Weather-day-value"
+          >
+            34
+          </span>
+           °
+          <p
+            className="Weather-day-summary"
+          >
+            sunny
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="widget"
+  >
+    <div
+      className="List"
+    >
+      <h3>
+        Top 0 tourist places:
+      </h3>
+      <ul />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Component - City renders city with widgets in loading state 1`] = `
+<div
+  className="City"
+>
+  <div
+    className="meta"
+  >
+    <div
+      className="buttons"
+    >
+      <button
+        className="move"
+        onClick={[Function]}
+        title="Move destination up in list"
+      >
+        ⬆
+      </button>
+      <button
+        className="remove"
+        onClick={[Function]}
+        title="Remove from list"
+      >
+        ✗
+      </button>
+    </div>
+    <h3>
+      CITY
+    </h3>
+    <div
+      className="distance"
+    >
+      ...
+    </div>
+  </div>
+  <div
+    className="widget"
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "padding": "1em",
+      }
+    }
+  >
+    <svg
+      className="loader"
+      height="50"
+      stroke="#ff8a00"
+      viewBox="0 0 38 38"
+      width="50"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        fill="none"
+        fillRule="evenodd"
+      >
+        <g
+          strokeWidth="2"
+          transform="translate(1 1)"
+        >
+          <circle
+            cx="18"
+            cy="18"
+            r="18"
+            strokeOpacity=".5"
+          />
+          <path
+            d="M36 18c0-9.94-8.06-18-18-18"
+          >
+            <animateTransform
+              attributeName="transform"
+              dur="1s"
+              from="0 18 18"
+              repeatCount="indefinite"
+              to="360 18 18"
+              type="rotate"
+            />
+          </path>
+        </g>
+      </g>
+    </svg>
+  </div>
+  <div
+    className="widget"
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "padding": "1em",
+      }
+    }
+  >
+    <svg
+      className="loader"
+      height="50"
+      stroke="#ff8a00"
+      viewBox="0 0 38 38"
+      width="50"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        fill="none"
+        fillRule="evenodd"
+      >
+        <g
+          strokeWidth="2"
+          transform="translate(1 1)"
+        >
+          <circle
+            cx="18"
+            cy="18"
+            r="18"
+            strokeOpacity=".5"
+          />
+          <path
+            d="M36 18c0-9.94-8.06-18-18-18"
+          >
+            <animateTransform
+              attributeName="transform"
+              dur="1s"
+              from="0 18 18"
+              repeatCount="indefinite"
+              to="360 18 18"
+              type="rotate"
+            />
+          </path>
+        </g>
+      </g>
+    </svg>
+  </div>
+</div>
+`;

@@ -34,7 +34,7 @@ function WeatherDay(props: WeatherDayProps) {
 }
 
 export default function Weather(props: WeatherProps) {
-  const { temperature, unit = 'C', icon, forecast, summary } = props;
+  const { temperature, unit, icon, forecast, summary } = props;
   return (
     <div className="Weather">
       <div className="Weather-today">
