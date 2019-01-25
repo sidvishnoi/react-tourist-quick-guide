@@ -16,10 +16,6 @@
   flex-grow: 1;
 }
 
-.City .widget {
-  background: #fff;
-}
-
 .City .meta {
   display: flex;
   justify-content: space-between;

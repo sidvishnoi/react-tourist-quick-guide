@@ -1,4 +1,6 @@
 import * as React from 'react';
+import styled from 'styled-components';
+
 import { iconRain, iconSunny } from '../../images';
 import './Weather.css';
 
@@ -33,7 +35,11 @@ function WeatherDay(props: WeatherDayProps) {
   );
 }
 
-export default function Weather(props: WeatherProps) {
+const Weather = styled.div`
+  background: #fff;
+`;
+
+export default function(props: WeatherProps) {
   const { temperature, unit, icon, forecast, summary } = props;
   return (
     <div className="Weather">

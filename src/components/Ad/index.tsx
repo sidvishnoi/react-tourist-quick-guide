@@ -1,6 +1,17 @@
 import * as React from 'react';
-import './Ad.css';
+import styled from 'styled-components';
+
+const AdSpace = styled.div`
+  background: #eee;
+  margin: 0.5em auto;
+  padding: 1em;
+  text-align: center;
+
+  @media print {
+    display: none;
+  }
+`;
 
 export default function Ad() {
-  return <div className="Ad">Advertisement Space</div>;
+  return <AdSpace>Advertisement Space</AdSpace>;
 }

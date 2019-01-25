@@ -1,6 +1,6 @@
 import * as React from 'react';
-import * as AutoComplete from 'react-autocomplete';
-import './AutoCompleteSearch.css';
+import * as ReactAutocomplete from 'react-autocomplete';
+import styled from 'styled-components';
 
 interface AutoCompleteSearchProps {
   // from mapDispatch:
@@ -14,6 +14,64 @@ interface AutoCompleteSearchProps {
   [prop: string]: any;
 }
 
+const AutoComplete = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  width: 100%;
+
+  > div {
+    position: relative;
+  }
+
+  input {
+    padding: 1em;
+    width: 100%;
+    background: none;
+    border: none;
+    border: 1px solid #eee;
+    background: #fff;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+
+    :focus {
+      outline: none;
+      border-radius: 0;
+      border-color: cornflowerblue;
+    }
+
+    &.loading {
+      opacity: 0.5;
+    }
+  }
+`;
+
+const AutoCompleteMenu = styled.div`
+  width: 100%;
+  max-height: 300px;
+  overflow: auto;
+  border: 1px solid cornflowerblue;
+  border-top: none;
+  background: #fafafa;
+  position: absolute;
+  top: calc(2em + 2px);
+  left: 0;
+  border-radius: 0 0 3px 3px;
+
+  :empty {
+    display: none;
+  }
+`;
+
+const AutoCompleteMenuItem = styled.div`
+  padding: 0.5em 1em;
+  background: ${(props: { active: boolean }) =>
+    props.active ? '#eee' : '#fff'};
+  :hover {
+    cursor: pointer;
+  }
+`;
+
 export default function AutoCompleteSearch(props: AutoCompleteSearchProps) {
   const {
     onChange,
@@ -25,18 +83,13 @@ export default function AutoCompleteSearch(props: AutoCompleteSearchProps) {
     id,
   } = props;
 
-  const classNames = ['AutoComplete-input'];
-  if (isLoading) {
-    classNames.push('AutoComplete-input--loading');
-  }
-
   return (
-    <div className="AutoComplete">
-      <AutoComplete
+    <AutoComplete>
+      <ReactAutocomplete
         items={items}
         getItemValue={item => item.name}
         inputProps={{
-          className: classNames.join(' '),
+          className: isLoading ? 'loading' : '',
           id,
           placeholder: placeholder || 'Enter location',
         }}
@@ -47,20 +100,21 @@ export default function AutoCompleteSearch(props: AutoCompleteSearchProps) {
         }}
         onSelect={onSelect}
         renderMenu={children => (
-          <div className="AutoComplete-menu">{children}</div>
+          <AutoCompleteMenu role="listbox">{children}</AutoCompleteMenu>
         )}
         renderItem={(item, isHighlighted) => {
-          const itemClassName = ['AutoComplete-menuItem'];
-          if (isHighlighted) {
-            itemClassName.push('AutoComplete-menuItem--highlighted');
-          }
           return (
-            <div key={item.id} className={itemClassName.join(' ')}>
+            <AutoCompleteMenuItem
+              role="option"
+              active={isHighlighted}
+              aria-selected={isHighlighted}
+              key={item.id}
+            >
               {item.name}
-            </div>
+            </AutoCompleteMenuItem>
           );
         }}
       />
-    </div>
+    </AutoComplete>
   );
 }

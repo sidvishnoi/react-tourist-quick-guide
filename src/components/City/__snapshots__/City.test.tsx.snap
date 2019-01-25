@@ -36,7 +36,7 @@ exports[`Component - City renders city with proper widgets 1`] = `
     </div>
   </div>
   <div
-    className="widget"
+    className="sc-bZQynM cLinaQ"
   >
     <div
       className="Weather"
@@ -132,15 +132,19 @@ exports[`Component - City renders city with proper widgets 1`] = `
     </div>
   </div>
   <div
-    className="widget"
+    className="sc-bZQynM cLinaQ"
   >
     <div
-      className="List"
+      className="sc-bdVaJa bDWFJH"
     >
-      <h3>
+      <h3
+        className="sc-bwzfXH ljPwbj"
+      >
         Top 0 tourist places:
       </h3>
-      <ul />
+      <ul
+        className="sc-htpNat dKIRsi"
+      />
     </div>
   </div>
 </div>
@@ -181,16 +185,7 @@ exports[`Component - City renders city with widgets in loading state 1`] = `
     </div>
   </div>
   <div
-    className="widget"
-    style={
-      Object {
-        "alignItems": "center",
-        "display": "flex",
-        "flexDirection": "column",
-        "justifyContent": "center",
-        "padding": "1em",
-      }
-    }
+    className="sc-bZQynM sc-gzVnrw gkyVFa"
   >
     <svg
       className="loader"
@@ -231,16 +226,7 @@ exports[`Component - City renders city with widgets in loading state 1`] = `
     </svg>
   </div>
   <div
-    className="widget"
-    style={
-      Object {
-        "alignItems": "center",
-        "display": "flex",
-        "flexDirection": "column",
-        "justifyContent": "center",
-        "padding": "1em",
-      }
-    }
+    className="sc-bZQynM sc-gzVnrw gkyVFa"
   >
     <svg
       className="loader"

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './List.css';
+import styled from 'styled-components';
 
 export interface ListProps {
   title: string;
@@ -10,18 +10,54 @@ export interface ListProps {
   [prop: string]: any;
 }
 
-export default function Places(props: ListProps) {
-  const { title, items, ...rest } = props;
+type ListStyleProps = Partial<{
+  color1: string;
+  color2: string;
+}>;
+
+const List = styled.div``;
+
+const Heading = styled.h3`
+  color: ${(props: ListStyleProps) => props.color1 || '#000'};
+  padding: 0.5rem;
+  border-bottom: 2px solid
+    ${(props: ListStyleProps) => props.color2 || 'crimson'};
+`;
+
+const UnorderedList = styled.ul`
+  margin: 0.5rem 0 0 2rem;
+`;
+
+const ListItem = styled.li`
+  margin: 0.2rem 0;
+`;
+
+const ListItemLink = styled.a`
+  text-decoration: none;
+  color: ${(props: { color: string }) => props.color || 'crimson'};
+
+  :hover,
+  :focus {
+    text-decoration: underline;
+  }
+`;
+
+export default function(props: ListProps & ListStyleProps) {
+  const { title, items, color1, color2, ...rest } = props;
   return (
-    <div className="List" {...rest}>
-      <h3>{title}</h3>
-      <ul>
+    <List {...rest}>
+      <Heading color1={color1} color2={color2}>
+        {title}
+      </Heading>
+      <UnorderedList>
         {items.map((place, i) => (
-          <li key={i}>
-            <a href={place.link}>{place.name}</a>
-          </li>
+          <ListItem key={i}>
+            <ListItemLink href={place.link} color={color2}>
+              {place.name}
+            </ListItemLink>
+          </ListItem>
         ))}
-      </ul>
-    </div>
+      </UnorderedList>
+    </List>
   );
 }

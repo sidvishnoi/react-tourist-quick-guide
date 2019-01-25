@@ -1,7 +1,7 @@
 import { mount } from 'enzyme';
 import * as Enzyme from 'enzyme';
 import * as Adapter from 'enzyme-adapter-react-16';
-import React = require('react');
+import * as React from 'react';
 Enzyme.configure({ adapter: new Adapter() });
 
 import Weather, { WeatherProps } from '.';

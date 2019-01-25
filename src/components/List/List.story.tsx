@@ -9,6 +9,8 @@ stories.addDecorator(withKnobs);
 
 stories.add('list', () => {
   const props: ListProps = {
+    color1: color('color1: title color', '#000'),
+    color2: color('color2: theme color', 'crimson'),
     items: object('items', [
       { name: 'Place one', link: '#' },
       { name: 'Place two', link: '#' },
@@ -16,14 +18,8 @@ stories.add('list', () => {
       { name: 'Place fourth is long', link: '#' },
       { name: 'Place five', link: '#' },
     ]),
-    style: {
-      '--color': color('title color', '#000'),
-      '--link-color': color('theme color', 'crimson'),
-    },
     title: text('title', 'Top 5 tourist places:'),
   };
 
-  return (
-    <List items={props.items} title={props.title} style={props.style} />
-  );
+  return <List {...props} />;
 });
