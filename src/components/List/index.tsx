@@ -10,18 +10,20 @@ export interface ListProps {
   [prop: string]: any;
 }
 
-type ListStyleProps = Partial<{
-  color1: string;
-  color2: string;
-}>;
-
 const List = styled.div``;
 
-const Heading = styled.h3`
-  color: ${(props: ListStyleProps) => props.color1 || '#000'};
+const Heading = styled.h3<{
+  color1?: string;
+  color2?: string;
+}>`
+  color: ${props => props.color1 || '#000'};
   padding: 0.5rem;
-  border-bottom: 2px solid
-    ${(props: ListStyleProps) => props.color2 || 'crimson'};
+  border-bottom: 2px solid ${props => props.color2 || 'crimson'};
+
+  @media print {
+    padding: 0 0.5rem 0.2rem;
+    color: #000;
+  }
 `;
 
 const UnorderedList = styled.ul`
@@ -32,17 +34,21 @@ const ListItem = styled.li`
   margin: 0.2rem 0;
 `;
 
-const ListItemLink = styled.a`
+const ListItemLink = styled.a<{ color?: string }>`
   text-decoration: none;
-  color: ${(props: { color: string }) => props.color || 'crimson'};
+  color: ${props => props.color || 'crimson'};
 
   :hover,
   :focus {
     text-decoration: underline;
   }
+
+  @media print {
+    color: #000;
+  }
 `;
 
-export default function(props: ListProps & ListStyleProps) {
+export default function(props: ListProps) {
   const { title, items, color1, color2, ...rest } = props;
   return (
     <List {...rest}>

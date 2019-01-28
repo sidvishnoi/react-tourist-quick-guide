@@ -44,6 +44,10 @@ const AutoComplete = styled.div`
       opacity: 0.5;
     }
   }
+
+  @media print {
+    display: none;
+  }
 `;
 
 const AutoCompleteMenu = styled.div`

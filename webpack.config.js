@@ -18,10 +18,6 @@ module.exports = {
         options: { presets: ['@babel/env'] },
       },
       {
-        test: /\.css$/,
-        loader: 'style-loader!css-loader',
-      },
-      {
         test: /\.svg$/,
         loader: 'url-loader',
       },

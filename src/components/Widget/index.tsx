@@ -14,11 +14,11 @@ const Widget = styled.div`
 `;
 
 const PassiveWidget = styled(Widget)`
-  align-items: 'center';
-  display: 'flex';
-  flex-direction: 'column';
-  justify-content: 'center';
-  padding: '1em';
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1em;
 `;
 
 export default function({ props, component: Component }: WidgetProps) {
@@ -70,8 +70,8 @@ function Loader() {
 function Error() {
   return (
     <>
-      <p style={{ fontSize: '2em' }}>😞</p>
-      <h4>Something went wrong.</h4>
+      <p style={{ fontSize: '2em', margin: 0 }}>😞</p>
+      <h4 style={{ margin: 0 }}>Something went wrong.</h4>
     </>
   );
 }

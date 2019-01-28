@@ -23,7 +23,6 @@
   ],
   "moduleFileExtensions": ["ts", "tsx", "js"],
   "moduleNameMapper": {
-    "\\.css": "identity-obj-proxy",
     "\\.svg": "<rootDir>/.jest/file-transformer.js"
   },
   "preset": "ts-jest",
