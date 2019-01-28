@@ -4,6 +4,7 @@ import distanceAPI from '../fake-apis/distance';
 import locationAPI from '../fake-apis/location';
 import placesAPI from '../fake-apis/places';
 import weatherAPI from '../fake-apis/weather';
+import { State } from '../state';
 
 export function getSuggestions(query: string) {
   return (dispatch: Dispatch) => {
@@ -30,13 +31,14 @@ export const searchUpdate = (query: string) => ({
   type: 'SUGGESTION_UPDATE',
 });
 
-export function addCity(name: string) {
-  return (dispatch: Dispatch) => {
+export function addCity(destination: string) {
+  return (dispatch: Dispatch, getState: () => State) => {
     dispatch(searchUpdate(''));
-    dispatch({ type: 'ADD_CITY', name });
-    getWeather(name, dispatch);
-    getPlaces(name, dispatch);
-    getDistance(name, dispatch);
+    dispatch({ type: 'ADD_CITY', name: destination });
+    getWeather(destination, dispatch);
+    getPlaces(destination, dispatch);
+    const { source } = getState();
+    getDistance(source, destination, dispatch);
   };
 }
 
@@ -95,13 +97,13 @@ function getPlaces(location: string, dispatch: Dispatch) {
     });
 }
 
-function getDistance(location: string, dispatch: Dispatch) {
-  dispatch({ type: 'DISTANCE_SEARCH', name: location });
+function getDistance(source: string, destination: string, dispatch: Dispatch) {
+  dispatch({ type: 'DISTANCE_SEARCH', name: destination });
 
-  distanceAPI(location, 1200)
+  distanceAPI(source, destination, 1200)
     .then(response => {
       dispatch({
-        name: location,
+        name: destination,
         response,
         type: 'DISTANCE_RESPONSE',
       });
@@ -109,7 +111,7 @@ function getDistance(location: string, dispatch: Dispatch) {
     .catch(error => {
       dispatch({
         error: error.message,
-        name: location,
+        name: destination,
         type: 'DISTANCE_ERROR',
       });
     });
