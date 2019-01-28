@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components - WeatherDay matches snapshot 1`] = `
+<div
+  className="weather-day sc-bdVaJa farCSP"
+>
+  <span>
+    30
+  </span>
+   °
+  F
+  <p>
+    sunny
+  </p>
+</div>
+`;

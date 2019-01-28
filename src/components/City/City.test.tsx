@@ -1,9 +1,5 @@
-import { mount } from 'enzyme';
-import * as Enzyme from 'enzyme';
-import * as Adapter from 'enzyme-adapter-react-16';
 import React = require('react');
 import * as renderer from 'react-test-renderer';
-Enzyme.configure({ adapter: new Adapter() });
 
 import City, { CityProps } from '.';
 
@@ -78,33 +74,5 @@ describe('Component - City', () => {
       <City mover={mover} destroyer={destroyer} {...props} />,
     );
     expect(tree).toMatchSnapshot();
-  });
-
-  it('calls destroyer on remove button click', () => {
-    const mover = (): null => null;
-    const destroyer = jest.fn();
-
-    const output = mount(
-      <City mover={mover} destroyer={destroyer} {...cityProps} />,
-    );
-    const removeButton = output.find('button.remove');
-    expect(destroyer).not.toHaveBeenCalled();
-    removeButton.simulate('click');
-    expect(destroyer).toHaveBeenCalledTimes(1);
-    expect(destroyer).toHaveBeenLastCalledWith(cityProps.name);
-  });
-
-  it('calls mover on move button click', () => {
-    const mover = jest.fn();
-    const destroyer = (): null => null;
-
-    const output = mount(
-      <City mover={mover} destroyer={destroyer} {...cityProps} />,
-    );
-    const moveButton = output.find('button.move');
-    expect(mover).not.toHaveBeenCalled();
-    moveButton.simulate('click');
-    expect(mover).toHaveBeenCalledTimes(1);
-    expect(mover).toHaveBeenLastCalledWith(cityProps.name);
   });
 });

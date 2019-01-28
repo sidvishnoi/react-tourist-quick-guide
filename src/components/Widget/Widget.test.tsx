@@ -12,14 +12,14 @@ const Component = ({ value }: { value: string }) => {
 
 describe('Components - Widget', () => {
   it('displays widget when state is `ready`', () => {
-    const props = { data: { value: 'foo' }, state: 'ready' };
+    const props = { props: { value: 'foo' }, state: 'ready' };
     const output = shallow(<Widget props={props} component={Component} />);
 
     expect(output.containsMatchingElement(<Component value="foo" />));
   });
 
   it('displays error when state is `error`', () => {
-    const props = { data: { value: 'foo' }, state: 'error' };
+    const props = { props: { value: 'foo' }, state: 'error' };
     const output = mount(<Widget props={props} component={Component} />);
 
     expect(
@@ -32,7 +32,7 @@ describe('Components - Widget', () => {
   });
 
   it('displays Loader when state is `loading`', () => {
-    const props = { data: { value: 'foo' }, state: 'loading' };
+    const props = { props: { value: 'foo' }, state: 'loading' };
     const output = mount(<Widget props={props} component={Component} />);
 
     expect(output.find('svg.loader').exists()).toBeTruthy();

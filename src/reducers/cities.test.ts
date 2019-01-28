@@ -1,5 +1,5 @@
-import reducer, { ActionType } from './cities';
 import { State } from '../state';
+import reducer, { ActionType } from './cities';
 
 describe('Reducers - cities', () => {
   describe('defaults', () => {

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component - ListItem renders empty item 1`] = `
+<li
+  className="sc-bdVaJa gYVUxP"
+/>
+`;
+
+exports[`Component - ListItem renders plain text 1`] = `
+<li
+  className="sc-bdVaJa gYVUxP"
+>
+  PASS
+</li>
+`;

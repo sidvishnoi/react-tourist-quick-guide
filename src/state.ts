@@ -1,3 +1,4 @@
+import { PlacesProps } from './components/Places';
 import { WeatherProps } from './components/Weather';
 
 const initialState: State = {
@@ -38,7 +39,7 @@ export interface State {
         };
         places: {
           state: string;
-          data: { name: string; link: string }[];
+          data: PlacesProps['places'];
         };
       };
     };

@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { AnyAction } from 'redux';
 import { ThunkAction, ThunkDispatch } from 'redux-thunk';
 import { searchUpdate } from '../../actions';
-import AutoCompleteSearch from '../../components/AutoCompleteSearch';
+import AutoComplete from '../../components/AutoComplete';
 import { State } from '../../state';
 
 interface OwnProps {
@@ -50,4 +50,4 @@ const mapDispatchToProps = (
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(AutoCompleteSearch);
+)(AutoComplete);

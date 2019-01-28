@@ -4,14 +4,14 @@ import * as Adapter from 'enzyme-adapter-react-16';
 import * as React from 'react';
 Enzyme.configure({ adapter: new Adapter() });
 
-import AutoCompleteSearch from '.';
+import AutoComplete from '.';
 
 const noop = (): null => null;
 
-describe('Components - AutoCompleteSearch', () => {
+describe('Components - AutoComplete', () => {
   it('displays an empty input in initial state', () => {
     const output = mount(
-      <AutoCompleteSearch
+      <AutoComplete
         value={''}
         isLoading={false}
         items={[]}
@@ -28,7 +28,7 @@ describe('Components - AutoCompleteSearch', () => {
 
   it('displays input in loading state', () => {
     const output = mount(
-      <AutoCompleteSearch
+      <AutoComplete
         value={''}
         isLoading={true}
         items={[]}
@@ -43,7 +43,7 @@ describe('Components - AutoCompleteSearch', () => {
   it('calls onChange when user types', () => {
     const onChange = jest.fn();
     const output = mount(
-      <AutoCompleteSearch
+      <AutoComplete
         value={''}
         isLoading={false}
         items={[]}
@@ -66,7 +66,7 @@ describe('Components - AutoCompleteSearch', () => {
   it('calls onSelect when user selects', () => {
     const onSelect = jest.fn();
     const output = mount(
-      <AutoCompleteSearch
+      <AutoComplete
         value={'abc'}
         isLoading={false}
         items={[{ name: 'one', id: '1' }, { name: 'two', id: '2' }]}

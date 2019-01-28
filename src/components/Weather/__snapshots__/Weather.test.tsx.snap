@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components - Weather matches snapshot 1`] = `
+<div
+  className="sc-bwzfXH bDtDqE"
+>
+  <div
+    className="weather-today"
+  >
+    <div
+      className="weather-day sc-bdVaJa farCSP"
+    >
+      <span>
+        30
+      </span>
+       °
+      F
+      <p>
+        sunny
+      </p>
+    </div>
+  </div>
+  <div
+    className="weather-forecast sc-htpNat gvnkNz"
+  >
+    <div
+      className="weather-day sc-bdVaJa fZwxoE"
+    >
+      <span>
+        30
+      </span>
+       °
+      F
+      <p>
+        sunny
+      </p>
+    </div>
+    <div
+      className="weather-day sc-bdVaJa fZwxoE"
+    >
+      <span>
+        35
+      </span>
+       °
+      F
+      <p>
+        sunny
+      </p>
+    </div>
+    <div
+      className="weather-day sc-bdVaJa fZwxoE"
+    >
+      <span>
+        32
+      </span>
+       °
+      F
+      <p>
+        sunny
+      </p>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component - H3 can change border color 1`] = `
+.c0 {
+  --color: red;
+  color: var(--color);
+  padding: 0.5rem;
+  border-bottom: 2px solid var(--color);
+}
+
+@media print {
+  .c0 {
+    padding: 0 0.5rem 0.2rem;
+    --color: #000;
+  }
+}
+
+@media print {
+  .c0 {
+    border-bottom: none;
+  }
+}
+
+<h3
+  className="c0"
+  color="red"
+>
+  PASS
+</h3>
+`;
+
+exports[`Component - H3 renders with border 1`] = `
+.c0 {
+  --color: #000;
+  color: var(--color);
+  padding: 0.5rem;
+  border-bottom: 2px solid var(--color);
+}
+
+@media print {
+  .c0 {
+    padding: 0 0.5rem 0.2rem;
+    --color: #000;
+  }
+}
+
+@media print {
+  .c0 {
+    border-bottom: none;
+  }
+}
+
+<h3
+  className="c0"
+>
+  PASS
+</h3>
+`;
+
+exports[`Component - H3 renders without border 1`] = `
+.c0 {
+  --color: #000;
+  color: var(--color);
+  padding: 0.5rem;
+}
+
+@media print {
+  .c0 {
+    padding: 0 0.5rem 0.2rem;
+    --color: #000;
+  }
+}
+
+<h3
+  className="c0"
+>
+  PASS
+</h3>
+`;

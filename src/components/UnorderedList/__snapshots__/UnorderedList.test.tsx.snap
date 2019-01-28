@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component - UnorderedList renders JSX children 1`] = `
+<ul
+  className="sc-bwzfXH cbqXRN"
+>
+  <li
+    className="sc-bdVaJa gYVUxP"
+  >
+    <span>
+      one
+    </span>
+  </li>
+  <li
+    className="sc-bdVaJa gYVUxP"
+  >
+    <span>
+      two
+    </span>
+  </li>
+</ul>
+`;
+
+exports[`Component - UnorderedList renders empty list if items is empty array 1`] = `
+<ul
+  className="sc-bwzfXH cbqXRN"
+/>
+`;
+
+exports[`Component - UnorderedList renders list with JSX items 1`] = `
+<ul
+  className="sc-bwzfXH cbqXRN"
+>
+  <li
+    className="sc-bdVaJa gYVUxP"
+  >
+    <span>
+      one
+    </span>
+  </li>
+  <li
+    className="sc-bdVaJa gYVUxP"
+  >
+    <span>
+      two
+    </span>
+  </li>
+</ul>
+`;
+
+exports[`Component - UnorderedList renders list with plain text items 1`] = `
+<ul
+  className="sc-bwzfXH cbqXRN"
+>
+  <li
+    className="sc-bdVaJa gYVUxP"
+  >
+    one
+  </li>
+  <li
+    className="sc-bdVaJa gYVUxP"
+  >
+    two
+  </li>
+</ul>
+`;
+
+exports[`Component - UnorderedList renders nothing if no items or children provided 1`] = `null`;
