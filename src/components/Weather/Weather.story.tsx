@@ -38,12 +38,14 @@ stories.add('weather', () => {
   };
 
   return (
-    <Weather
-      temperature={props.temperature}
-      unit={props.unit}
-      icon={props.icon}
-      forecast={props.forecast}
-      summary={props.summary}
-    />
+    <div style={{ maxWidth: '300px', border: '1px solid #000' }}>
+      <Weather
+        temperature={props.temperature}
+        unit={props.unit}
+        icon={props.icon}
+        forecast={props.forecast}
+        summary={props.summary}
+      />
+    </div>
   );
 });

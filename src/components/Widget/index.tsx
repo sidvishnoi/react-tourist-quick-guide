@@ -1,4 +1,5 @@
 import * as React from 'react';
+import styled from 'styled-components';
 
 export interface WidgetProps {
   props: {
@@ -8,27 +9,31 @@ export interface WidgetProps {
   component: any;
 }
 
-const style = {
-  alignItems: 'center',
-  display: 'flex',
-  flexDirection: 'column' as 'column',
-  justifyContent: 'center',
-  padding: '1em',
-};
+const Widget = styled.div`
+  background: #fff;
+`;
+
+const PassiveWidget = styled(Widget)`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1em;
+`;
 
 export default function({ props, component: Component }: WidgetProps) {
   if (!props || !props.data || props.state !== 'ready') {
     return (
-      <div className="widget" style={style}>
+      <PassiveWidget>
         {props.state === 'loading' ? <Loader /> : <Error />}
-      </div>
+      </PassiveWidget>
     );
   }
 
   return (
-    <div className="widget">
+    <Widget>
       <Component {...props.data} />
-    </div>
+    </Widget>
   );
 }
 
@@ -65,8 +70,8 @@ function Loader() {
 function Error() {
   return (
     <>
-      <p style={{ fontSize: '2em' }}>😞</p>
-      <h4>Something went wrong.</h4>
+      <p style={{ fontSize: '2em', margin: 0 }}>😞</p>
+      <h4 style={{ margin: 0 }}>Something went wrong.</h4>
     </>
   );
 }

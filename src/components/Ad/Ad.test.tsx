@@ -9,7 +9,6 @@ import Ad from '.';
 describe('Component - Ad', () => {
   it('displays Ad', () => {
     const output = shallow(<Ad />);
-    expect(output.find('.Ad').exists()).toEqual(true);
     expect(output.text().includes('Advertisement Space'));
   });
 });
