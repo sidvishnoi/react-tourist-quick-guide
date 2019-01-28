@@ -67,7 +67,7 @@ const WeatherForecast = styled.div`
 function WeatherDay(props: WeatherDayProps & { isSmall: boolean }) {
   const { temperature, unit, icon, summary, isSmall } = props;
   return (
-    <StyledWeatherDay isSmall={isSmall} icon={icon}>
+    <StyledWeatherDay isSmall={isSmall} icon={icon} className="weather-day">
       <span>{temperature}</span> °{unit || 'C'}
       <p>{summary}</p>
     </StyledWeatherDay>
@@ -78,7 +78,7 @@ export default function(props: WeatherProps) {
   const { temperature, unit, icon, forecast, summary } = props;
   return (
     <Weather>
-      <div className="Weather-today">
+      <div className="weather-today">
         <WeatherDay
           isSmall={false}
           temperature={temperature}
@@ -87,7 +87,7 @@ export default function(props: WeatherProps) {
           summary={summary}
         />
       </div>
-      <WeatherForecast>
+      <WeatherForecast className="weather-forecast">
         {forecast.map((day, i) => (
           <WeatherDay
             key={i}

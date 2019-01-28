@@ -2,129 +2,99 @@
 
 exports[`Component - City renders city with proper widgets 1`] = `
 <div
-  className="City"
+  className="sc-iwsKbI dSEQiH"
 >
   <div
-    className="meta"
+    className="sc-gZMcBi dSwc"
   >
     <div
       className="buttons"
     >
       <button
-        className="move"
+        className="move sc-gqjmRU iKMjOf"
         onClick={[Function]}
         title="Move destination up in list"
       >
         ⬆
       </button>
       <button
-        className="remove"
+        className="remove sc-gqjmRU iKMjOf"
         onClick={[Function]}
         title="Remove from list"
       >
         ✗
       </button>
     </div>
-    <h3>
+    <h3
+      className="sc-VigVT hBMUxy"
+    >
       CITY
     </h3>
     <div
-      className="distance"
+      className="sc-jTzLTM gTioxh"
     >
       23
        KM
     </div>
   </div>
   <div
-    className="sc-bZQynM cLinaQ"
+    className="sc-htoDjs lbxQv"
   >
     <div
-      className="Weather"
+      className="sc-bZQynM iuqrgX"
     >
       <div
-        className="Weather-today"
+        className="weather-today"
       >
         <div
-          className="Weather-day"
-          style={
-            Object {
-              "backgroundImage": "url([object Object])",
-            }
-          }
+          className="weather-day sc-EHOje iahMDE"
         >
-          <span
-            className="Weather-day-value"
-          >
+          <span>
             40
           </span>
            °
-          <p
-            className="Weather-day-summary"
-          >
+          C
+          <p>
             sunny
           </p>
         </div>
       </div>
       <div
-        className="Weather-forecast"
+        className="weather-forecast sc-gzVnrw hKGbEO"
       >
         <div
-          className="Weather-day"
-          style={
-            Object {
-              "backgroundImage": "url([object Object])",
-            }
-          }
+          className="weather-day sc-EHOje kdmaEr"
         >
-          <span
-            className="Weather-day-value"
-          >
+          <span>
             39
           </span>
            °
-          <p
-            className="Weather-day-summary"
-          >
+          C
+          <p>
             sunny
           </p>
         </div>
         <div
-          className="Weather-day"
-          style={
-            Object {
-              "backgroundImage": "url([object Object])",
-            }
-          }
+          className="weather-day sc-EHOje kdmaEr"
         >
-          <span
-            className="Weather-day-value"
-          >
+          <span>
             30
           </span>
            °
-          <p
-            className="Weather-day-summary"
-          >
+          C
+          <p>
             shower
           </p>
         </div>
         <div
-          className="Weather-day"
-          style={
-            Object {
-              "backgroundImage": "url([object Object])",
-            }
-          }
+          className="weather-day sc-EHOje kdmaEr"
         >
-          <span
-            className="Weather-day-value"
-          >
+          <span>
             34
           </span>
            °
-          <p
-            className="Weather-day-summary"
-          >
+          C
+          <p>
             sunny
           </p>
         </div>
@@ -132,13 +102,13 @@ exports[`Component - City renders city with proper widgets 1`] = `
     </div>
   </div>
   <div
-    className="sc-bZQynM cLinaQ"
+    className="sc-htoDjs lbxQv"
   >
     <div
       className="sc-bdVaJa bDWFJH"
     >
       <h3
-        className="sc-bwzfXH ljPwbj"
+        className="sc-bwzfXH ibkAcI"
       >
         Top 0 tourist places:
       </h3>
@@ -152,40 +122,42 @@ exports[`Component - City renders city with proper widgets 1`] = `
 
 exports[`Component - City renders city with widgets in loading state 1`] = `
 <div
-  className="City"
+  className="sc-iwsKbI dSEQiH"
 >
   <div
-    className="meta"
+    className="sc-gZMcBi dSwc"
   >
     <div
       className="buttons"
     >
       <button
-        className="move"
+        className="move sc-gqjmRU iKMjOf"
         onClick={[Function]}
         title="Move destination up in list"
       >
         ⬆
       </button>
       <button
-        className="remove"
+        className="remove sc-gqjmRU iKMjOf"
         onClick={[Function]}
         title="Remove from list"
       >
         ✗
       </button>
     </div>
-    <h3>
+    <h3
+      className="sc-VigVT hBMUxy"
+    >
       CITY
     </h3>
     <div
-      className="distance"
+      className="sc-jTzLTM gTioxh"
     >
       ...
     </div>
   </div>
   <div
-    className="sc-bZQynM sc-gzVnrw gkyVFa"
+    className="sc-htoDjs sc-dnqmqq cFffhV"
   >
     <svg
       className="loader"
@@ -226,7 +198,7 @@ exports[`Component - City renders city with widgets in loading state 1`] = `
     </svg>
   </div>
   <div
-    className="sc-bZQynM sc-gzVnrw gkyVFa"
+    className="sc-htoDjs sc-dnqmqq cFffhV"
   >
     <svg
       className="loader"
