@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components - WeatherDay should show temperature value and summary with correct unit 1`] = `
+<div
+  className="weather-day sc-bdVaJa KUpLK"
+>
+  <span>
+    30
+  </span>
+   °
+  F
+  <p>
+    sunny
+  </p>
+</div>
+`;
