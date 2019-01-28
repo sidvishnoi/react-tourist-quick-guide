@@ -105,15 +105,15 @@ exports[`Component - City renders city with proper widgets 1`] = `
     className="sc-htoDjs lbxQv"
   >
     <div
-      className="sc-bdVaJa bDWFJH"
+      className="sc-bwzfXH uTxCW"
     >
       <h3
-        className="sc-bwzfXH ibkAcI"
+        className="sc-htpNat dmVUzX"
       >
         Top 0 tourist places:
       </h3>
       <ul
-        className="sc-htpNat dKIRsi"
+        className="sc-bxivhb hKgMCY"
       />
     </div>
   </div>

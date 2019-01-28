@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components - Link matches snapshot 1`] = `
+.c0 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #333;
+}
+
+.c0:hover,
+.c0:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+@media print {
+  .c0 {
+    color: #000;
+  }
+}
+
+<a
+  className="c0"
+  color="#333"
+  href="LINK"
+>
+  TEXT
+</a>
+`;

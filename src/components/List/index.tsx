@@ -1,6 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
+import Link from '../Link';
+
 export interface ListProps {
   title: string;
   items: {
@@ -34,20 +36,6 @@ const ListItem = styled.li`
   margin: 0.2rem 0;
 `;
 
-const ListItemLink = styled.a<{ color?: string }>`
-  text-decoration: none;
-  color: ${props => props.color || 'crimson'};
-
-  :hover,
-  :focus {
-    text-decoration: underline;
-  }
-
-  @media print {
-    color: #000;
-  }
-`;
-
 export default function(props: ListProps) {
   const { title, items, color1, color2, ...rest } = props;
   return (
@@ -58,9 +46,9 @@ export default function(props: ListProps) {
       <UnorderedList>
         {items.map((place, i) => (
           <ListItem key={i}>
-            <ListItemLink href={place.link} color={color2}>
+            <Link href={place.link} color={color2}>
               {place.name}
-            </ListItemLink>
+            </Link>
           </ListItem>
         ))}
       </UnorderedList>
