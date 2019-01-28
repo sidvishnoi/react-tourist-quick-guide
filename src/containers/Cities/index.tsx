@@ -7,12 +7,12 @@ import Ad from '../../components/Ad';
 import City, { CityProps } from '../../components/City';
 import { State } from '../../state';
 
-const mapStateToProps = (state: State) => ({
-  cities: state.cities.map(name => ({
-    distance: state.distance[name],
+const mapStateToProps = ({ cities }: State) => ({
+  cities: cities.allIds.map(name => ({
+    distance: cities.byId[name].distance,
     name,
-    places: state.places[name],
-    weather: state.weather[name],
+    places: cities.byId[name].places,
+    weather: cities.byId[name].weather,
   })),
 });
 

@@ -58,8 +58,6 @@ export function selectLocation(location: string) {
 }
 
 function getWeather(location: string, dispatch: Dispatch) {
-  dispatch({ type: 'WEATHER_SEARCH', name: location });
-
   weatherAPI(location, 500)
     .then(response => {
       dispatch({
@@ -78,8 +76,6 @@ function getWeather(location: string, dispatch: Dispatch) {
 }
 
 function getPlaces(location: string, dispatch: Dispatch) {
-  dispatch({ type: 'PLACES_SEARCH', name: location });
-
   placesAPI(location, 900)
     .then(response => {
       dispatch({
@@ -98,8 +94,6 @@ function getPlaces(location: string, dispatch: Dispatch) {
 }
 
 function getDistance(source: string, destination: string, dispatch: Dispatch) {
-  dispatch({ type: 'DISTANCE_SEARCH', name: destination });
-
   distanceAPI(source, destination, 1200)
     .then(response => {
       dispatch({

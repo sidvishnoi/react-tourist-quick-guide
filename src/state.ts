@@ -1,16 +1,16 @@
 import { WeatherProps } from './components/Weather';
 
 const initialState: State = {
-  cities: [],
-  distance: {},
-  places: {},
+  cities: {
+    allIds: [],
+    byId: {},
+  },
   search: {
     isLoading: false,
     query: '',
     suggestions: [],
   },
   source: '',
-  weather: {},
 };
 
 export default initialState;
@@ -24,23 +24,23 @@ export interface SearchState {
 export interface State {
   search: SearchState;
   source: string;
-  cities: string[];
-  weather: {
-    [name: string]: {
-      state: string;
-      data: WeatherProps;
-    };
-  };
-  distance: {
-    [name: string]: {
-      state: string;
-      data: number;
-    };
-  };
-  places: {
-    [name: string]: {
-      state: string;
-      data: { name: string; link: string }[];
+  cities: {
+    allIds: string[];
+    byId: {
+      [cityName: string]: {
+        weather: {
+          state: string;
+          data: WeatherProps;
+        };
+        distance: {
+          state: string;
+          data: number;
+        };
+        places: {
+          state: string;
+          data: { name: string; link: string }[];
+        };
+      };
     };
   };
 }
