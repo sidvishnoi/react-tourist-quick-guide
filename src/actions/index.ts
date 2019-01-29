@@ -94,7 +94,9 @@ function getPlaces(location: string, dispatch: Dispatch) {
 }
 
 function getDistance(source: string, destination: string, dispatch: Dispatch) {
-  distanceAPI(source, destination, 1200)
+  dispatch({ type: 'DISTANCE_SEARCH', name: destination });
+
+  distanceAPI(source, destination)
     .then(response => {
       dispatch({
         name: destination,
