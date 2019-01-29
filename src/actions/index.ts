@@ -58,7 +58,7 @@ export function selectLocation(location: string) {
 }
 
 function getWeather(location: string, dispatch: Dispatch) {
-  weatherAPI(location, 500)
+  weatherAPI(location)
     .then(response => {
       dispatch({
         name: location,
