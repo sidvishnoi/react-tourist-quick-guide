@@ -10,7 +10,7 @@ export function getSuggestions(query: string) {
   return (dispatch: Dispatch) => {
     dispatch({ type: 'SUGGESTION_LOOKUP', query });
 
-    locationAPI(query, 10)
+    locationAPI(query)
       .then(response => {
         dispatch({
           type: 'SUGGESTION_RESPONSE',
