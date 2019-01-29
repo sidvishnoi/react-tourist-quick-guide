@@ -13,7 +13,9 @@ const H3 = styled.h3<{ color: string }>`
 `;
 
 const H3WithBorder = styled(H3)`
-  border-bottom: 2px solid var(--color);
+  @media screen {
+    border-bottom: 2px solid var(--color);
+  }
 `;
 
 export interface H3Props {

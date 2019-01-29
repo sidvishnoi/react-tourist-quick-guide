@@ -7,13 +7,14 @@ const CityMeta = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  background: transparent;
+  background: #000;
+  color: #fff;
   width: 200px;
+  padding: 0.2em;
 
   .buttons {
     display: flex;
-    flex-direction: column;
-    width: 30px;
+    justify-content: space-between;
 
     @media print {
       display: none;
@@ -24,25 +25,27 @@ const CityMeta = styled.div`
     justify-content: flex-start;
     width: auto;
     max-width: 200px;
+    background: #fff;
+    color: #000;
   }
 `;
 
 const CityName = styled.h3`
   font-size: 2rem;
   text-align: center;
+  margin: 0.5rem auto;
   padding: 0.2rem 0.5rem;
-  color: #000;
 
   @media print {
     padding: 0;
+    margin: 0;
     text-align: left;
   }
 `;
 
 const Distance = styled.div`
   text-align: right;
-  padding: 1rem;
-  font-size: 1.2rem;
+  padding: 0.5rem;
 
   @media print {
     padding: 0;
@@ -67,18 +70,20 @@ export default (props: CityMetaProps) => {
           className="move"
           title="Move destination up in list"
           onClick={() => onMoveButtonClick(name)}
+          color="#fff"
+          altColor="cornflowerblue"
         />
         <IconButton
           icon="✗"
           className="remove"
           title="Remove from list"
           onClick={() => onRemoveButtonClick(name)}
+          color="#fff"
+          altColor="red"
         />
       </div>
       <CityName>{name}</CityName>
-      <Distance>
-        {distance !== null ? `${distance} KM` : '...'}
-      </Distance>
+      <Distance>{distance !== null ? `${distance} KM` : '...'}</Distance>
     </CityMeta>
   );
 };

@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as ReactAutocomplete from 'react-autocomplete';
 import styled from 'styled-components';
 
-interface AutoCompleteSearchProps {
+export interface AutoCompleteProps {
   // from mapDispatch:
   onChange: (value: string) => void;
   onSelect: (value: string) => void;
@@ -76,7 +76,7 @@ const AutoCompleteMenuItem = styled.div`
   }
 `;
 
-export default function AutoCompleteSearch(props: AutoCompleteSearchProps) {
+export default function AutoCompleteSearch(props: AutoCompleteProps) {
   const {
     onChange,
     onSelect,
@@ -95,7 +95,7 @@ export default function AutoCompleteSearch(props: AutoCompleteSearchProps) {
         inputProps={{
           className: isLoading ? 'loading' : '',
           id,
-          placeholder: placeholder || 'Enter location',
+          placeholder,
         }}
         value={value}
         onChange={(e, val) => {

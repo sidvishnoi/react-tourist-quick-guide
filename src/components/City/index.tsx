@@ -22,14 +22,8 @@ const City = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background: linear-gradient(to right, #ff8a00, #da1b60);
   margin: 1em auto;
-  padding: 0.2em;
-  transition: all 0.2s ease;
-
-  :hover {
-    border-image: linear-gradient(to right, #ff8a00, #da1b60) 1 1;
-  }
+  border: 2px solid #000;
 
   > div {
     flex-grow: 1;
@@ -37,7 +31,9 @@ const City = styled.div`
 
   @media print {
     background: #fff;
+    border: none;
     border-bottom: 2px solid #000;
+    padding: 0.5rem 0;
   }
 `;
 

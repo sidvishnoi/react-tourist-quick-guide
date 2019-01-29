@@ -3,7 +3,7 @@ import { boolean, text, withKnobs } from '@storybook/addon-knobs';
 import { forceReRender, storiesOf } from '@storybook/react';
 
 import * as React from 'react';
-import AutoCompleteSearch from '.';
+import AutoComplete from '.';
 
 const allItems = [
   { id: 'AL', name: 'Alabama' },
@@ -80,12 +80,12 @@ const onSelect = (val: string) => {
   action('onSelect')(value);
 };
 
-const stories = storiesOf('AutoCompleteSearch', module);
+const stories = storiesOf('AutoComplete', module);
 stories.addDecorator(withKnobs);
 
 stories.add('with sync predictor', () => {
   return (
-    <AutoCompleteSearch
+    <AutoComplete
       onChange={onChange}
       onSelect={onSelect}
       id="search-1"

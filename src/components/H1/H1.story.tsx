@@ -2,11 +2,11 @@ import { text, withKnobs } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
 import * as React from 'react';
-import ListItem from '.';
+import H1 from '.';
 
-const stories = storiesOf('Atoms/ListItem', module);
+const stories = storiesOf('Atoms/H1', module);
 stories.addDecorator(withKnobs);
 
-stories.add('with plain text', () => {
-  return <ListItem>{text('text', 'hello')}</ListItem>;
+stories.add('simple', () => {
+  return <H1>{text('text', 'Hello World')}</H1>;
 });

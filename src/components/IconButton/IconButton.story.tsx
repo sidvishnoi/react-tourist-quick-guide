@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react';
 import * as React from 'react';
 import IconButton from '.';
 
-const stories = storiesOf('IconButton', module);
+const stories = storiesOf('Atoms/IconButton', module);
 stories.addDecorator(withKnobs);
 
 stories.add('with simple icon text', () => {

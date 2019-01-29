@@ -7,7 +7,7 @@ import UnorderedList from '.';
 const stories = storiesOf('UnorderedList', module);
 stories.addDecorator(withKnobs);
 
-stories.add('UnorderedList', () => {
+stories.add('with plain text items', () => {
   const items = array('items', ['One', 'Two', 'Three']);
   const listStyleType = text('list-style-type', 'square');
 

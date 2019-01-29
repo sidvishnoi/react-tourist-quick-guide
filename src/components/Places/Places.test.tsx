@@ -9,7 +9,7 @@ Enzyme.configure({ adapter: new Adapter() });
 
 import Places from '.';
 
-describe('Components - List', () => {
+describe('Components - Places', () => {
   const places = [{ name: 'one', link: '#1' }, { name: 'two', link: '#2' }];
 
   it('matches snapshot', () => {

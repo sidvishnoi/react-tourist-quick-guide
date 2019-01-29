@@ -42,6 +42,10 @@ const WeatherDay = styled.div<{
   @media print {
     background-size: 0;
     --padding: 0 0.5rem;
+
+    span {
+      font-size: ${props => (props.isSmall ? '1.2rem' : '2rem')};
+    }
   }
 `;
 
