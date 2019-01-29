@@ -1,10 +1,11 @@
+import initialState from '../state';
 import reducer, { ActionType } from './source';
 
 describe('Reducers - source', () => {
   describe('defaults', () => {
     const action = ({ type: 'ANY' } as unknown) as ActionType;
     it('returns initialState', () => {
-      expect(reducer(undefined, action)).toEqual('');
+      expect(reducer(undefined, action)).toEqual(initialState.source);
     });
   });
 

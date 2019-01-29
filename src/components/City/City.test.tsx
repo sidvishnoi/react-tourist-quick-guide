@@ -79,32 +79,4 @@ describe('Component - City', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-
-  it('calls destroyer on remove button click', () => {
-    const mover = (): null => null;
-    const destroyer = jest.fn();
-
-    const output = mount(
-      <City mover={mover} destroyer={destroyer} {...cityProps} />,
-    );
-    const removeButton = output.find('button.remove');
-    expect(destroyer).not.toHaveBeenCalled();
-    removeButton.simulate('click');
-    expect(destroyer).toHaveBeenCalledTimes(1);
-    expect(destroyer).toHaveBeenLastCalledWith(cityProps.name);
-  });
-
-  it('calls mover on move button click', () => {
-    const mover = jest.fn();
-    const destroyer = (): null => null;
-
-    const output = mount(
-      <City mover={mover} destroyer={destroyer} {...cityProps} />,
-    );
-    const moveButton = output.find('button.move');
-    expect(mover).not.toHaveBeenCalled();
-    moveButton.simulate('click');
-    expect(mover).toHaveBeenCalledTimes(1);
-    expect(mover).toHaveBeenLastCalledWith(cityProps.name);
-  });
 });

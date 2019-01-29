@@ -11,7 +11,7 @@ stories.add('widget', () => {
   const Component = ({ value }: { value: string }) => <div>{value}</div>;
 
   const componentProps: WidgetProps['props'] = {
-    data: {
+    props: {
       value: text('text', '😀😀😀'),
     },
     state: select('state', ['ready', 'loading', 'error'], 'ready'),

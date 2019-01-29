@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components - List matches snapshot 1`] = `
+.c0 {
+  --color: #000;
+  color: var(--color);
+  padding: 0.5rem;
+  border-bottom: 2px solid var(--color);
+}
+
+.c3 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #333;
+}
+
+.c3:hover,
+.c3:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c2 {
+  margin: 0.2rem 0;
+}
+
+.c2 > * {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+.c1 {
+  margin: 0.5rem 0 0 2rem;
+}
+
+@media print {
+  .c0 {
+    padding: 0 0.5rem 0.2rem;
+    --color: #000;
+  }
+}
+
+@media print {
+  .c3 {
+    color: #000;
+  }
+}
+
+<div>
+  <h3
+    className="c0"
+    color="#000"
+  >
+    Top 2 tourist places:
+  </h3>
+  <ul
+    className="c1"
+  >
+    <li
+      className="c2"
+    >
+      <a
+        className="c3"
+        color="#333"
+        href="#1"
+      >
+        one
+      </a>
+    </li>
+    <li
+      className="c2"
+    >
+      <a
+        className="c3"
+        color="#333"
+        href="#2"
+      >
+        two
+      </a>
+    </li>
+  </ul>
+</div>
+`;

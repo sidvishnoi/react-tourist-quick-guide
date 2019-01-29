@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components - IconButton matches snapshot 1`] = `
+.c0 {
+  background: red;
+  border: none;
+  padding: 0.5rem;
+  margin: 0.1rem;
+  color: crimson;
+}
+
+.c0:hover,
+.c0:focus {
+  background: crimson;
+  color: #fff;
+  cursor: pointer;
+}
+
+<button
+  className="c0"
+  color="crimson"
+  title="PASS"
+>
+  §
+</button>
+`;

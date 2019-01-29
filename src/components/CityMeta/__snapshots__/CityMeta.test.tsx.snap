@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Componets - CityMeta matches snapshot 1`] = `
+<div
+  className="sc-bwzfXH jCFfls"
+>
+  <div
+    className="buttons"
+  >
+    <button
+      className="move sc-bdVaJa iwnPMC"
+      color="crimson"
+      onClick={[Function]}
+      title="Move destination up in list"
+    >
+      ⬆
+    </button>
+    <button
+      className="remove sc-bdVaJa iwnPMC"
+      color="crimson"
+      onClick={[Function]}
+      title="Remove from list"
+    >
+      ✗
+    </button>
+  </div>
+  <h3
+    className="sc-htpNat jxPlQW"
+  >
+    PASS
+  </h3>
+  <div
+    className="sc-bxivhb cGQxdQ"
+  >
+    10 KM
+  </div>
+</div>
+`;

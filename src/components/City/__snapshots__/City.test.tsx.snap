@@ -2,23 +2,25 @@
 
 exports[`Component - City renders city with proper widgets 1`] = `
 <div
-  className="sc-iwsKbI dSEQiH"
+  className="sc-jTzLTM fxzRlC"
 >
   <div
-    className="sc-gZMcBi dSwc"
+    className="sc-bwzfXH jCFfls"
   >
     <div
       className="buttons"
     >
       <button
-        className="move sc-gqjmRU iKMjOf"
+        className="move sc-bdVaJa iwnPMC"
+        color="crimson"
         onClick={[Function]}
         title="Move destination up in list"
       >
         ⬆
       </button>
       <button
-        className="remove sc-gqjmRU iKMjOf"
+        className="remove sc-bdVaJa iwnPMC"
+        color="crimson"
         onClick={[Function]}
         title="Remove from list"
       >
@@ -26,28 +28,27 @@ exports[`Component - City renders city with proper widgets 1`] = `
       </button>
     </div>
     <h3
-      className="sc-VigVT hBMUxy"
+      className="sc-htpNat jxPlQW"
     >
       CITY
     </h3>
     <div
-      className="sc-jTzLTM gTioxh"
+      className="sc-bxivhb cGQxdQ"
     >
-      23
-       KM
+      23 KM
     </div>
   </div>
   <div
-    className="sc-htoDjs lbxQv"
+    className="sc-gqjmRU bzqLpt"
   >
     <div
-      className="sc-bZQynM iuqrgX"
+      className="sc-iwsKbI pSYKQ"
     >
       <div
         className="weather-today"
       >
         <div
-          className="weather-day sc-EHOje iahMDE"
+          className="weather-day sc-dnqmqq WhMTi"
         >
           <span>
             40
@@ -60,10 +61,10 @@ exports[`Component - City renders city with proper widgets 1`] = `
         </div>
       </div>
       <div
-        className="weather-forecast sc-gzVnrw hKGbEO"
+        className="weather-forecast sc-gZMcBi dUgxhQ"
       >
         <div
-          className="weather-day sc-EHOje kdmaEr"
+          className="weather-day sc-dnqmqq cwbUsh"
         >
           <span>
             39
@@ -75,7 +76,7 @@ exports[`Component - City renders city with proper widgets 1`] = `
           </p>
         </div>
         <div
-          className="weather-day sc-EHOje kdmaEr"
+          className="weather-day sc-dnqmqq cwbUsh"
         >
           <span>
             30
@@ -87,7 +88,7 @@ exports[`Component - City renders city with proper widgets 1`] = `
           </p>
         </div>
         <div
-          className="weather-day sc-EHOje kdmaEr"
+          className="weather-day sc-dnqmqq cwbUsh"
         >
           <span>
             34
@@ -102,18 +103,17 @@ exports[`Component - City renders city with proper widgets 1`] = `
     </div>
   </div>
   <div
-    className="sc-htoDjs lbxQv"
+    className="sc-gqjmRU bzqLpt"
   >
-    <div
-      className="sc-bwzfXH uTxCW"
-    >
+    <div>
       <h3
-        className="sc-htpNat dmVUzX"
+        className="sc-ifAKCX sc-EHOje Jyxdr"
+        color="#000"
       >
         Top 0 tourist places:
       </h3>
       <ul
-        className="sc-bxivhb hKgMCY"
+        className="sc-htoDjs dtrDje"
       />
     </div>
   </div>
@@ -122,23 +122,25 @@ exports[`Component - City renders city with proper widgets 1`] = `
 
 exports[`Component - City renders city with widgets in loading state 1`] = `
 <div
-  className="sc-iwsKbI dSEQiH"
+  className="sc-jTzLTM fxzRlC"
 >
   <div
-    className="sc-gZMcBi dSwc"
+    className="sc-bwzfXH jCFfls"
   >
     <div
       className="buttons"
     >
       <button
-        className="move sc-gqjmRU iKMjOf"
+        className="move sc-bdVaJa iwnPMC"
+        color="crimson"
         onClick={[Function]}
         title="Move destination up in list"
       >
         ⬆
       </button>
       <button
-        className="remove sc-gqjmRU iKMjOf"
+        className="remove sc-bdVaJa iwnPMC"
+        color="crimson"
         onClick={[Function]}
         title="Remove from list"
       >
@@ -146,18 +148,18 @@ exports[`Component - City renders city with widgets in loading state 1`] = `
       </button>
     </div>
     <h3
-      className="sc-VigVT hBMUxy"
+      className="sc-htpNat jxPlQW"
     >
       CITY
     </h3>
     <div
-      className="sc-jTzLTM gTioxh"
+      className="sc-bxivhb cGQxdQ"
     >
       ...
     </div>
   </div>
   <div
-    className="sc-htoDjs sc-dnqmqq cFffhV"
+    className="sc-gqjmRU sc-VigVT Rvxpl"
   >
     <svg
       className="loader"
@@ -198,7 +200,7 @@ exports[`Component - City renders city with widgets in loading state 1`] = `
     </svg>
   </div>
   <div
-    className="sc-htoDjs sc-dnqmqq cFffhV"
+    className="sc-gqjmRU sc-VigVT Rvxpl"
   >
     <svg
       className="loader"
