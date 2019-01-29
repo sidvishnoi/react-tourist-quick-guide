@@ -7,6 +7,18 @@ import ListItem from '.';
 const stories = storiesOf('Atoms/ListItem', module);
 stories.addDecorator(withKnobs);
 
-stories.add('with plain text', () => {
-  return <ListItem>{text('text', 'hello')}</ListItem>;
+stories.add('in ordered list', () => {
+  return (
+    <ol>
+      <ListItem>{text('text', 'hello')}</ListItem>
+    </ol>
+  );
+});
+
+stories.add('in unordered list', () => {
+  return (
+    <ul>
+      <ListItem>{text('text', 'hello')}</ListItem>
+    </ul>
+  );
 });
