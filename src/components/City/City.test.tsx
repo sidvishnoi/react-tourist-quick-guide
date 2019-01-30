@@ -1,9 +1,5 @@
-import { mount } from 'enzyme';
-import * as Enzyme from 'enzyme';
-import * as Adapter from 'enzyme-adapter-react-16';
 import React = require('react');
 import * as renderer from 'react-test-renderer';
-Enzyme.configure({ adapter: new Adapter() });
 
 import City, { CityProps } from '.';
 

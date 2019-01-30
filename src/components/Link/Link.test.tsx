@@ -10,6 +10,11 @@ Enzyme.configure({ adapter: new Adapter() });
 import Link from '.';
 
 describe('Components - Link', () => {
+  it('matches snapshot', () => {
+    const tree = renderer.create(<Link href="LINK">TEXT</Link>);
+    expect(tree).toMatchSnapshot();
+  });
+
   it('renders <a> element', () => {
     const output = mount(<Link href="LINK">TEXT</Link>);
 
@@ -31,10 +36,5 @@ describe('Components - Link', () => {
     );
     expect(output).toHaveStyleRule('color', 'red');
     expect(output.prop('role')).toEqual('button');
-  });
-
-  it('matches snapshot', () => {
-    const tree = renderer.create(<Link href="LINK">TEXT</Link>);
-    expect(tree).toMatchSnapshot();
   });
 });
