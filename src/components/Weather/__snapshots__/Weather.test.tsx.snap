@@ -8,53 +8,69 @@ exports[`Components - Weather matches snapshot 1`] = `
     className="weather-today"
   >
     <div
-      className="weather-day sc-bdVaJa farCSP"
+      className="weather-day sc-bdVaJa kuIetW"
+      style={
+        Object {
+          "backgroundImage": "url(/images/weather-icons/227.png)",
+        }
+      }
     >
       <span>
         30
       </span>
-       °
-      F
+      °C
       <p>
         sunny
       </p>
     </div>
   </div>
   <div
-    className="weather-forecast sc-htpNat gvnkNz"
+    className="weather-forecast sc-htpNat lnkNj"
   >
     <div
-      className="weather-day sc-bdVaJa fZwxoE"
+      className="weather-day sc-bdVaJa gFiwtQ"
+      style={
+        Object {
+          "backgroundImage": "url(/images/weather-icons/113.png)",
+        }
+      }
     >
       <span>
         30
       </span>
-       °
-      F
+      °C
       <p>
         sunny
       </p>
     </div>
     <div
-      className="weather-day sc-bdVaJa fZwxoE"
+      className="weather-day sc-bdVaJa gFiwtQ"
+      style={
+        Object {
+          "backgroundImage": "url(/images/weather-icons/230.png)",
+        }
+      }
     >
       <span>
         35
       </span>
-       °
-      F
+      °C
       <p>
         sunny
       </p>
     </div>
     <div
-      className="weather-day sc-bdVaJa fZwxoE"
+      className="weather-day sc-bdVaJa gFiwtQ"
+      style={
+        Object {
+          "backgroundImage": "url(/images/weather-icons/263.png)",
+        }
+      }
     >
       <span>
         32
       </span>
-       °
-      F
+      °C
       <p>
         sunny
       </p>

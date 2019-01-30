@@ -29,22 +29,22 @@ stories.add('city', () => {
       data: {
         forecast: [
           {
-            icon: 'sun',
+            icon: 113,
             summary: 'sunny',
             temperature: 30,
           },
           {
-            icon: 'rain',
+            icon: 119,
             summary: 'shower',
             temperature: 35,
           },
           {
-            icon: 'sun',
+            icon: 179,
             summary: 'sunny',
             temperature: 32,
           },
         ],
-        icon: 'sun',
+        icon: 260,
         summary: 'sunny',
         temperature: number('weather.temperature', 30, {
           max: 100,
@@ -52,7 +52,6 @@ stories.add('city', () => {
           range: true,
           step: 1,
         }),
-        unit: select('weather.unit', ['C', 'F'], 'C'),
       },
       state: 'ready',
     },

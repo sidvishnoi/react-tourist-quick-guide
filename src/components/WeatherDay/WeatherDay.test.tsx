@@ -7,12 +7,10 @@ Enzyme.configure({ adapter: new Adapter() });
 
 import WeatherDay, { WeatherDayProps } from '.';
 
-const props: WeatherDayProps = {
-  icon: 'sun',
-  isSmall: false,
+const props: WeatherDayProps  = {
+  icon: 113,
   summary: 'sunny',
   temperature: 30,
-  unit: 'F',
 };
 
 describe('Components - WeatherDay', () => {

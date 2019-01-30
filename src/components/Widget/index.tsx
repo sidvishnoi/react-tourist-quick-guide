@@ -13,6 +13,7 @@ export interface WidgetProps {
 
 const Widget = styled.div`
   background: #fff;
+  padding: 0 0.5rem;
 `;
 
 // widget in loading or error state

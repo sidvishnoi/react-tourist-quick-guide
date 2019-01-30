@@ -9,34 +9,39 @@ import { storiesOf } from '@storybook/react';
 
 import * as React from 'react';
 import WeatherDay, { WeatherDayProps } from '.';
+import weatherCodes from './weather-codes';
 
 const stories = storiesOf('WeatherDay', module).addDecorator(withKnobs);
 
 stories.add('weather', () => {
+  const condition = select(
+    'weather condition',
+    Array.from(weatherCodes.keys()),
+    'Sunny',
+  );
   const props: WeatherDayProps = {
-    icon: select('icon', ['sun', 'rain'], 'sun'),
-    isSmall: boolean('isSmall', false),
-    summary: text('summary', 'sunny'),
+    icon: weatherCodes.get(condition),
+    summary: condition,
     temperature: number('temperature', 30, {
       max: 100,
       min: -50,
       range: true,
       step: 1,
     }),
-    unit: select('unit', ['C', 'F'], 'C'),
   };
+
+  const isSmall = boolean('isSmall', false);
 
   return (
     <div
       style={{
         border: '1px solid #000',
-        maxWidth: props.isSmall ? '100px' : '300px',
+        maxWidth: isSmall ? '100px' : '300px',
       }}
     >
       <WeatherDay
-        isSmall={props.isSmall}
+        isSmall={isSmall}
         temperature={props.temperature}
-        unit={props.unit}
         icon={props.icon}
         summary={props.summary}
       />

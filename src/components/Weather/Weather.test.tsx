@@ -10,25 +10,24 @@ import Weather, { WeatherProps } from '.';
 const props: WeatherProps = {
   forecast: [
     {
-      icon: 'sun',
+      icon: 113,
       summary: 'sunny',
       temperature: 30,
     },
     {
-      icon: 'rain',
+      icon: 230,
       summary: 'sunny',
       temperature: 35,
     },
     {
-      icon: 'sun',
+      icon: 263,
       summary: 'sunny',
       temperature: 32,
     },
   ],
-  icon: 'sun',
+  icon: 227,
   summary: 'sunny',
   temperature: 30,
-  unit: 'F',
 };
 
 describe('Components - Weather', () => {

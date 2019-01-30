@@ -1,42 +1,30 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-import { iconRain, iconSunny } from '../../images';
-
-const icons: { [name: string]: any } = {
-  rain: iconRain,
-  sun: iconSunny,
-};
-
 export interface WeatherDayProps {
-  isSmall: boolean;
   temperature: number;
-  unit?: 'C' | 'F';
-  icon: string;
+  icon: number;
   summary: string;
 }
 
-const WeatherDay = styled.div<{
-  isSmall: boolean;
-  icon: any;
-}>`
+const WeatherDay = styled.div<{ isSmall: boolean }>`
   --padding: ${props => (props.isSmall ? '1rem' : '2rem')};
   background-repeat: no-repeat;
-  background-position: 80% -10%;
+  background-position: top right;
+  background-size: ${props => (props.isSmall ? '2rem' : 'auto')};
   padding: var(--padding);
-  background-size: ${props => (props.isSmall ? '2rem' : '4rem')};
-  background-image: url(${props => props.icon});
   transition: all 0.2s ease;
-  flex-grow: ${props => (props.isSmall ? '1' : 'auto')};
+  flex-grow: 1;
 
   span {
     font-size: ${props => (props.isSmall ? '1.2rem' : '2.5rem')};
   }
 
   p {
-    font-size: 90%;
+    font-size: 70%;
     font-style: italic;
     margin: 0;
+    max-width: 70%;
   }
 
   @media print {
@@ -49,11 +37,16 @@ const WeatherDay = styled.div<{
   }
 `;
 
-export default function(props: WeatherDayProps) {
-  const { temperature, unit, icon, summary, isSmall } = props;
+export default function(props: WeatherDayProps & { isSmall?: boolean }) {
+  const { temperature, icon, summary, isSmall = false } = props;
+  const backgroundImage = `url(/images/weather-icons/${icon}.png)`;
   return (
-    <WeatherDay isSmall={isSmall} icon={icons[icon]} className="weather-day">
-      <span>{temperature}</span> °{unit || 'C'}
+    <WeatherDay
+      isSmall={isSmall}
+      style={{ backgroundImage }}
+      className="weather-day"
+    >
+      <span>{temperature}</span>°C
       <p>{summary}</p>
     </WeatherDay>
   );

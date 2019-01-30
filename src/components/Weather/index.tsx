@@ -1,14 +1,10 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-import WeatherDay from '../WeatherDay';
+import WeatherDay, { WeatherDayProps } from '../WeatherDay';
 
-export interface WeatherProps {
-  temperature: number;
-  unit?: 'C' | 'F';
-  icon: string;
-  summary: string;
-  forecast: { temperature: number; icon: string; summary: string }[];
+export interface WeatherProps extends WeatherDayProps {
+  forecast: WeatherDayProps[];
 }
 
 const Weather = styled.div`
@@ -22,20 +18,27 @@ const Weather = styled.div`
 const WeatherForecast = styled.div`
   display: flex;
 
+  > div {
+    width: 33%;
+  }
+
   @media print {
     flex-direction: column;
+
+    > div {
+      width: 100%;
+    }
   }
 `;
 
 export default function(props: WeatherProps) {
-  const { temperature, unit, icon, forecast, summary } = props;
+  const { temperature, icon, forecast, summary } = props;
   return (
     <Weather>
       <div className="weather-today">
         <WeatherDay
           isSmall={false}
           temperature={temperature}
-          unit={unit}
           icon={icon}
           summary={summary}
         />
@@ -46,7 +49,6 @@ export default function(props: WeatherProps) {
             key={i}
             isSmall={true}
             temperature={day.temperature}
-            unit={unit}
             icon={day.icon}
             summary={day.summary}
           />

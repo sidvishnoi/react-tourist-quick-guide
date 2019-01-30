@@ -17,24 +17,24 @@ const cityProps: CityProps = {
     data: {
       forecast: [
         {
-          icon: 'sun',
+          icon: 113,
           summary: 'sunny',
-          temperature: 39,
-        },
-        {
-          icon: 'rain',
-          summary: 'shower',
           temperature: 30,
         },
         {
-          icon: 'sun',
+          icon: 119,
+          summary: 'shower',
+          temperature: 35,
+        },
+        {
+          icon: 179,
           summary: 'sunny',
-          temperature: 34,
+          temperature: 32,
         },
       ],
-      icon: 'sun',
+      icon: 260,
       summary: 'sunny',
-      temperature: 40,
+      temperature: 30,
     },
     state: 'ready',
   },

@@ -18,8 +18,7 @@
     "<rootDir>/src/containers",
     "<rootDir>/src/containers",
     "<rootDir>/src/fake-apis",
-    "<rootDir>/src/fake-apis",
-    "<rootDir>/src/images"
+    "<rootDir>/src/fake-apis"
   ],
   "moduleFileExtensions": ["ts", "tsx", "js"],
   "moduleNameMapper": {

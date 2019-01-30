@@ -21,12 +21,20 @@ interface CityPropsFromDispatch {
 const City = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   margin: 1em auto;
   border: 2px solid #000;
+  max-width: 900px;
 
   > div {
+    max-width: 300px;
     flex-grow: 1;
+  }
+
+  @media screen and (max-width: 700px) {
+    > div {
+      max-width: 100%;
+    }
   }
 
   @media print {
@@ -34,6 +42,12 @@ const City = styled.div`
     border: none;
     border-bottom: 2px solid #000;
     padding: 0.5rem 0;
+    page-break-inside: avoid;
+
+    > div {
+      width: 33%;
+      flex-grow: unset;
+    }
   }
 `;
 

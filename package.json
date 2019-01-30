@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "webpack-dev-server --mode development --port=8888",
-    "storybook": "start-storybook",
+    "storybook": "start-storybook -s ./public",
     "test": "jest --config=jest.config.json"
   },
   "dependencies": {

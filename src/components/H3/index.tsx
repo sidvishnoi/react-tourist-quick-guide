@@ -9,6 +9,7 @@ const H3 = styled.h3<H3Props>`
   --color: ${props => props.color || '#000'};
   color: var(--color);
   padding: 0.5rem;
+  margin: 0;
 
   @media print {
     padding: 0 0.5rem 0.2rem;

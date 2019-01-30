@@ -2,13 +2,17 @@
 
 exports[`Components - WeatherDay matches snapshot 1`] = `
 <div
-  className="weather-day sc-bdVaJa farCSP"
+  className="weather-day sc-bdVaJa kuIetW"
+  style={
+    Object {
+      "backgroundImage": "url(/images/weather-icons/113.png)",
+    }
+  }
 >
   <span>
     30
   </span>
-   °
-  F
+  °C
   <p>
     sunny
   </p>
