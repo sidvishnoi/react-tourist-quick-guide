@@ -21,7 +21,6 @@ exports[`Components - Link matches snapshot 1`] = `
 
 <a
   className="c0"
-  color="#333"
   href="LINK"
 >
   TEXT

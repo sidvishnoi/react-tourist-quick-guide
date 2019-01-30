@@ -67,7 +67,6 @@ exports[`Components - Places matches snapshot 1`] = `
     >
       <a
         className="c3"
-        color="#333"
         href="#1"
       >
         one
@@ -78,7 +77,6 @@ exports[`Components - Places matches snapshot 1`] = `
     >
       <a
         className="c3"
-        color="#333"
         href="#2"
       >
         two
