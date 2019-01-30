@@ -1,4 +1,4 @@
-import { text, withKnobs, color } from '@storybook/addon-knobs';
+import { color, text, withKnobs } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
 import * as React from 'react';
