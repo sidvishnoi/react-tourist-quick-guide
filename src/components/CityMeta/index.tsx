@@ -30,7 +30,7 @@ const CityMeta = styled.div`
   }
 `;
 
-const CityName = styled.h3`
+const CityName = styled.h2`
   font-size: 2rem;
   text-align: center;
   margin: 0.5rem auto;

@@ -1,14 +1,33 @@
 import * as React from 'react';
 
-export default function Loader() {
+interface LoaderProps {
+  size?: number;
+  color?: string;
+  speed?: 'fast' | 'slow' | 'normal';
+}
+
+const enum Duration {
+  slow = 1.5,
+  normal = 1,
+  fast = 0.5,
+}
+
+export default function Loader(props: LoaderProps) {
+  const { size = 50, color = '#ff8a00', speed = 'normal' } = props;
+  const duration =
+    speed === 'normal'
+      ? Duration.normal
+      : speed === 'fast'
+      ? Duration.fast
+      : Duration.slow;
   // from: https://samherbert.net/svg-loaders/
   return (
     <svg
-      width="50"
-      height="50"
+      width={size.toString()}
+      height={size.toString()}
       viewBox="0 0 38 38"
       xmlns="http://www.w3.org/2000/svg"
-      stroke="#ff8a00"
+      stroke={color}
       className="loader"
     >
       <g fill="none" fillRule="evenodd">
@@ -20,7 +39,7 @@ export default function Loader() {
               type="rotate"
               from="0 18 18"
               to="360 18 18"
-              dur="1s"
+              dur={`${duration}s`}
               repeatCount="indefinite"
             />
           </path>

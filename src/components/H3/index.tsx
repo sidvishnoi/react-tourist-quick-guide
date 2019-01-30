@@ -1,8 +1,12 @@
-import * as React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-const H3 = styled.h3<{ color: string }>`
-  --color: ${props => props.color};
+export interface H3Props {
+  bordered?: boolean;
+  color?: string;
+}
+
+const H3 = styled.h3<H3Props>`
+  --color: ${props => props.color || '#000'};
   color: var(--color);
   padding: 0.5rem;
 
@@ -10,25 +14,15 @@ const H3 = styled.h3<{ color: string }>`
     padding: 0 0.5rem 0.2rem;
     --color: #000;
   }
+
+  ${props =>
+    props.bordered &&
+    css`
+      border-bottom: 2px solid var(--color);
+      @media print {
+        border-bottom: none;
+      }
+    `}
 `;
 
-const H3WithBorder = styled(H3)`
-  @media screen {
-    border-bottom: 2px solid var(--color);
-  }
-`;
-
-export interface H3Props {
-  children: React.ReactNode;
-  bordered?: boolean;
-  color?: string;
-}
-
-export default (props: H3Props) => {
-  const { bordered = false, color = '#000', children } = props;
-  return bordered ? (
-    <H3WithBorder color={color}>{children}</H3WithBorder>
-  ) : (
-    <H3 color={color}>{children}</H3>
-  );
-};
+export default H3;

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components - List matches snapshot 1`] = `
+exports[`Components - Places matches snapshot 1`] = `
 .c0 {
   --color: #000;
   color: var(--color);
@@ -42,6 +42,12 @@ exports[`Components - List matches snapshot 1`] = `
 }
 
 @media print {
+  .c0 {
+    border-bottom: none;
+  }
+}
+
+@media print {
   .c3 {
     color: #000;
   }
@@ -50,7 +56,6 @@ exports[`Components - List matches snapshot 1`] = `
 <div>
   <h3
     className="c0"
-    color="#000"
   >
     Top 2 tourist places:
   </h3>

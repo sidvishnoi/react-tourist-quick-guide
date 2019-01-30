@@ -2,35 +2,35 @@
 
 exports[`Componets - CityMeta matches snapshot 1`] = `
 <div
-  className="sc-bwzfXH jCFfls"
+  className="sc-bwzfXH faEXFt"
 >
   <div
     className="buttons"
   >
     <button
-      className="move sc-bdVaJa iwnPMC"
-      color="crimson"
+      className="move sc-bdVaJa bilwKe"
+      color="#fff"
       onClick={[Function]}
       title="Move destination up in list"
     >
       ⬆
     </button>
     <button
-      className="remove sc-bdVaJa iwnPMC"
-      color="crimson"
+      className="remove sc-bdVaJa bxWWPb"
+      color="#fff"
       onClick={[Function]}
       title="Remove from list"
     >
       ✗
     </button>
   </div>
-  <h3
-    className="sc-htpNat jxPlQW"
+  <h2
+    className="sc-htpNat dpsiEy"
   >
     PASS
-  </h3>
+  </h2>
   <div
-    className="sc-bxivhb cGQxdQ"
+    className="sc-bxivhb ddgbhp"
   >
     10 KM
   </div>

@@ -15,6 +15,12 @@ exports[`Component - H3 can change border color 1`] = `
   }
 }
 
+@media print {
+  .c0 {
+    border-bottom: none;
+  }
+}
+
 <h3
   className="c0"
   color="red"
@@ -38,9 +44,14 @@ exports[`Component - H3 renders with border 1`] = `
   }
 }
 
+@media print {
+  .c0 {
+    border-bottom: none;
+  }
+}
+
 <h3
   className="c0"
-  color="#000"
 >
   PASS
 </h3>
@@ -62,7 +73,6 @@ exports[`Component - H3 renders without border 1`] = `
 
 <h3
   className="c0"
-  color="#000"
 >
   PASS
 </h3>

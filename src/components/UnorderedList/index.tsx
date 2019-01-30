@@ -8,15 +8,20 @@ const UnorderedList = styled.ul`
 `;
 
 export interface UnorderedListProps {
-  items: React.ReactNode[];
+  items?: React.ReactNode[];
+  children?: React.ReactNode[];
   [prop: string]: any;
 }
 
 export default (props: UnorderedListProps) => {
-  const { items, ...rest } = props;
+  const { items, children, ...rest } = props;
+  const listItems = items ? items : children;
+  if (!listItems || !Array.isArray(listItems)) {
+    return <></>;
+  }
   return (
     <UnorderedList {...rest}>
-      {items.map((item, i) => (
+      {listItems.map((item, i) => (
         <ListItem key={i}>{item}</ListItem>
       ))}
     </UnorderedList>

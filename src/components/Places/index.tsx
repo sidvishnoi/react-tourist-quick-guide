@@ -14,16 +14,17 @@ export interface PlacesProps {
 
 export default function(props: PlacesProps) {
   const { places } = props;
-  const listItems = places.map(place => (
-    <Link href={place.link} color='#333'>
-      {place.name}
-    </Link>
-  ));
   const title = `Top ${places.length} tourist places:`;
   return (
     <div>
       <H3 bordered>{title}</H3>
-      <UnorderedList items={listItems} />
+      <UnorderedList>
+        {places.map((place, i) => (
+          <Link href={place.link} key={i}>
+            {place.name}
+          </Link>
+        ))}
+      </UnorderedList>
     </div>
   );
 }

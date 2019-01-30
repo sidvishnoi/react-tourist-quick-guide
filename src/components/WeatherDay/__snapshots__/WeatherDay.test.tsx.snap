@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components - WeatherDay should show temperature value and summary with correct unit 1`] = `
+exports[`Components - WeatherDay matches snapshot 1`] = `
 <div
-  className="weather-day sc-bdVaJa KUpLK"
+  className="weather-day sc-bdVaJa farCSP"
 >
   <span>
     30

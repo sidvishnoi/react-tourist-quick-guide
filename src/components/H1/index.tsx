@@ -1,16 +1,19 @@
-import * as React from 'react';
 import styled from 'styled-components';
 
-const H1 = styled.h1`
-  padding: 1em 1em 0;
-  text-align: center;
-`;
-
 export interface H1Props {
-  children: React.ReactNode;
+  color?: string;
+  borderColor?: string;
 }
 
-export default (props: H1Props) => {
-  const { children } = props;
-  return <H1>{children}</H1>;
-};
+const H1 = styled.h1<H1Props>`
+  --border-color: ${props => props.borderColor || '#000'};
+  color: ${props => props.color || '#000'};
+  padding: 0.5em;
+  text-align: center;
+  border-top: 2px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color);
+  max-width: 95%;
+  margin: 0.2em auto;
+`;
+
+export default H1;
