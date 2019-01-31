@@ -2,7 +2,7 @@
 
 exports[`Componets - CityMeta matches snapshot 1`] = `
 <div
-  className="sc-bwzfXH faEXFt"
+  className="sc-htpNat jMRBuQ"
 >
   <div
     className="buttons"
@@ -25,14 +25,18 @@ exports[`Componets - CityMeta matches snapshot 1`] = `
     </button>
   </div>
   <h2
-    className="sc-htpNat dpsiEy"
+    className="sc-bwzfXH sc-bxivhb lkVqxl"
+    color="#fff"
+    size="fsize_08"
   >
     PASS
   </h2>
-  <div
-    className="sc-bxivhb ddgbhp"
+  <span
+    className="sc-bwzfXH sc-ifAKCX hmgNoS"
+    color="#fff"
+    size="fsize_04"
   >
     10 KM
-  </div>
+  </span>
 </div>
 `;

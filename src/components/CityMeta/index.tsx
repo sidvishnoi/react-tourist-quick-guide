@@ -2,13 +2,13 @@ import * as React from 'react';
 import styled from 'styled-components';
 
 import IconButton from '../IconButton';
+import { Typography } from '../Text';
 
 const CityMeta = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   background: #000;
-  color: #fff;
   width: 200px;
   padding: 0.2em;
 
@@ -26,30 +26,29 @@ const CityMeta = styled.div`
     width: auto;
     max-width: 200px;
     background: #fff;
-    color: #000;
   }
 `;
 
-const CityName = styled.h2`
-  font-size: 2rem;
+const CityName = styled(Typography)`
   text-align: center;
   margin: 0.5rem auto;
-  padding: 0.2rem 0.5rem;
 
   @media print {
     padding: 0;
     margin: 0;
     text-align: left;
+    color: #000;
   }
 `;
 
-const Distance = styled.div`
+const Distance = styled(Typography)`
   text-align: right;
   padding: 0.5rem;
 
   @media print {
     padding: 0;
     text-align: left;
+    color: #000;
   }
 `;
 
@@ -82,8 +81,12 @@ export default (props: CityMetaProps) => {
           altColor="red"
         />
       </div>
-      <CityName>{name}</CityName>
-      <Distance>{distance !== null ? `${distance} KM` : '...'}</Distance>
+      <CityName as="h2" color="#fff" size="fsize_08">
+        {name}
+      </CityName>
+      <Distance as="span" color="#fff" size="fsize_04">
+        {distance !== null ? `${distance} KM` : '...'}
+      </Distance>
     </CityMeta>
   );
 };

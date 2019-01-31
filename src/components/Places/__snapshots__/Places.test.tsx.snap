@@ -1,14 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Components - Places matches snapshot 1`] = `
-.c0 {
-  --color: #000;
-  color: var(--color);
-  padding: 0.5rem;
-  margin: 0;
-  border-bottom: 2px solid var(--color);
-}
-
 .c3 {
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -21,25 +13,20 @@ exports[`Components - Places matches snapshot 1`] = `
   text-decoration: underline;
 }
 
+.c0 {
+  font-family: serif;
+  color: #000;
+  font-size: 1.25rem;
+  line-height: 1.625rem;
+  margin: 0.2rem 0;
+}
+
 .c2 {
   margin: 0.2rem 0;
 }
 
 .c1 {
-  margin: 0.5rem 0 0 2rem;
-}
-
-@media print {
-  .c0 {
-    padding: 0 0.5rem 0.2rem;
-    --color: #000;
-  }
-}
-
-@media print {
-  .c0 {
-    border-bottom: none;
-  }
+  margin: 0.5rem 0 0 0.5rem;
 }
 
 @media print {
@@ -51,6 +38,8 @@ exports[`Components - Places matches snapshot 1`] = `
 <div>
   <h3
     className="c0"
+    color="#000"
+    size="fsize_05"
   >
     Top tourist places:
   </h3>

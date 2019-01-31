@@ -5,7 +5,7 @@ exports[`Component - City renders city with proper widgets 1`] = `
   className="sc-VigVT hLLesS"
 >
   <div
-    className="sc-bwzfXH faEXFt"
+    className="sc-htpNat jMRBuQ"
   >
     <div
       className="buttons"
@@ -28,18 +28,22 @@ exports[`Component - City renders city with proper widgets 1`] = `
       </button>
     </div>
     <h2
-      className="sc-htpNat dpsiEy"
+      className="sc-bwzfXH sc-bxivhb lkVqxl"
+      color="#fff"
+      size="fsize_08"
     >
       CITY
     </h2>
-    <div
-      className="sc-bxivhb ddgbhp"
+    <span
+      className="sc-bwzfXH sc-ifAKCX hmgNoS"
+      color="#fff"
+      size="fsize_04"
     >
       23 KM
-    </div>
+    </span>
   </div>
   <div
-    className="sc-gZMcBi inPIVp"
+    className="sc-gZMcBi kvMLCZ"
   >
     <div
       className="sc-dnqmqq hEtNIr"
@@ -119,16 +123,18 @@ exports[`Component - City renders city with proper widgets 1`] = `
     </div>
   </div>
   <div
-    className="sc-gZMcBi inPIVp"
+    className="sc-gZMcBi kvMLCZ"
   >
     <div>
       <h3
-        className="sc-ifAKCX jdVxTs"
+        className="sc-bwzfXH cbCUnk"
+        color="#000"
+        size="fsize_05"
       >
         Top tourist places:
       </h3>
       <ul
-        className="sc-gzVnrw fzgGaI"
+        className="sc-gzVnrw jzkUPy"
       />
     </div>
   </div>
@@ -140,7 +146,7 @@ exports[`Component - City renders city with widgets in loading state 1`] = `
   className="sc-VigVT hLLesS"
 >
   <div
-    className="sc-bwzfXH faEXFt"
+    className="sc-htpNat jMRBuQ"
   >
     <div
       className="buttons"
@@ -163,18 +169,22 @@ exports[`Component - City renders city with widgets in loading state 1`] = `
       </button>
     </div>
     <h2
-      className="sc-htpNat dpsiEy"
+      className="sc-bwzfXH sc-bxivhb lkVqxl"
+      color="#fff"
+      size="fsize_08"
     >
       CITY
     </h2>
-    <div
-      className="sc-bxivhb ddgbhp"
+    <span
+      className="sc-bwzfXH sc-ifAKCX hmgNoS"
+      color="#fff"
+      size="fsize_04"
     >
       ...
-    </div>
+    </span>
   </div>
   <div
-    className="sc-gZMcBi sc-gqjmRU dLGAop"
+    className="sc-gZMcBi sc-gqjmRU JvtnJ"
   >
     <svg
       className="loader"
@@ -215,7 +225,7 @@ exports[`Component - City renders city with widgets in loading state 1`] = `
     </svg>
   </div>
   <div
-    className="sc-gZMcBi sc-gqjmRU dLGAop"
+    className="sc-gZMcBi sc-gqjmRU JvtnJ"
   >
     <svg
       className="loader"

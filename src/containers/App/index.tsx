@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { addCity, getSuggestions, selectLocation } from '../../actions';
 import { State } from '../../state';
 
-import H1 from '../../components/H1';
+import Text from '../../components/Text';
 import AutoComplete from '../AutoComplete';
 import Cities from '../Cities';
 
@@ -16,7 +16,9 @@ function App({ source }: { source: string }) {
   if (!source) {
     return (
       <div className="App">
-        <H1>Where are you travelling from?</H1>
+        <Text as="h1" size="fsize_09">
+          Where are you travelling from?
+        </Text>
         <AutoComplete
           placeholder="Your Location"
           onChange={getSuggestions}
@@ -28,9 +30,9 @@ function App({ source }: { source: string }) {
 
   return (
     <div className="App">
-      <H1>
+      <Text as="h1" size="fsize_09">
         Destinations from <em>{source}</em>:
-      </H1>
+      </Text>
       <AutoComplete
         placeholder="Add destination"
         onChange={getSuggestions}

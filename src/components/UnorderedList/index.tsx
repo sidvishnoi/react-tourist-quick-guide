@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import ListItem from '../ListItem';
 
 const UnorderedList = styled.ul`
-  margin: 0.5rem 0 0 2rem;
+  margin: 0.5rem 0 0 0.5rem;
 `;
 
 export interface UnorderedListProps {

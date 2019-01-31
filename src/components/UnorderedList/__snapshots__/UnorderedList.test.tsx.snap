@@ -2,7 +2,7 @@
 
 exports[`Component - UnorderedList renders JSX children 1`] = `
 <ul
-  className="sc-bwzfXH cbqXRN"
+  className="sc-bwzfXH gjGEUQ"
 >
   <li
     className="sc-bdVaJa DYeZc"
@@ -23,13 +23,13 @@ exports[`Component - UnorderedList renders JSX children 1`] = `
 
 exports[`Component - UnorderedList renders empty list if items is empty array 1`] = `
 <ul
-  className="sc-bwzfXH cbqXRN"
+  className="sc-bwzfXH gjGEUQ"
 />
 `;
 
 exports[`Component - UnorderedList renders list with JSX items 1`] = `
 <ul
-  className="sc-bwzfXH cbqXRN"
+  className="sc-bwzfXH gjGEUQ"
 >
   <li
     className="sc-bdVaJa DYeZc"
@@ -50,7 +50,7 @@ exports[`Component - UnorderedList renders list with JSX items 1`] = `
 
 exports[`Component - UnorderedList renders list with plain text items 1`] = `
 <ul
-  className="sc-bwzfXH cbqXRN"
+  className="sc-bwzfXH gjGEUQ"
 >
   <li
     className="sc-bdVaJa DYeZc"

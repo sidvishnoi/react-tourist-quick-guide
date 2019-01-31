@@ -2,7 +2,7 @@ import { color, select, text, withKnobs } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
 import * as React from 'react';
-import Text from '.';
+import Text, { fontSize, TextProps } from '.';
 
 const stories = storiesOf('Typography', module);
 stories.addDecorator(withKnobs);
@@ -16,7 +16,11 @@ stories.add('Typography', () => {
     ),
     color: color('color', '#000'),
     family: text('family', 'sans-serif'),
-    size: text('size', '1em'),
+    size: select(
+      'size',
+      Object.keys(fontSize) as TextProps['size'][],
+      'fsize_03',
+    ),
   };
   return (
     <Text
@@ -28,7 +32,7 @@ stories.add('Typography', () => {
       {text(
         'text',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' +
-          'Duis sed neque ac tortor viverra sagittis non nec massa.',
+          ' Duis sed neque ac tortor viverra sagittis non nec massa.',
       )}
     </Text>
   );
