@@ -1,9 +1,9 @@
 import { Dispatch } from 'redux';
 
-import distanceAPI from '../fake-apis/distance';
-import locationAPI from '../fake-apis/location';
-import placesAPI from '../fake-apis/places';
-import weatherAPI from '../fake-apis/weather';
+import distanceAPI from '../apis/distance';
+import locationAPI from '../apis/location';
+import placesAPI from '../apis/places';
+import weatherAPI from '../apis/weather';
 import { State } from '../state';
 
 export function getSuggestions(query: string) {

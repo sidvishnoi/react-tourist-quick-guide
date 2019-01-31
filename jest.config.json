@@ -17,8 +17,7 @@
     "<rootDir>/src/actions",
     "<rootDir>/src/containers",
     "<rootDir>/src/containers",
-    "<rootDir>/src/fake-apis",
-    "<rootDir>/src/fake-apis"
+    "<rootDir>/src/apis"
   ],
   "moduleFileExtensions": ["ts", "tsx", "js"],
   "moduleNameMapper": {
