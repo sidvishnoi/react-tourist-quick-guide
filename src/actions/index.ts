@@ -76,7 +76,7 @@ function getWeather(location: string, dispatch: Dispatch) {
 }
 
 function getPlaces(location: string, dispatch: Dispatch) {
-  placesAPI(location, 900)
+  placesAPI(location)
     .then(response => {
       dispatch({
         name: location,

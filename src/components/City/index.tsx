@@ -2,14 +2,14 @@ import * as React from 'react';
 import styled from 'styled-components';
 
 import CityMeta from '../CityMeta';
-import Places from '../Places';
+import Places, { PlacesProps } from '../Places';
 import Weather, { WeatherProps } from '../Weather';
 import Widget from '../Widget';
 
 export interface CityProps {
   name: string;
   weather: { state: string; data: WeatherProps };
-  places: { state: string; data: { name: string; link: string }[] };
+  places: { state: string; data: PlacesProps['places'] };
   distance: { state: string; data: number };
 }
 

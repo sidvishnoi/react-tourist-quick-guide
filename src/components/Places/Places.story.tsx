@@ -10,11 +10,15 @@ stories.addDecorator(withKnobs);
 stories.add('places', () => {
   const props: PlacesProps = {
     places: object('items', [
-      { name: 'Place one', link: '#' },
-      { name: 'Place two', link: '#' },
-      { name: 'Place third', link: '#' },
-      { name: 'Place fourth is long', link: '#' },
-      { name: 'Place five', link: '#' },
+      { title: 'Place one', link: '#', summary: 'this is a summary' },
+      { title: 'Place two', link: '#', summary: 'this is a longer summary' },
+      { title: 'Place third', link: '#', summary: 'this is a summary' },
+      {
+        link: '#',
+        summary: 'this is a summary',
+        title: 'Place fourth is long',
+      },
+      { title: 'Place five', link: '#', summary: 'this is a summary' },
     ]),
   };
 

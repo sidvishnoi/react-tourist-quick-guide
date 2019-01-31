@@ -14,14 +14,29 @@ stories.add('city', () => {
       data: number('distance', 50),
       state: 'ready',
     },
-    name: text('city.name', 'London'),
+    name: text('city.name', 'Hyderabad'),
     places: {
       data: [
-        { name: 'Place 1', link: '#' },
-        { name: 'Place 2', link: '#' },
-        { name: 'Place 3', link: '#' },
-        { name: 'Place 4', link: '#' },
-        { name: 'Place 5', link: '#' },
+        {
+          link: '#',
+          summary: 'Iconic mosque with 4 minarets & arches',
+          title: 'Charminar',
+        },
+        {
+          link: '#',
+          summary: 'Fortress complex famed for acoustics',
+          title: 'Golconda Fort',
+        },
+        {
+          link: '#',
+          summary: 'Varied art & antiques from Asia & Europe',
+          title: 'Salar Jung Museum',
+        },
+        {
+          link: '#',
+          summary: 'Heart-shaped lake with a Buddha statue',
+          title: 'Hussain Sagar',
+        },
       ],
       state: 'ready',
     },

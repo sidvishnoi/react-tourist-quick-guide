@@ -25,12 +25,6 @@ exports[`Components - Places matches snapshot 1`] = `
   margin: 0.2rem 0;
 }
 
-.c2 > * {
-  margin: 0;
-  padding: 0;
-  display: inline-block;
-}
-
 .c1 {
   margin: 0.5rem 0 0 2rem;
 }
@@ -66,22 +60,36 @@ exports[`Components - Places matches snapshot 1`] = `
     <li
       className="c2"
     >
-      <a
-        className="c3"
-        href="#1"
-      >
-        one
-      </a>
+      <span>
+        <a
+          className="c3"
+          href="#1"
+        >
+          one
+        </a>
+        :
+         
+        <em>
+          foo
+        </em>
+      </span>
     </li>
     <li
       className="c2"
     >
-      <a
-        className="c3"
-        href="#2"
-      >
-        two
-      </a>
+      <span>
+        <a
+          className="c3"
+          href="#2"
+        >
+          two
+        </a>
+        :
+         
+        <em>
+          bar
+        </em>
+      </span>
     </li>
   </ul>
 </div>

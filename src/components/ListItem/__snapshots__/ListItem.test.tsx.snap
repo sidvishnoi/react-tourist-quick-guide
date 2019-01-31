@@ -2,13 +2,13 @@
 
 exports[`Component - ListItem renders empty item 1`] = `
 <li
-  className="sc-bdVaJa gYVUxP"
+  className="sc-bdVaJa DYeZc"
 />
 `;
 
 exports[`Component - ListItem renders plain text 1`] = `
 <li
-  className="sc-bdVaJa gYVUxP"
+  className="sc-bdVaJa DYeZc"
 >
   PASS
 </li>

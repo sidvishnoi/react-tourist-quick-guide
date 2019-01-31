@@ -5,14 +5,14 @@ exports[`Component - UnorderedList renders JSX children 1`] = `
   className="sc-bwzfXH cbqXRN"
 >
   <li
-    className="sc-bdVaJa gYVUxP"
+    className="sc-bdVaJa DYeZc"
   >
     <span>
       one
     </span>
   </li>
   <li
-    className="sc-bdVaJa gYVUxP"
+    className="sc-bdVaJa DYeZc"
   >
     <span>
       two
@@ -32,14 +32,14 @@ exports[`Component - UnorderedList renders list with JSX items 1`] = `
   className="sc-bwzfXH cbqXRN"
 >
   <li
-    className="sc-bdVaJa gYVUxP"
+    className="sc-bdVaJa DYeZc"
   >
     <span>
       one
     </span>
   </li>
   <li
-    className="sc-bdVaJa gYVUxP"
+    className="sc-bdVaJa DYeZc"
   >
     <span>
       two
@@ -53,12 +53,12 @@ exports[`Component - UnorderedList renders list with plain text items 1`] = `
   className="sc-bwzfXH cbqXRN"
 >
   <li
-    className="sc-bdVaJa gYVUxP"
+    className="sc-bdVaJa DYeZc"
   >
     one
   </li>
   <li
-    className="sc-bdVaJa gYVUxP"
+    className="sc-bdVaJa DYeZc"
   >
     two
   </li>

@@ -1,18 +1,16 @@
-export default (location: string, delay: number) => {
-  const createPlace = () =>
-    Math.random()
-      .toString(36)
-      .substring(7);
+const API_URL = 'http://localhost:8889';
 
-  const response: {
-    name: string;
-    link: string;
-  }[] = [];
-  for (let i = 0; i < 5; ++i) {
-    response.push({
-      link: '#',
-      name: createPlace(),
-    });
-  }
-  return new Promise(resolve => setTimeout(() => resolve(response), delay));
+interface Response {
+  name: string;
+  summary: string;
+  link: string;
+}
+
+export default async (location: string): Promise<Response> => {
+  const params = new URLSearchParams();
+  params.set('q', location);
+  const url = API_URL + '?' + params.toString();
+  const response = await fetch(url);
+  const result = await response.json();
+  return Promise.resolve(result);
 };

@@ -6,8 +6,9 @@ import UnorderedList from '../UnorderedList';
 
 export interface PlacesProps {
   places: {
-    name: string;
+    title: string;
     link: string;
+    summary: string;
   }[];
   [prop: string]: any;
 }
@@ -20,9 +21,10 @@ export default function(props: PlacesProps) {
       <H3 bordered>{title}</H3>
       <UnorderedList>
         {places.map((place, i) => (
-          <Link href={place.link} key={i}>
-            {place.name}
-          </Link>
+          <span key={i}>
+            <Link href={place.link}>{place.title}</Link>:{' '}
+            <em>{place.summary}</em>
+          </span>
         ))}
       </UnorderedList>
     </div>
