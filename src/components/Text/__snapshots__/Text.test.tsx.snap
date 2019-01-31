@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components - Text matches snapshot 1`] = `
+.c0 {
+  font-family: sans-serif;
+  color: #000;
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  margin: 0.2rem 0;
+}
+
+<h2
+  className="c0"
+  color="#000"
+  size="fsize_07"
+>
+  PASS
+</h2>
+`;

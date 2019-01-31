@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import H3 from '../H3';
 import Link from '../Link';
+import Text from '../Text';
 import UnorderedList from '../UnorderedList';
 
 export interface PlacesProps {
@@ -17,7 +17,9 @@ export default function(props: PlacesProps) {
   const { places } = props;
   return (
     <div>
-      <H3 bordered>Top tourist places:</H3>
+      <Text as="h3" size="fsize_05">
+        Top tourist places:
+      </Text>
       <UnorderedList>
         {places.map((place, i) => (
           <span key={i}>
