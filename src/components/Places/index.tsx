@@ -15,10 +15,9 @@ export interface PlacesProps {
 
 export default function(props: PlacesProps) {
   const { places } = props;
-  const title = `Top ${places.length} tourist places:`;
   return (
     <div>
-      <H3 bordered>{title}</H3>
+      <H3 bordered>Top tourist places:</H3>
       <UnorderedList>
         {places.map((place, i) => (
           <span key={i}>

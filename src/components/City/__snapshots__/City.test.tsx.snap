@@ -125,7 +125,7 @@ exports[`Component - City renders city with proper widgets 1`] = `
       <h3
         className="sc-ifAKCX jdVxTs"
       >
-        Top 0 tourist places:
+        Top tourist places:
       </h3>
       <ul
         className="sc-gzVnrw fzgGaI"

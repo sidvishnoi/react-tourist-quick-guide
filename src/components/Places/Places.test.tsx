@@ -22,7 +22,7 @@ describe('Components - Places', () => {
 
   it('renders title', () => {
     const output = mount(<Places places={places} />);
-    expect(output.find('h3').text()).toEqual('Top 2 tourist places:');
+    expect(output.find('h3').text()).toEqual('Top tourist places:');
   });
 
   it('should display list of places', () => {

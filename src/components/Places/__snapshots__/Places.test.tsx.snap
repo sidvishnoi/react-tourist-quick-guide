@@ -52,7 +52,7 @@ exports[`Components - Places matches snapshot 1`] = `
   <h3
     className="c0"
   >
-    Top 2 tourist places:
+    Top tourist places:
   </h3>
   <ul
     className="c1"
