@@ -1,0 +1,1349 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Containers - Cities allows moving a city up in list 1`] = `
+Array [
+  <div
+    className="city sc-jTzLTM gTeocR"
+  >
+    <div
+      className="sc-bxivhb liRQLP"
+    >
+      <div
+        className="buttons"
+      >
+        <button
+          className="move sc-bwzfXH fGOwbX"
+          color="#fff"
+          onClick={[Function]}
+          title="Move destination up in list"
+        >
+          ⬆
+        </button>
+        <button
+          className="remove sc-bwzfXH gbuAGC"
+          color="#fff"
+          onClick={[Function]}
+          title="Remove from list"
+        >
+          ✗
+        </button>
+      </div>
+      <h2
+        className="sc-htpNat sc-ifAKCX jZwhHp"
+        color="#fff"
+        size="fsize_08"
+      >
+        ONE
+      </h2>
+      <span
+        className="sc-htpNat sc-EHOje bUQOko"
+        color="#fff"
+        size="fsize_04"
+      >
+        50 KM
+      </span>
+    </div>
+    <div
+      className="sc-gqjmRU ebSWTF"
+    >
+      <div
+        className="sc-iwsKbI pSYKQ"
+      >
+        <div
+          className="weather-today"
+        >
+          <div
+            className="weather-day sc-dnqmqq cJeYVJ"
+            style={
+              Object {
+                "backgroundImage": "url(/images/weather-icons/113.png)",
+              }
+            }
+          >
+            <span>
+              35
+            </span>
+            °C
+            <p>
+              Sunny
+            </p>
+          </div>
+        </div>
+        <div
+          className="weather-forecast sc-gZMcBi hguPkl"
+        >
+          <div
+            className="weather-day sc-dnqmqq cdKxNR"
+            style={
+              Object {
+                "backgroundImage": "url(/images/weather-icons/113.png)",
+              }
+            }
+          >
+            <span>
+              35
+            </span>
+            °C
+            <p>
+              Sunny
+            </p>
+          </div>
+          <div
+            className="weather-day sc-dnqmqq cdKxNR"
+            style={
+              Object {
+                "backgroundImage": "url(/images/weather-icons/113.png)",
+              }
+            }
+          >
+            <span>
+              35
+            </span>
+            °C
+            <p>
+              Sunny
+            </p>
+          </div>
+          <div
+            className="weather-day sc-dnqmqq cdKxNR"
+            style={
+              Object {
+                "backgroundImage": "url(/images/weather-icons/113.png)",
+              }
+            }
+          >
+            <span>
+              35
+            </span>
+            °C
+            <p>
+              Sunny
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-gqjmRU ebSWTF"
+    >
+      <div>
+        <h3
+          className="sc-htpNat hvSXnA"
+          color="#000"
+          size="fsize_05"
+        >
+          Top tourist places:
+        </h3>
+        <ul
+          className="sc-htoDjs hEklmg"
+        >
+          <li
+            className="sc-gzVnrw iAYwO"
+          >
+            <span>
+              <a
+                className="sc-bZQynM ivuoxv"
+                href="#"
+              >
+                FOO
+              </a>
+              :
+               
+              <em>
+                foo
+              </em>
+            </span>
+          </li>
+          <li
+            className="sc-gzVnrw iAYwO"
+          >
+            <span>
+              <a
+                className="sc-bZQynM ivuoxv"
+                href="#"
+              >
+                BAR
+              </a>
+              :
+               
+              <em>
+                bar
+              </em>
+            </span>
+          </li>
+          <li
+            className="sc-gzVnrw iAYwO"
+          >
+            <span>
+              <a
+                className="sc-bZQynM ivuoxv"
+                href="#"
+              >
+                BAZ
+              </a>
+              :
+               
+              <em>
+                baz
+              </em>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="sc-bdVaJa hDTFWN"
+  >
+    Advertisement Space
+  </div>,
+  <div
+    className="city sc-jTzLTM gTeocR"
+  >
+    <div
+      className="sc-bxivhb liRQLP"
+    >
+      <div
+        className="buttons"
+      >
+        <button
+          className="move sc-bwzfXH fGOwbX"
+          color="#fff"
+          onClick={[Function]}
+          title="Move destination up in list"
+        >
+          ⬆
+        </button>
+        <button
+          className="remove sc-bwzfXH gbuAGC"
+          color="#fff"
+          onClick={[Function]}
+          title="Remove from list"
+        >
+          ✗
+        </button>
+      </div>
+      <h2
+        className="sc-htpNat sc-ifAKCX jZwhHp"
+        color="#fff"
+        size="fsize_08"
+      >
+        TWO
+      </h2>
+      <span
+        className="sc-htpNat sc-EHOje bUQOko"
+        color="#fff"
+        size="fsize_04"
+      >
+        100 KM
+      </span>
+    </div>
+    <div
+      className="sc-gqjmRU sc-VigVT ewklmX"
+    >
+      <p
+        style={
+          Object {
+            "fontSize": "2em",
+            "margin": 0,
+          }
+        }
+      >
+        😞
+      </p>
+      <h4
+        style={
+          Object {
+            "margin": 0,
+          }
+        }
+      >
+        Something went wrong.
+      </h4>
+    </div>
+    <div
+      className="sc-gqjmRU sc-VigVT ewklmX"
+    >
+      <svg
+        className="loader"
+        height="50"
+        stroke="#ff8a00"
+        viewBox="0 0 38 38"
+        width="50"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          fill="none"
+          fillRule="evenodd"
+        >
+          <g
+            strokeWidth="2"
+            transform="translate(1 1)"
+          >
+            <circle
+              cx="18"
+              cy="18"
+              r="18"
+              strokeOpacity=".5"
+            />
+            <path
+              d="M36 18c0-9.94-8.06-18-18-18"
+            >
+              <animateTransform
+                attributeName="transform"
+                dur="1s"
+                from="0 18 18"
+                repeatCount="indefinite"
+                to="360 18 18"
+                type="rotate"
+              />
+            </path>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Containers - Cities allows moving a city up in list 2`] = `
+Array [
+  <div
+    className="city sc-jTzLTM gTeocR"
+  >
+    <div
+      className="sc-bxivhb liRQLP"
+    >
+      <div
+        className="buttons"
+      >
+        <button
+          className="move sc-bwzfXH fGOwbX"
+          color="#fff"
+          onClick={[Function]}
+          title="Move destination up in list"
+        >
+          ⬆
+        </button>
+        <button
+          className="remove sc-bwzfXH gbuAGC"
+          color="#fff"
+          onClick={[Function]}
+          title="Remove from list"
+        >
+          ✗
+        </button>
+      </div>
+      <h2
+        className="sc-htpNat sc-ifAKCX jZwhHp"
+        color="#fff"
+        size="fsize_08"
+      >
+        TWO
+      </h2>
+      <span
+        className="sc-htpNat sc-EHOje bUQOko"
+        color="#fff"
+        size="fsize_04"
+      >
+        100 KM
+      </span>
+    </div>
+    <div
+      className="sc-gqjmRU sc-VigVT ewklmX"
+    >
+      <p
+        style={
+          Object {
+            "fontSize": "2em",
+            "margin": 0,
+          }
+        }
+      >
+        😞
+      </p>
+      <h4
+        style={
+          Object {
+            "margin": 0,
+          }
+        }
+      >
+        Something went wrong.
+      </h4>
+    </div>
+    <div
+      className="sc-gqjmRU sc-VigVT ewklmX"
+    >
+      <svg
+        className="loader"
+        height="50"
+        stroke="#ff8a00"
+        viewBox="0 0 38 38"
+        width="50"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          fill="none"
+          fillRule="evenodd"
+        >
+          <g
+            strokeWidth="2"
+            transform="translate(1 1)"
+          >
+            <circle
+              cx="18"
+              cy="18"
+              r="18"
+              strokeOpacity=".5"
+            />
+            <path
+              d="M36 18c0-9.94-8.06-18-18-18"
+            >
+              <animateTransform
+                attributeName="transform"
+                dur="1s"
+                from="0 18 18"
+                repeatCount="indefinite"
+                to="360 18 18"
+                type="rotate"
+              />
+            </path>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>,
+  <div
+    className="sc-bdVaJa hDTFWN"
+  >
+    Advertisement Space
+  </div>,
+  <div
+    className="city sc-jTzLTM gTeocR"
+  >
+    <div
+      className="sc-bxivhb liRQLP"
+    >
+      <div
+        className="buttons"
+      >
+        <button
+          className="move sc-bwzfXH fGOwbX"
+          color="#fff"
+          onClick={[Function]}
+          title="Move destination up in list"
+        >
+          ⬆
+        </button>
+        <button
+          className="remove sc-bwzfXH gbuAGC"
+          color="#fff"
+          onClick={[Function]}
+          title="Remove from list"
+        >
+          ✗
+        </button>
+      </div>
+      <h2
+        className="sc-htpNat sc-ifAKCX jZwhHp"
+        color="#fff"
+        size="fsize_08"
+      >
+        ONE
+      </h2>
+      <span
+        className="sc-htpNat sc-EHOje bUQOko"
+        color="#fff"
+        size="fsize_04"
+      >
+        50 KM
+      </span>
+    </div>
+    <div
+      className="sc-gqjmRU ebSWTF"
+    >
+      <div
+        className="sc-iwsKbI pSYKQ"
+      >
+        <div
+          className="weather-today"
+        >
+          <div
+            className="weather-day sc-dnqmqq cJeYVJ"
+            style={
+              Object {
+                "backgroundImage": "url(/images/weather-icons/113.png)",
+              }
+            }
+          >
+            <span>
+              35
+            </span>
+            °C
+            <p>
+              Sunny
+            </p>
+          </div>
+        </div>
+        <div
+          className="weather-forecast sc-gZMcBi hguPkl"
+        >
+          <div
+            className="weather-day sc-dnqmqq cdKxNR"
+            style={
+              Object {
+                "backgroundImage": "url(/images/weather-icons/113.png)",
+              }
+            }
+          >
+            <span>
+              35
+            </span>
+            °C
+            <p>
+              Sunny
+            </p>
+          </div>
+          <div
+            className="weather-day sc-dnqmqq cdKxNR"
+            style={
+              Object {
+                "backgroundImage": "url(/images/weather-icons/113.png)",
+              }
+            }
+          >
+            <span>
+              35
+            </span>
+            °C
+            <p>
+              Sunny
+            </p>
+          </div>
+          <div
+            className="weather-day sc-dnqmqq cdKxNR"
+            style={
+              Object {
+                "backgroundImage": "url(/images/weather-icons/113.png)",
+              }
+            }
+          >
+            <span>
+              35
+            </span>
+            °C
+            <p>
+              Sunny
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-gqjmRU ebSWTF"
+    >
+      <div>
+        <h3
+          className="sc-htpNat hvSXnA"
+          color="#000"
+          size="fsize_05"
+        >
+          Top tourist places:
+        </h3>
+        <ul
+          className="sc-htoDjs hEklmg"
+        >
+          <li
+            className="sc-gzVnrw iAYwO"
+          >
+            <span>
+              <a
+                className="sc-bZQynM ivuoxv"
+                href="#"
+              >
+                FOO
+              </a>
+              :
+               
+              <em>
+                foo
+              </em>
+            </span>
+          </li>
+          <li
+            className="sc-gzVnrw iAYwO"
+          >
+            <span>
+              <a
+                className="sc-bZQynM ivuoxv"
+                href="#"
+              >
+                BAR
+              </a>
+              :
+               
+              <em>
+                bar
+              </em>
+            </span>
+          </li>
+          <li
+            className="sc-gzVnrw iAYwO"
+          >
+            <span>
+              <a
+                className="sc-bZQynM ivuoxv"
+                href="#"
+              >
+                BAZ
+              </a>
+              :
+               
+              <em>
+                baz
+              </em>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Containers - Cities allows removing city from list 1`] = `
+Array [
+  <div
+    className="city sc-jTzLTM gTeocR"
+  >
+    <div
+      className="sc-bxivhb liRQLP"
+    >
+      <div
+        className="buttons"
+      >
+        <button
+          className="move sc-bwzfXH fGOwbX"
+          color="#fff"
+          onClick={[Function]}
+          title="Move destination up in list"
+        >
+          ⬆
+        </button>
+        <button
+          className="remove sc-bwzfXH gbuAGC"
+          color="#fff"
+          onClick={[Function]}
+          title="Remove from list"
+        >
+          ✗
+        </button>
+      </div>
+      <h2
+        className="sc-htpNat sc-ifAKCX jZwhHp"
+        color="#fff"
+        size="fsize_08"
+      >
+        ONE
+      </h2>
+      <span
+        className="sc-htpNat sc-EHOje bUQOko"
+        color="#fff"
+        size="fsize_04"
+      >
+        50 KM
+      </span>
+    </div>
+    <div
+      className="sc-gqjmRU ebSWTF"
+    >
+      <div
+        className="sc-iwsKbI pSYKQ"
+      >
+        <div
+          className="weather-today"
+        >
+          <div
+            className="weather-day sc-dnqmqq cJeYVJ"
+            style={
+              Object {
+                "backgroundImage": "url(/images/weather-icons/113.png)",
+              }
+            }
+          >
+            <span>
+              35
+            </span>
+            °C
+            <p>
+              Sunny
+            </p>
+          </div>
+        </div>
+        <div
+          className="weather-forecast sc-gZMcBi hguPkl"
+        >
+          <div
+            className="weather-day sc-dnqmqq cdKxNR"
+            style={
+              Object {
+                "backgroundImage": "url(/images/weather-icons/113.png)",
+              }
+            }
+          >
+            <span>
+              35
+            </span>
+            °C
+            <p>
+              Sunny
+            </p>
+          </div>
+          <div
+            className="weather-day sc-dnqmqq cdKxNR"
+            style={
+              Object {
+                "backgroundImage": "url(/images/weather-icons/113.png)",
+              }
+            }
+          >
+            <span>
+              35
+            </span>
+            °C
+            <p>
+              Sunny
+            </p>
+          </div>
+          <div
+            className="weather-day sc-dnqmqq cdKxNR"
+            style={
+              Object {
+                "backgroundImage": "url(/images/weather-icons/113.png)",
+              }
+            }
+          >
+            <span>
+              35
+            </span>
+            °C
+            <p>
+              Sunny
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-gqjmRU ebSWTF"
+    >
+      <div>
+        <h3
+          className="sc-htpNat hvSXnA"
+          color="#000"
+          size="fsize_05"
+        >
+          Top tourist places:
+        </h3>
+        <ul
+          className="sc-htoDjs hEklmg"
+        >
+          <li
+            className="sc-gzVnrw iAYwO"
+          >
+            <span>
+              <a
+                className="sc-bZQynM ivuoxv"
+                href="#"
+              >
+                FOO
+              </a>
+              :
+               
+              <em>
+                foo
+              </em>
+            </span>
+          </li>
+          <li
+            className="sc-gzVnrw iAYwO"
+          >
+            <span>
+              <a
+                className="sc-bZQynM ivuoxv"
+                href="#"
+              >
+                BAR
+              </a>
+              :
+               
+              <em>
+                bar
+              </em>
+            </span>
+          </li>
+          <li
+            className="sc-gzVnrw iAYwO"
+          >
+            <span>
+              <a
+                className="sc-bZQynM ivuoxv"
+                href="#"
+              >
+                BAZ
+              </a>
+              :
+               
+              <em>
+                baz
+              </em>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="sc-bdVaJa hDTFWN"
+  >
+    Advertisement Space
+  </div>,
+  <div
+    className="city sc-jTzLTM gTeocR"
+  >
+    <div
+      className="sc-bxivhb liRQLP"
+    >
+      <div
+        className="buttons"
+      >
+        <button
+          className="move sc-bwzfXH fGOwbX"
+          color="#fff"
+          onClick={[Function]}
+          title="Move destination up in list"
+        >
+          ⬆
+        </button>
+        <button
+          className="remove sc-bwzfXH gbuAGC"
+          color="#fff"
+          onClick={[Function]}
+          title="Remove from list"
+        >
+          ✗
+        </button>
+      </div>
+      <h2
+        className="sc-htpNat sc-ifAKCX jZwhHp"
+        color="#fff"
+        size="fsize_08"
+      >
+        TWO
+      </h2>
+      <span
+        className="sc-htpNat sc-EHOje bUQOko"
+        color="#fff"
+        size="fsize_04"
+      >
+        100 KM
+      </span>
+    </div>
+    <div
+      className="sc-gqjmRU sc-VigVT ewklmX"
+    >
+      <p
+        style={
+          Object {
+            "fontSize": "2em",
+            "margin": 0,
+          }
+        }
+      >
+        😞
+      </p>
+      <h4
+        style={
+          Object {
+            "margin": 0,
+          }
+        }
+      >
+        Something went wrong.
+      </h4>
+    </div>
+    <div
+      className="sc-gqjmRU sc-VigVT ewklmX"
+    >
+      <svg
+        className="loader"
+        height="50"
+        stroke="#ff8a00"
+        viewBox="0 0 38 38"
+        width="50"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          fill="none"
+          fillRule="evenodd"
+        >
+          <g
+            strokeWidth="2"
+            transform="translate(1 1)"
+          >
+            <circle
+              cx="18"
+              cy="18"
+              r="18"
+              strokeOpacity=".5"
+            />
+            <path
+              d="M36 18c0-9.94-8.06-18-18-18"
+            >
+              <animateTransform
+                attributeName="transform"
+                dur="1s"
+                from="0 18 18"
+                repeatCount="indefinite"
+                to="360 18 18"
+                type="rotate"
+              />
+            </path>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Containers - Cities allows removing city from list 2`] = `
+Array [
+  <div
+    className="city sc-jTzLTM gTeocR"
+  >
+    <div
+      className="sc-bxivhb liRQLP"
+    >
+      <div
+        className="buttons"
+      >
+        <button
+          className="move sc-bwzfXH fGOwbX"
+          color="#fff"
+          onClick={[Function]}
+          title="Move destination up in list"
+        >
+          ⬆
+        </button>
+        <button
+          className="remove sc-bwzfXH gbuAGC"
+          color="#fff"
+          onClick={[Function]}
+          title="Remove from list"
+        >
+          ✗
+        </button>
+      </div>
+      <h2
+        className="sc-htpNat sc-ifAKCX jZwhHp"
+        color="#fff"
+        size="fsize_08"
+      >
+        TWO
+      </h2>
+      <span
+        className="sc-htpNat sc-EHOje bUQOko"
+        color="#fff"
+        size="fsize_04"
+      >
+        100 KM
+      </span>
+    </div>
+    <div
+      className="sc-gqjmRU sc-VigVT ewklmX"
+    >
+      <p
+        style={
+          Object {
+            "fontSize": "2em",
+            "margin": 0,
+          }
+        }
+      >
+        😞
+      </p>
+      <h4
+        style={
+          Object {
+            "margin": 0,
+          }
+        }
+      >
+        Something went wrong.
+      </h4>
+    </div>
+    <div
+      className="sc-gqjmRU sc-VigVT ewklmX"
+    >
+      <svg
+        className="loader"
+        height="50"
+        stroke="#ff8a00"
+        viewBox="0 0 38 38"
+        width="50"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          fill="none"
+          fillRule="evenodd"
+        >
+          <g
+            strokeWidth="2"
+            transform="translate(1 1)"
+          >
+            <circle
+              cx="18"
+              cy="18"
+              r="18"
+              strokeOpacity=".5"
+            />
+            <path
+              d="M36 18c0-9.94-8.06-18-18-18"
+            >
+              <animateTransform
+                attributeName="transform"
+                dur="1s"
+                from="0 18 18"
+                repeatCount="indefinite"
+                to="360 18 18"
+                type="rotate"
+              />
+            </path>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>,
+  <div
+    className="sc-bdVaJa hDTFWN"
+  >
+    Advertisement Space
+  </div>,
+]
+`;
+
+exports[`Containers - Cities renders cities when cities count is 0 1`] = `
+<div
+  className="sc-bdVaJa hDTFWN"
+>
+  Advertisement Space
+</div>
+`;
+
+exports[`Containers - Cities renders cities when cities count is more than 0 1`] = `
+Array [
+  <div
+    className="city sc-jTzLTM gTeocR"
+  >
+    <div
+      className="sc-bxivhb liRQLP"
+    >
+      <div
+        className="buttons"
+      >
+        <button
+          className="move sc-bwzfXH fGOwbX"
+          color="#fff"
+          onClick={[Function]}
+          title="Move destination up in list"
+        >
+          ⬆
+        </button>
+        <button
+          className="remove sc-bwzfXH gbuAGC"
+          color="#fff"
+          onClick={[Function]}
+          title="Remove from list"
+        >
+          ✗
+        </button>
+      </div>
+      <h2
+        className="sc-htpNat sc-ifAKCX jZwhHp"
+        color="#fff"
+        size="fsize_08"
+      >
+        ONE
+      </h2>
+      <span
+        className="sc-htpNat sc-EHOje bUQOko"
+        color="#fff"
+        size="fsize_04"
+      >
+        50 KM
+      </span>
+    </div>
+    <div
+      className="sc-gqjmRU ebSWTF"
+    >
+      <div
+        className="sc-iwsKbI pSYKQ"
+      >
+        <div
+          className="weather-today"
+        >
+          <div
+            className="weather-day sc-dnqmqq cJeYVJ"
+            style={
+              Object {
+                "backgroundImage": "url(/images/weather-icons/113.png)",
+              }
+            }
+          >
+            <span>
+              35
+            </span>
+            °C
+            <p>
+              Sunny
+            </p>
+          </div>
+        </div>
+        <div
+          className="weather-forecast sc-gZMcBi hguPkl"
+        >
+          <div
+            className="weather-day sc-dnqmqq cdKxNR"
+            style={
+              Object {
+                "backgroundImage": "url(/images/weather-icons/113.png)",
+              }
+            }
+          >
+            <span>
+              35
+            </span>
+            °C
+            <p>
+              Sunny
+            </p>
+          </div>
+          <div
+            className="weather-day sc-dnqmqq cdKxNR"
+            style={
+              Object {
+                "backgroundImage": "url(/images/weather-icons/113.png)",
+              }
+            }
+          >
+            <span>
+              35
+            </span>
+            °C
+            <p>
+              Sunny
+            </p>
+          </div>
+          <div
+            className="weather-day sc-dnqmqq cdKxNR"
+            style={
+              Object {
+                "backgroundImage": "url(/images/weather-icons/113.png)",
+              }
+            }
+          >
+            <span>
+              35
+            </span>
+            °C
+            <p>
+              Sunny
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-gqjmRU ebSWTF"
+    >
+      <div>
+        <h3
+          className="sc-htpNat hvSXnA"
+          color="#000"
+          size="fsize_05"
+        >
+          Top tourist places:
+        </h3>
+        <ul
+          className="sc-htoDjs hEklmg"
+        >
+          <li
+            className="sc-gzVnrw iAYwO"
+          >
+            <span>
+              <a
+                className="sc-bZQynM ivuoxv"
+                href="#"
+              >
+                FOO
+              </a>
+              :
+               
+              <em>
+                foo
+              </em>
+            </span>
+          </li>
+          <li
+            className="sc-gzVnrw iAYwO"
+          >
+            <span>
+              <a
+                className="sc-bZQynM ivuoxv"
+                href="#"
+              >
+                BAR
+              </a>
+              :
+               
+              <em>
+                bar
+              </em>
+            </span>
+          </li>
+          <li
+            className="sc-gzVnrw iAYwO"
+          >
+            <span>
+              <a
+                className="sc-bZQynM ivuoxv"
+                href="#"
+              >
+                BAZ
+              </a>
+              :
+               
+              <em>
+                baz
+              </em>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="sc-bdVaJa hDTFWN"
+  >
+    Advertisement Space
+  </div>,
+  <div
+    className="city sc-jTzLTM gTeocR"
+  >
+    <div
+      className="sc-bxivhb liRQLP"
+    >
+      <div
+        className="buttons"
+      >
+        <button
+          className="move sc-bwzfXH fGOwbX"
+          color="#fff"
+          onClick={[Function]}
+          title="Move destination up in list"
+        >
+          ⬆
+        </button>
+        <button
+          className="remove sc-bwzfXH gbuAGC"
+          color="#fff"
+          onClick={[Function]}
+          title="Remove from list"
+        >
+          ✗
+        </button>
+      </div>
+      <h2
+        className="sc-htpNat sc-ifAKCX jZwhHp"
+        color="#fff"
+        size="fsize_08"
+      >
+        TWO
+      </h2>
+      <span
+        className="sc-htpNat sc-EHOje bUQOko"
+        color="#fff"
+        size="fsize_04"
+      >
+        100 KM
+      </span>
+    </div>
+    <div
+      className="sc-gqjmRU sc-VigVT ewklmX"
+    >
+      <p
+        style={
+          Object {
+            "fontSize": "2em",
+            "margin": 0,
+          }
+        }
+      >
+        😞
+      </p>
+      <h4
+        style={
+          Object {
+            "margin": 0,
+          }
+        }
+      >
+        Something went wrong.
+      </h4>
+    </div>
+    <div
+      className="sc-gqjmRU sc-VigVT ewklmX"
+    >
+      <svg
+        className="loader"
+        height="50"
+        stroke="#ff8a00"
+        viewBox="0 0 38 38"
+        width="50"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          fill="none"
+          fillRule="evenodd"
+        >
+          <g
+            strokeWidth="2"
+            transform="translate(1 1)"
+          >
+            <circle
+              cx="18"
+              cy="18"
+              r="18"
+              strokeOpacity=".5"
+            />
+            <path
+              d="M36 18c0-9.94-8.06-18-18-18"
+            >
+              <animateTransform
+                attributeName="transform"
+                dur="1s"
+                from="0 18 18"
+                repeatCount="indefinite"
+                to="360 18 18"
+                type="rotate"
+              />
+            </path>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>,
+]
+`;

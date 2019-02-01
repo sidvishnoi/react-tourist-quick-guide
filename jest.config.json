@@ -15,8 +15,6 @@
     "<rootDir>/public",
     "<rootDir>/src/@types",
     "<rootDir>/src/actions",
-    "<rootDir>/src/containers",
-    "<rootDir>/src/containers",
     "<rootDir>/src/apis"
   ],
   "moduleFileExtensions": ["ts", "tsx", "js"],

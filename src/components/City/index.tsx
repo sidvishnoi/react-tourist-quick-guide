@@ -62,7 +62,7 @@ export default function(props: CityProps & CityPropsFromDispatch) {
     state: weather.state,
   };
   return (
-    <City>
+    <City className="city">
       <CityMeta
         name={props.name}
         distance={distance.data}

@@ -9,22 +9,21 @@ params.append('orderby', 'relevance');
 params.append('maxRows', '20');
 params.append('featureClass', 'P');
 
+interface Response {
+  geonames: {
+    toponymName: string;
+    geonameId: number;
+  }[];
+}
+
 export default async (query: string) => {
   params.set('name_startsWith', query);
   const url = API_URL + '?' + params.toString();
   const response = await fetch(url);
-  const json = await response.json();
-  const locations = json.geonames.map(
-    ({
-      toponymName,
-      geonameId,
-    }: {
-      toponymName: string;
-      geonameId: number;
-    }) => ({
-      id: geonameId,
-      name: toponymName,
-    }),
-  );
+  const json: Response = await response.json();
+  const locations = json.geonames.map(res => ({
+    id: res.geonameId,
+    name: res.toponymName,
+  }));
   return Promise.resolve({ query, locations });
 };

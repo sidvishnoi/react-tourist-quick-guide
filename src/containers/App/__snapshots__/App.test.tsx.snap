@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Containers - App renders destination search page when source is set 1`] = `
+<div
+  className="App"
+>
+  <h1
+    className="sc-bdVaJa fCEYOb"
+    color="#000"
+    size="fsize_09"
+  >
+    Destinations from 
+    <em>
+      PASS
+    </em>
+    :
+  </h1>
+  <div
+    className="sc-bwzfXH fQaCWc"
+  >
+    <div
+      style={
+        Object {
+          "display": "inline-block",
+        }
+      }
+    >
+      <input
+        aria-autocomplete="list"
+        aria-expanded={false}
+        autoComplete="off"
+        className=""
+        onBlur={[Function]}
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        placeholder="Add destination"
+        role="combobox"
+        value=""
+      />
+    </div>
+  </div>
+  <div
+    className="Content"
+  >
+    <div
+      className="sc-ifAKCX ulTBn"
+    >
+      Advertisement Space
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Containers - App renders initial page when source is not available 1`] = `
+<div
+  className="App"
+>
+  <h1
+    className="sc-bdVaJa fCEYOb"
+    color="#000"
+    size="fsize_09"
+  >
+    Where are you travelling from?
+  </h1>
+  <div
+    className="sc-bwzfXH fQaCWc"
+  >
+    <div
+      style={
+        Object {
+          "display": "inline-block",
+        }
+      }
+    >
+      <input
+        aria-autocomplete="list"
+        aria-expanded={false}
+        autoComplete="off"
+        className=""
+        onBlur={[Function]}
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        placeholder="Your Location"
+        role="combobox"
+        value=""
+      />
+    </div>
+  </div>
+</div>
+`;

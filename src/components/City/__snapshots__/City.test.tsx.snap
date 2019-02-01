@@ -2,7 +2,7 @@
 
 exports[`Component - City renders city with proper widgets 1`] = `
 <div
-  className="sc-VigVT hLLesS"
+  className="city sc-VigVT hLLesS"
 >
   <div
     className="sc-htpNat jMRBuQ"
@@ -143,7 +143,7 @@ exports[`Component - City renders city with proper widgets 1`] = `
 
 exports[`Component - City renders city with widgets in loading state 1`] = `
 <div
-  className="sc-VigVT hLLesS"
+  className="city sc-VigVT hLLesS"
 >
   <div
     className="sc-htpNat jMRBuQ"
