@@ -25,5 +25,5 @@ export default async (query: string) => {
     id: res.geonameId,
     name: res.toponymName,
   }));
-  return Promise.resolve({ query, locations });
+  return Promise.resolve(locations);
 };

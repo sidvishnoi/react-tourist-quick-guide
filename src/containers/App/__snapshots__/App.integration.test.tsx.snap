@@ -1,0 +1,1455 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App lets add a new destination 1`] = `
+<div
+  className="App"
+>
+  <h1
+    className="sc-bdVaJa fCEYOb"
+    color="#000"
+    size="fsize_09"
+  >
+    Destinations from 
+    <em>
+      LOCATION
+    </em>
+    :
+  </h1>
+  <div
+    className="sc-bwzfXH fQaCWc"
+  >
+    <div
+      style={
+        Object {
+          "display": "inline-block",
+        }
+      }
+    >
+      <input
+        aria-autocomplete="list"
+        aria-expanded={false}
+        autoComplete="off"
+        className=""
+        onBlur={[Function]}
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        placeholder="Add destination"
+        role="combobox"
+        value=""
+      />
+    </div>
+  </div>
+  <div
+    className="Content"
+  >
+    <div
+      className="city sc-cSHVUG hpSfXF"
+    >
+      <div
+        className="sc-bZQynM lkaWTh"
+      >
+        <div
+          className="buttons"
+        >
+          <button
+            className="move sc-EHOje caNcft"
+            color="#fff"
+            onClick={[Function]}
+            title="Move destination up in list"
+          >
+            ⬆
+          </button>
+          <button
+            className="remove sc-EHOje hWrgYh"
+            color="#fff"
+            onClick={[Function]}
+            title="Remove from list"
+          >
+            ✗
+          </button>
+        </div>
+        <h2
+          className="sc-bdVaJa sc-gzVnrw gmWgic"
+          color="#fff"
+          size="fsize_08"
+        >
+          LOCATION TWO
+        </h2>
+        <span
+          className="sc-bdVaJa sc-htoDjs jyuKTm"
+          color="#fff"
+          size="fsize_04"
+        >
+          100 KM
+        </span>
+      </div>
+      <div
+        className="sc-fjdhpX laTUCL"
+      >
+        <div
+          className="sc-VigVT hpjzoH"
+        >
+          <div
+            className="weather-today"
+          >
+            <div
+              className="weather-day sc-gqjmRU jFBVhn"
+              style={
+                Object {
+                  "backgroundImage": "url(/images/weather-icons/227.png)",
+                }
+              }
+            >
+              <span>
+                30
+              </span>
+              °C
+              <p>
+                sunny
+              </p>
+            </div>
+          </div>
+          <div
+            className="weather-forecast sc-jTzLTM kAcagK"
+          >
+            <div
+              className="weather-day sc-gqjmRU libNPB"
+              style={
+                Object {
+                  "backgroundImage": "url(/images/weather-icons/113.png)",
+                }
+              }
+            >
+              <span>
+                30
+              </span>
+              °C
+              <p>
+                sunny
+              </p>
+            </div>
+            <div
+              className="weather-day sc-gqjmRU libNPB"
+              style={
+                Object {
+                  "backgroundImage": "url(/images/weather-icons/230.png)",
+                }
+              }
+            >
+              <span>
+                35
+              </span>
+              °C
+              <p>
+                sunny
+              </p>
+            </div>
+            <div
+              className="weather-day sc-gqjmRU libNPB"
+              style={
+                Object {
+                  "backgroundImage": "url(/images/weather-icons/263.png)",
+                }
+              }
+            >
+              <span>
+                32
+              </span>
+              °C
+              <p>
+                sunny
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="sc-fjdhpX laTUCL"
+      >
+        <div>
+          <h3
+            className="sc-bdVaJa ldjkJc"
+            color="#000"
+            size="fsize_05"
+          >
+            Top tourist places:
+          </h3>
+          <ul
+            className="sc-gZMcBi fRKiLq"
+          >
+            <li
+              className="sc-iwsKbI cHNZZb"
+            >
+              <span>
+                <a
+                  className="sc-dnqmqq cCpFAY"
+                  href="#"
+                >
+                  ONE
+                </a>
+                :
+                 
+                <em>
+                  summary for ONE
+                </em>
+              </span>
+            </li>
+            <li
+              className="sc-iwsKbI cHNZZb"
+            >
+              <span>
+                <a
+                  className="sc-dnqmqq cCpFAY"
+                  href="#"
+                >
+                  TWO
+                </a>
+                :
+                 
+                <em>
+                  summary for TWO
+                </em>
+              </span>
+            </li>
+            <li
+              className="sc-iwsKbI cHNZZb"
+            >
+              <span>
+                <a
+                  className="sc-dnqmqq cCpFAY"
+                  href="#"
+                >
+                  THREE
+                </a>
+                :
+                 
+                <em>
+                  summary for THREE
+                </em>
+              </span>
+            </li>
+            <li
+              className="sc-iwsKbI cHNZZb"
+            >
+              <span>
+                <a
+                  className="sc-dnqmqq cCpFAY"
+                  href="#"
+                >
+                  FOUR
+                </a>
+                :
+                 
+                <em>
+                  summary for FOUR
+                </em>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-ifAKCX ulTBn"
+    >
+      Advertisement Space
+    </div>
+  </div>
+</div>
+`;
+
+exports[`App lets add a new destination 2`] = `
+<div
+  className="App"
+>
+  <h1
+    className="sc-bdVaJa fCEYOb"
+    color="#000"
+    size="fsize_09"
+  >
+    Destinations from 
+    <em>
+      LOCATION
+    </em>
+    :
+  </h1>
+  <div
+    className="sc-bwzfXH fQaCWc"
+  >
+    <div
+      style={
+        Object {
+          "display": "inline-block",
+        }
+      }
+    >
+      <input
+        aria-autocomplete="list"
+        aria-expanded={false}
+        autoComplete="off"
+        className=""
+        onBlur={[Function]}
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        placeholder="Add destination"
+        role="combobox"
+        value=""
+      />
+    </div>
+  </div>
+  <div
+    className="Content"
+  >
+    <div
+      className="city sc-cSHVUG hpSfXF"
+    >
+      <div
+        className="sc-bZQynM lkaWTh"
+      >
+        <div
+          className="buttons"
+        >
+          <button
+            className="move sc-EHOje caNcft"
+            color="#fff"
+            onClick={[Function]}
+            title="Move destination up in list"
+          >
+            ⬆
+          </button>
+          <button
+            className="remove sc-EHOje hWrgYh"
+            color="#fff"
+            onClick={[Function]}
+            title="Remove from list"
+          >
+            ✗
+          </button>
+        </div>
+        <h2
+          className="sc-bdVaJa sc-gzVnrw gmWgic"
+          color="#fff"
+          size="fsize_08"
+        >
+          LOCATION THREE
+        </h2>
+        <span
+          className="sc-bdVaJa sc-htoDjs jyuKTm"
+          color="#fff"
+          size="fsize_04"
+        >
+          100 KM
+        </span>
+      </div>
+      <div
+        className="sc-fjdhpX laTUCL"
+      >
+        <div
+          className="sc-VigVT hpjzoH"
+        >
+          <div
+            className="weather-today"
+          >
+            <div
+              className="weather-day sc-gqjmRU jFBVhn"
+              style={
+                Object {
+                  "backgroundImage": "url(/images/weather-icons/227.png)",
+                }
+              }
+            >
+              <span>
+                30
+              </span>
+              °C
+              <p>
+                sunny
+              </p>
+            </div>
+          </div>
+          <div
+            className="weather-forecast sc-jTzLTM kAcagK"
+          >
+            <div
+              className="weather-day sc-gqjmRU libNPB"
+              style={
+                Object {
+                  "backgroundImage": "url(/images/weather-icons/113.png)",
+                }
+              }
+            >
+              <span>
+                30
+              </span>
+              °C
+              <p>
+                sunny
+              </p>
+            </div>
+            <div
+              className="weather-day sc-gqjmRU libNPB"
+              style={
+                Object {
+                  "backgroundImage": "url(/images/weather-icons/230.png)",
+                }
+              }
+            >
+              <span>
+                35
+              </span>
+              °C
+              <p>
+                sunny
+              </p>
+            </div>
+            <div
+              className="weather-day sc-gqjmRU libNPB"
+              style={
+                Object {
+                  "backgroundImage": "url(/images/weather-icons/263.png)",
+                }
+              }
+            >
+              <span>
+                32
+              </span>
+              °C
+              <p>
+                sunny
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="sc-fjdhpX laTUCL"
+      >
+        <div>
+          <h3
+            className="sc-bdVaJa ldjkJc"
+            color="#000"
+            size="fsize_05"
+          >
+            Top tourist places:
+          </h3>
+          <ul
+            className="sc-gZMcBi fRKiLq"
+          >
+            <li
+              className="sc-iwsKbI cHNZZb"
+            >
+              <span>
+                <a
+                  className="sc-dnqmqq cCpFAY"
+                  href="#"
+                >
+                  ONE
+                </a>
+                :
+                 
+                <em>
+                  summary for ONE
+                </em>
+              </span>
+            </li>
+            <li
+              className="sc-iwsKbI cHNZZb"
+            >
+              <span>
+                <a
+                  className="sc-dnqmqq cCpFAY"
+                  href="#"
+                >
+                  TWO
+                </a>
+                :
+                 
+                <em>
+                  summary for TWO
+                </em>
+              </span>
+            </li>
+            <li
+              className="sc-iwsKbI cHNZZb"
+            >
+              <span>
+                <a
+                  className="sc-dnqmqq cCpFAY"
+                  href="#"
+                >
+                  THREE
+                </a>
+                :
+                 
+                <em>
+                  summary for THREE
+                </em>
+              </span>
+            </li>
+            <li
+              className="sc-iwsKbI cHNZZb"
+            >
+              <span>
+                <a
+                  className="sc-dnqmqq cCpFAY"
+                  href="#"
+                >
+                  FOUR
+                </a>
+                :
+                 
+                <em>
+                  summary for FOUR
+                </em>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-ifAKCX ulTBn"
+    >
+      Advertisement Space
+    </div>
+    <div
+      className="city sc-cSHVUG hpSfXF"
+    >
+      <div
+        className="sc-bZQynM lkaWTh"
+      >
+        <div
+          className="buttons"
+        >
+          <button
+            className="move sc-EHOje caNcft"
+            color="#fff"
+            onClick={[Function]}
+            title="Move destination up in list"
+          >
+            ⬆
+          </button>
+          <button
+            className="remove sc-EHOje hWrgYh"
+            color="#fff"
+            onClick={[Function]}
+            title="Remove from list"
+          >
+            ✗
+          </button>
+        </div>
+        <h2
+          className="sc-bdVaJa sc-gzVnrw gmWgic"
+          color="#fff"
+          size="fsize_08"
+        >
+          LOCATION TWO
+        </h2>
+        <span
+          className="sc-bdVaJa sc-htoDjs jyuKTm"
+          color="#fff"
+          size="fsize_04"
+        >
+          100 KM
+        </span>
+      </div>
+      <div
+        className="sc-fjdhpX laTUCL"
+      >
+        <div
+          className="sc-VigVT hpjzoH"
+        >
+          <div
+            className="weather-today"
+          >
+            <div
+              className="weather-day sc-gqjmRU jFBVhn"
+              style={
+                Object {
+                  "backgroundImage": "url(/images/weather-icons/227.png)",
+                }
+              }
+            >
+              <span>
+                30
+              </span>
+              °C
+              <p>
+                sunny
+              </p>
+            </div>
+          </div>
+          <div
+            className="weather-forecast sc-jTzLTM kAcagK"
+          >
+            <div
+              className="weather-day sc-gqjmRU libNPB"
+              style={
+                Object {
+                  "backgroundImage": "url(/images/weather-icons/113.png)",
+                }
+              }
+            >
+              <span>
+                30
+              </span>
+              °C
+              <p>
+                sunny
+              </p>
+            </div>
+            <div
+              className="weather-day sc-gqjmRU libNPB"
+              style={
+                Object {
+                  "backgroundImage": "url(/images/weather-icons/230.png)",
+                }
+              }
+            >
+              <span>
+                35
+              </span>
+              °C
+              <p>
+                sunny
+              </p>
+            </div>
+            <div
+              className="weather-day sc-gqjmRU libNPB"
+              style={
+                Object {
+                  "backgroundImage": "url(/images/weather-icons/263.png)",
+                }
+              }
+            >
+              <span>
+                32
+              </span>
+              °C
+              <p>
+                sunny
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="sc-fjdhpX laTUCL"
+      >
+        <div>
+          <h3
+            className="sc-bdVaJa ldjkJc"
+            color="#000"
+            size="fsize_05"
+          >
+            Top tourist places:
+          </h3>
+          <ul
+            className="sc-gZMcBi fRKiLq"
+          >
+            <li
+              className="sc-iwsKbI cHNZZb"
+            >
+              <span>
+                <a
+                  className="sc-dnqmqq cCpFAY"
+                  href="#"
+                >
+                  ONE
+                </a>
+                :
+                 
+                <em>
+                  summary for ONE
+                </em>
+              </span>
+            </li>
+            <li
+              className="sc-iwsKbI cHNZZb"
+            >
+              <span>
+                <a
+                  className="sc-dnqmqq cCpFAY"
+                  href="#"
+                >
+                  TWO
+                </a>
+                :
+                 
+                <em>
+                  summary for TWO
+                </em>
+              </span>
+            </li>
+            <li
+              className="sc-iwsKbI cHNZZb"
+            >
+              <span>
+                <a
+                  className="sc-dnqmqq cCpFAY"
+                  href="#"
+                >
+                  THREE
+                </a>
+                :
+                 
+                <em>
+                  summary for THREE
+                </em>
+              </span>
+            </li>
+            <li
+              className="sc-iwsKbI cHNZZb"
+            >
+              <span>
+                <a
+                  className="sc-dnqmqq cCpFAY"
+                  href="#"
+                >
+                  FOUR
+                </a>
+                :
+                 
+                <em>
+                  summary for FOUR
+                </em>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`App lets move a city up in destinations list 1`] = `
+<div
+  className="App"
+>
+  <h1
+    className="sc-bdVaJa fCEYOb"
+    color="#000"
+    size="fsize_09"
+  >
+    Destinations from 
+    <em>
+      LOCATION
+    </em>
+    :
+  </h1>
+  <div
+    className="sc-bwzfXH fQaCWc"
+  >
+    <div
+      style={
+        Object {
+          "display": "inline-block",
+        }
+      }
+    >
+      <input
+        aria-autocomplete="list"
+        aria-expanded={false}
+        autoComplete="off"
+        className=""
+        onBlur={[Function]}
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        placeholder="Add destination"
+        role="combobox"
+        value=""
+      />
+    </div>
+  </div>
+  <div
+    className="Content"
+  >
+    <div
+      className="city sc-cSHVUG hpSfXF"
+    >
+      <div
+        className="sc-bZQynM lkaWTh"
+      >
+        <div
+          className="buttons"
+        >
+          <button
+            className="move sc-EHOje caNcft"
+            color="#fff"
+            onClick={[Function]}
+            title="Move destination up in list"
+          >
+            ⬆
+          </button>
+          <button
+            className="remove sc-EHOje hWrgYh"
+            color="#fff"
+            onClick={[Function]}
+            title="Remove from list"
+          >
+            ✗
+          </button>
+        </div>
+        <h2
+          className="sc-bdVaJa sc-gzVnrw gmWgic"
+          color="#fff"
+          size="fsize_08"
+        >
+          LOCATION THREE
+        </h2>
+        <span
+          className="sc-bdVaJa sc-htoDjs jyuKTm"
+          color="#fff"
+          size="fsize_04"
+        >
+          100 KM
+        </span>
+      </div>
+      <div
+        className="sc-fjdhpX laTUCL"
+      >
+        <div
+          className="sc-VigVT hpjzoH"
+        >
+          <div
+            className="weather-today"
+          >
+            <div
+              className="weather-day sc-gqjmRU jFBVhn"
+              style={
+                Object {
+                  "backgroundImage": "url(/images/weather-icons/227.png)",
+                }
+              }
+            >
+              <span>
+                30
+              </span>
+              °C
+              <p>
+                sunny
+              </p>
+            </div>
+          </div>
+          <div
+            className="weather-forecast sc-jTzLTM kAcagK"
+          >
+            <div
+              className="weather-day sc-gqjmRU libNPB"
+              style={
+                Object {
+                  "backgroundImage": "url(/images/weather-icons/113.png)",
+                }
+              }
+            >
+              <span>
+                30
+              </span>
+              °C
+              <p>
+                sunny
+              </p>
+            </div>
+            <div
+              className="weather-day sc-gqjmRU libNPB"
+              style={
+                Object {
+                  "backgroundImage": "url(/images/weather-icons/230.png)",
+                }
+              }
+            >
+              <span>
+                35
+              </span>
+              °C
+              <p>
+                sunny
+              </p>
+            </div>
+            <div
+              className="weather-day sc-gqjmRU libNPB"
+              style={
+                Object {
+                  "backgroundImage": "url(/images/weather-icons/263.png)",
+                }
+              }
+            >
+              <span>
+                32
+              </span>
+              °C
+              <p>
+                sunny
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="sc-fjdhpX laTUCL"
+      >
+        <div>
+          <h3
+            className="sc-bdVaJa ldjkJc"
+            color="#000"
+            size="fsize_05"
+          >
+            Top tourist places:
+          </h3>
+          <ul
+            className="sc-gZMcBi fRKiLq"
+          >
+            <li
+              className="sc-iwsKbI cHNZZb"
+            >
+              <span>
+                <a
+                  className="sc-dnqmqq cCpFAY"
+                  href="#"
+                >
+                  ONE
+                </a>
+                :
+                 
+                <em>
+                  summary for ONE
+                </em>
+              </span>
+            </li>
+            <li
+              className="sc-iwsKbI cHNZZb"
+            >
+              <span>
+                <a
+                  className="sc-dnqmqq cCpFAY"
+                  href="#"
+                >
+                  TWO
+                </a>
+                :
+                 
+                <em>
+                  summary for TWO
+                </em>
+              </span>
+            </li>
+            <li
+              className="sc-iwsKbI cHNZZb"
+            >
+              <span>
+                <a
+                  className="sc-dnqmqq cCpFAY"
+                  href="#"
+                >
+                  THREE
+                </a>
+                :
+                 
+                <em>
+                  summary for THREE
+                </em>
+              </span>
+            </li>
+            <li
+              className="sc-iwsKbI cHNZZb"
+            >
+              <span>
+                <a
+                  className="sc-dnqmqq cCpFAY"
+                  href="#"
+                >
+                  FOUR
+                </a>
+                :
+                 
+                <em>
+                  summary for FOUR
+                </em>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-ifAKCX ulTBn"
+    >
+      Advertisement Space
+    </div>
+    <div
+      className="city sc-cSHVUG hpSfXF"
+    >
+      <div
+        className="sc-bZQynM lkaWTh"
+      >
+        <div
+          className="buttons"
+        >
+          <button
+            className="move sc-EHOje caNcft"
+            color="#fff"
+            onClick={[Function]}
+            title="Move destination up in list"
+          >
+            ⬆
+          </button>
+          <button
+            className="remove sc-EHOje hWrgYh"
+            color="#fff"
+            onClick={[Function]}
+            title="Remove from list"
+          >
+            ✗
+          </button>
+        </div>
+        <h2
+          className="sc-bdVaJa sc-gzVnrw gmWgic"
+          color="#fff"
+          size="fsize_08"
+        >
+          LOCATION TWO
+        </h2>
+        <span
+          className="sc-bdVaJa sc-htoDjs jyuKTm"
+          color="#fff"
+          size="fsize_04"
+        >
+          100 KM
+        </span>
+      </div>
+      <div
+        className="sc-fjdhpX laTUCL"
+      >
+        <div
+          className="sc-VigVT hpjzoH"
+        >
+          <div
+            className="weather-today"
+          >
+            <div
+              className="weather-day sc-gqjmRU jFBVhn"
+              style={
+                Object {
+                  "backgroundImage": "url(/images/weather-icons/227.png)",
+                }
+              }
+            >
+              <span>
+                30
+              </span>
+              °C
+              <p>
+                sunny
+              </p>
+            </div>
+          </div>
+          <div
+            className="weather-forecast sc-jTzLTM kAcagK"
+          >
+            <div
+              className="weather-day sc-gqjmRU libNPB"
+              style={
+                Object {
+                  "backgroundImage": "url(/images/weather-icons/113.png)",
+                }
+              }
+            >
+              <span>
+                30
+              </span>
+              °C
+              <p>
+                sunny
+              </p>
+            </div>
+            <div
+              className="weather-day sc-gqjmRU libNPB"
+              style={
+                Object {
+                  "backgroundImage": "url(/images/weather-icons/230.png)",
+                }
+              }
+            >
+              <span>
+                35
+              </span>
+              °C
+              <p>
+                sunny
+              </p>
+            </div>
+            <div
+              className="weather-day sc-gqjmRU libNPB"
+              style={
+                Object {
+                  "backgroundImage": "url(/images/weather-icons/263.png)",
+                }
+              }
+            >
+              <span>
+                32
+              </span>
+              °C
+              <p>
+                sunny
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="sc-fjdhpX laTUCL"
+      >
+        <div>
+          <h3
+            className="sc-bdVaJa ldjkJc"
+            color="#000"
+            size="fsize_05"
+          >
+            Top tourist places:
+          </h3>
+          <ul
+            className="sc-gZMcBi fRKiLq"
+          >
+            <li
+              className="sc-iwsKbI cHNZZb"
+            >
+              <span>
+                <a
+                  className="sc-dnqmqq cCpFAY"
+                  href="#"
+                >
+                  ONE
+                </a>
+                :
+                 
+                <em>
+                  summary for ONE
+                </em>
+              </span>
+            </li>
+            <li
+              className="sc-iwsKbI cHNZZb"
+            >
+              <span>
+                <a
+                  className="sc-dnqmqq cCpFAY"
+                  href="#"
+                >
+                  TWO
+                </a>
+                :
+                 
+                <em>
+                  summary for TWO
+                </em>
+              </span>
+            </li>
+            <li
+              className="sc-iwsKbI cHNZZb"
+            >
+              <span>
+                <a
+                  className="sc-dnqmqq cCpFAY"
+                  href="#"
+                >
+                  THREE
+                </a>
+                :
+                 
+                <em>
+                  summary for THREE
+                </em>
+              </span>
+            </li>
+            <li
+              className="sc-iwsKbI cHNZZb"
+            >
+              <span>
+                <a
+                  className="sc-dnqmqq cCpFAY"
+                  href="#"
+                >
+                  FOUR
+                </a>
+                :
+                 
+                <em>
+                  summary for FOUR
+                </em>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`App lets remove a city from destinations list 1`] = `
+<div
+  className="App"
+>
+  <h1
+    className="sc-bdVaJa fCEYOb"
+    color="#000"
+    size="fsize_09"
+  >
+    Destinations from 
+    <em>
+      LOCATION
+    </em>
+    :
+  </h1>
+  <div
+    className="sc-bwzfXH fQaCWc"
+  >
+    <div
+      style={
+        Object {
+          "display": "inline-block",
+        }
+      }
+    >
+      <input
+        aria-autocomplete="list"
+        aria-expanded={false}
+        autoComplete="off"
+        className=""
+        onBlur={[Function]}
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        placeholder="Add destination"
+        role="combobox"
+        value=""
+      />
+    </div>
+  </div>
+  <div
+    className="Content"
+  >
+    <div
+      className="city sc-cSHVUG hpSfXF"
+    >
+      <div
+        className="sc-bZQynM lkaWTh"
+      >
+        <div
+          className="buttons"
+        >
+          <button
+            className="move sc-EHOje caNcft"
+            color="#fff"
+            onClick={[Function]}
+            title="Move destination up in list"
+          >
+            ⬆
+          </button>
+          <button
+            className="remove sc-EHOje hWrgYh"
+            color="#fff"
+            onClick={[Function]}
+            title="Remove from list"
+          >
+            ✗
+          </button>
+        </div>
+        <h2
+          className="sc-bdVaJa sc-gzVnrw gmWgic"
+          color="#fff"
+          size="fsize_08"
+        >
+          LOCATION THREE
+        </h2>
+        <span
+          className="sc-bdVaJa sc-htoDjs jyuKTm"
+          color="#fff"
+          size="fsize_04"
+        >
+          100 KM
+        </span>
+      </div>
+      <div
+        className="sc-fjdhpX laTUCL"
+      >
+        <div
+          className="sc-VigVT hpjzoH"
+        >
+          <div
+            className="weather-today"
+          >
+            <div
+              className="weather-day sc-gqjmRU jFBVhn"
+              style={
+                Object {
+                  "backgroundImage": "url(/images/weather-icons/227.png)",
+                }
+              }
+            >
+              <span>
+                30
+              </span>
+              °C
+              <p>
+                sunny
+              </p>
+            </div>
+          </div>
+          <div
+            className="weather-forecast sc-jTzLTM kAcagK"
+          >
+            <div
+              className="weather-day sc-gqjmRU libNPB"
+              style={
+                Object {
+                  "backgroundImage": "url(/images/weather-icons/113.png)",
+                }
+              }
+            >
+              <span>
+                30
+              </span>
+              °C
+              <p>
+                sunny
+              </p>
+            </div>
+            <div
+              className="weather-day sc-gqjmRU libNPB"
+              style={
+                Object {
+                  "backgroundImage": "url(/images/weather-icons/230.png)",
+                }
+              }
+            >
+              <span>
+                35
+              </span>
+              °C
+              <p>
+                sunny
+              </p>
+            </div>
+            <div
+              className="weather-day sc-gqjmRU libNPB"
+              style={
+                Object {
+                  "backgroundImage": "url(/images/weather-icons/263.png)",
+                }
+              }
+            >
+              <span>
+                32
+              </span>
+              °C
+              <p>
+                sunny
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="sc-fjdhpX laTUCL"
+      >
+        <div>
+          <h3
+            className="sc-bdVaJa ldjkJc"
+            color="#000"
+            size="fsize_05"
+          >
+            Top tourist places:
+          </h3>
+          <ul
+            className="sc-gZMcBi fRKiLq"
+          >
+            <li
+              className="sc-iwsKbI cHNZZb"
+            >
+              <span>
+                <a
+                  className="sc-dnqmqq cCpFAY"
+                  href="#"
+                >
+                  ONE
+                </a>
+                :
+                 
+                <em>
+                  summary for ONE
+                </em>
+              </span>
+            </li>
+            <li
+              className="sc-iwsKbI cHNZZb"
+            >
+              <span>
+                <a
+                  className="sc-dnqmqq cCpFAY"
+                  href="#"
+                >
+                  TWO
+                </a>
+                :
+                 
+                <em>
+                  summary for TWO
+                </em>
+              </span>
+            </li>
+            <li
+              className="sc-iwsKbI cHNZZb"
+            >
+              <span>
+                <a
+                  className="sc-dnqmqq cCpFAY"
+                  href="#"
+                >
+                  THREE
+                </a>
+                :
+                 
+                <em>
+                  summary for THREE
+                </em>
+              </span>
+            </li>
+            <li
+              className="sc-iwsKbI cHNZZb"
+            >
+              <span>
+                <a
+                  className="sc-dnqmqq cCpFAY"
+                  href="#"
+                >
+                  FOUR
+                </a>
+                :
+                 
+                <em>
+                  summary for FOUR
+                </em>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-ifAKCX ulTBn"
+    >
+      Advertisement Space
+    </div>
+  </div>
+</div>
+`;

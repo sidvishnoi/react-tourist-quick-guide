@@ -14,12 +14,14 @@ export function getSuggestions(query: string) {
       .then(response => {
         dispatch({
           type: 'SUGGESTION_RESPONSE',
-          ...response,
+          query,
+          locations: response,
         });
       })
       .catch(error => {
         dispatch({
           error: error.message,
+          query,
           type: 'SUGGESTION_RESPONSE_ERROR',
         });
       });
