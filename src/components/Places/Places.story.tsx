@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import * as React from 'react';
 import Places, { PlacesProps } from '.';
 
-const stories = storiesOf('Places', module);
+const stories = storiesOf('Molecules/Places', module);
 stories.addDecorator(withKnobs);
 
 stories.add('places', () => {

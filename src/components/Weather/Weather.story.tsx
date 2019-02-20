@@ -5,7 +5,7 @@ import * as React from 'react';
 import Weather, { WeatherProps } from '.';
 import weatherCodes from '../WeatherDay/weather-codes';
 
-const stories = storiesOf('Weather', module);
+const stories = storiesOf('Molecules/Weather', module);
 stories.addDecorator(withKnobs);
 
 stories.add('weather', () => {

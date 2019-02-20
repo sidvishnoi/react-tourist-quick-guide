@@ -80,7 +80,7 @@ const onSelect = (val: string) => {
   action('onSelect')(value);
 };
 
-const stories = storiesOf('AutoComplete', module);
+const stories = storiesOf('Atoms/AutoComplete', module);
 stories.addDecorator(withKnobs);
 
 stories.add('with sync predictor', () => {

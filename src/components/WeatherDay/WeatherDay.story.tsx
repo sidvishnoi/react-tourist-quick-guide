@@ -11,7 +11,7 @@ import * as React from 'react';
 import WeatherDay, { WeatherDayProps } from '.';
 import weatherCodes from './weather-codes';
 
-const stories = storiesOf('WeatherDay', module).addDecorator(withKnobs);
+const stories = storiesOf('Atoms/WeatherDay', module).addDecorator(withKnobs);
 
 stories.add('weather', () => {
   const condition = select(

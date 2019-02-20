@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import * as React from 'react';
 import Widget, { WidgetProps } from '.';
 
-const stories = storiesOf('Widget', module);
+const stories = storiesOf('Molecules/Widget', module);
 stories.addDecorator(withKnobs);
 
 stories.add('widget', () => {

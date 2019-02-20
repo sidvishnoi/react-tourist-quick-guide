@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import * as React from 'react';
 import UnorderedList from '.';
 
-const stories = storiesOf('UnorderedList', module);
+const stories = storiesOf('Atoms/UnorderedList', module);
 stories.addDecorator(withKnobs);
 
 stories.add('with plain text items', () => {

@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react';
 import * as React from 'react';
 import CityMeta from '.';
 
-const stories = storiesOf('CityMeta', module);
+const stories = storiesOf('Molecules/CityMeta', module);
 stories.addDecorator(withKnobs);
 
 stories.add('CityMeta', () => {

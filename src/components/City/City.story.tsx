@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react';
 import * as React from 'react';
 import City, { CityProps } from '.';
 
-const stories = storiesOf('City', module);
+const stories = storiesOf('Organisms/City', module);
 stories.addDecorator(withKnobs);
 
 stories.add('city', () => {
